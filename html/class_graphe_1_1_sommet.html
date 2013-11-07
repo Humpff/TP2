@@ -130,14 +130,14 @@ template&lt;typename Objet&gt; </div>
 <p>Constructeur avec paramètres. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">Etiquette</td><td>Les donnees d'un sommet </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">numero</td><td>Le numero du sommet </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">numero</td><td>Le numero du sommet. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Etiquette</td><td>L'etiquette du sommet. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="post"><dt><b>Postcondition:</b></dt><dd>Le sommet est initialise avec les parametres </dd></dl>
+<dl class="post"><dt><b>Postcondition:</b></dt><dd>Le graphe est construit. </dd></dl>
 
-<p>Definition at line <a class="el" href="_graphe_8hpp_source.html#l00054">54</a> of file <a class="el" href="_graphe_8hpp_source.html">Graphe.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_graphe_8hpp_source.html#l00052">52</a> of file <a class="el" href="_graphe_8hpp_source.html">Graphe.hpp</a>.</p>
 
 </div>
 </div>
@@ -161,13 +161,13 @@ template&lt;typename Objet&gt; </div>
 <p>Constructeur par copie. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">source</td><td>Le sommet à copier </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">source</td><td>Le graphe a copier. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="post"><dt><b>Postcondition:</b></dt><dd>Copie profonde du sommet source </dd></dl>
+<dl class="post"><dt><b>Postcondition:</b></dt><dd>Un graphe semblable a celui passe en parametre est construit. </dd></dl>
 
-<p>Definition at line <a class="el" href="_graphe_8hpp_source.html#l00068">68</a> of file <a class="el" href="_graphe_8hpp_source.html">Graphe.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_graphe_8hpp_source.html#l00063">63</a> of file <a class="el" href="_graphe_8hpp_source.html">Graphe.hpp</a>.</p>
 
 <p>References <a class="el" href="_graphe_8h_source.html#l00055">Graphe&lt; Objet &gt;::Sommet::m_cout</a>, <a class="el" href="_graphe_8h_source.html#l00053">Graphe&lt; Objet &gt;::Sommet::m_etat</a>, <a class="el" href="_graphe_8h_source.html#l00049">Graphe&lt; Objet &gt;::Sommet::m_etiquette</a>, <a class="el" href="_graphe_8h_source.html#l00051">Graphe&lt; Objet &gt;::Sommet::m_listeDest</a>, <a class="el" href="_graphe_8h_source.html#l00048">Graphe&lt; Objet &gt;::Sommet::m_numero</a>, <a class="el" href="_graphe_8h_source.html#l00057">Graphe&lt; Objet &gt;::Sommet::m_precedent</a>, <a class="el" href="_graphe_8h_source.html#l00054">Graphe&lt; Objet &gt;::Sommet::m_predecesseur</a>, and <a class="el" href="_graphe_8h_source.html#l00058">Graphe&lt; Objet &gt;::Sommet::m_suivant</a>.</p>
 
@@ -212,7 +212,7 @@ template&lt;typename Objet&gt; </div>
 
 <p>Definition at line <a class="el" href="_graphe_8h_source.html#l00055">55</a> of file <a class="el" href="_graphe_8h_source.html">Graphe.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_graphe_8hpp_source.html#l00467">Graphe&lt; Objet &gt;::bellmanFord()</a>, <a class="el" href="_graphe_8hpp_source.html#l00511">Graphe&lt; Objet &gt;::dijkstra()</a>, and <a class="el" href="_graphe_8hpp_source.html#l00068">Graphe&lt; Objet &gt;::Sommet::Sommet()</a>.</p>
+<p>Referenced by <a class="el" href="_graphe_8hpp_source.html#l00606">Graphe&lt; Objet &gt;::bellmanFord()</a>, <a class="el" href="_graphe_8hpp_source.html#l00661">Graphe&lt; Objet &gt;::dijkstra()</a>, and <a class="el" href="_graphe_8hpp_source.html#l00063">Graphe&lt; Objet &gt;::Sommet::Sommet()</a>.</p>
 
 </div>
 </div>
@@ -233,7 +233,7 @@ template&lt;typename Objet&gt; </div>
 
 <p>Definition at line <a class="el" href="_graphe_8h_source.html#l00053">53</a> of file <a class="el" href="_graphe_8h_source.html">Graphe.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_graphe_8hpp_source.html#l00511">Graphe&lt; Objet &gt;::dijkstra()</a>, and <a class="el" href="_graphe_8hpp_source.html#l00068">Graphe&lt; Objet &gt;::Sommet::Sommet()</a>.</p>
+<p>Referenced by <a class="el" href="_graphe_8hpp_source.html#l00661">Graphe&lt; Objet &gt;::dijkstra()</a>, and <a class="el" href="_graphe_8hpp_source.html#l00063">Graphe&lt; Objet &gt;::Sommet::Sommet()</a>.</p>
 
 </div>
 </div>
@@ -252,7 +252,7 @@ template&lt;typename Objet&gt; </div>
 
 <p>Definition at line <a class="el" href="_graphe_8h_source.html#l00049">49</a> of file <a class="el" href="_graphe_8h_source.html">Graphe.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_graphe_8hpp_source.html#l00101">Graphe&lt; Objet &gt;::_copierGraphe()</a>, <a class="el" href="_graphe_8hpp_source.html#l00467">Graphe&lt; Objet &gt;::bellmanFord()</a>, <a class="el" href="_graphe_8hpp_source.html#l00511">Graphe&lt; Objet &gt;::dijkstra()</a>, <a class="el" href="_graphe_8hpp_source.html#l00388">Graphe&lt; Objet &gt;::fermetureGraphe()</a>, <a class="el" href="_graphe_8hpp_source.html#l00443">Graphe&lt; Objet &gt;::getComposantesFortementConnexes()</a>, <a class="el" href="_graphe_8hpp_source.html#l00308">Graphe&lt; Objet &gt;::getNumeroSommet()</a>, <a class="el" href="_graphe_8hpp_source.html#l00568">Graphe&lt; Objet &gt;::getPointsArticulation()</a>, <a class="el" href="_graphe_8hpp_source.html#l00295">Graphe&lt; Objet &gt;::listerEtiquetteSommets()</a>, <a class="el" href="_graphe_8hpp_source.html#l00020">operator&lt;&lt;()</a>, and <a class="el" href="_graphe_8hpp_source.html#l00068">Graphe&lt; Objet &gt;::Sommet::Sommet()</a>.</p>
+<p>Referenced by <a class="el" href="_graphe_8hpp_source.html#l00111">Graphe&lt; Objet &gt;::_copierGraphe()</a>, <a class="el" href="_graphe_8hpp_source.html#l00606">Graphe&lt; Objet &gt;::bellmanFord()</a>, <a class="el" href="_graphe_8hpp_source.html#l00661">Graphe&lt; Objet &gt;::dijkstra()</a>, <a class="el" href="_graphe_8hpp_source.html#l00508">Graphe&lt; Objet &gt;::fermetureGraphe()</a>, <a class="el" href="_graphe_8hpp_source.html#l00571">Graphe&lt; Objet &gt;::getComposantesFortementConnexes()</a>, <a class="el" href="_graphe_8hpp_source.html#l00376">Graphe&lt; Objet &gt;::getNumeroSommet()</a>, <a class="el" href="_graphe_8hpp_source.html#l00723">Graphe&lt; Objet &gt;::getPointsArticulation()</a>, <a class="el" href="_graphe_8hpp_source.html#l00357">Graphe&lt; Objet &gt;::listerEtiquetteSommets()</a>, <a class="el" href="_graphe_8hpp_source.html#l00020">operator&lt;&lt;()</a>, and <a class="el" href="_graphe_8hpp_source.html#l00063">Graphe&lt; Objet &gt;::Sommet::Sommet()</a>.</p>
 
 </div>
 </div>
@@ -273,7 +273,7 @@ template&lt;typename Objet&gt; </div>
 
 <p>Definition at line <a class="el" href="_graphe_8h_source.html#l00051">51</a> of file <a class="el" href="_graphe_8h_source.html">Graphe.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_graphe_8hpp_source.html#l00101">Graphe&lt; Objet &gt;::_copierGraphe()</a>, <a class="el" href="_graphe_8hpp_source.html#l00144">Graphe&lt; Objet &gt;::_getArc()</a>, <a class="el" href="_graphe_8hpp_source.html#l00232">Graphe&lt; Objet &gt;::ajouterArc()</a>, <a class="el" href="_graphe_8hpp_source.html#l00467">Graphe&lt; Objet &gt;::bellmanFord()</a>, <a class="el" href="_graphe_8hpp_source.html#l00246">Graphe&lt; Objet &gt;::enleverArc()</a>, <a class="el" href="_graphe_8hpp_source.html#l00178">Graphe&lt; Objet &gt;::enleverSommet()</a>, <a class="el" href="_graphe_8hpp_source.html#l00443">Graphe&lt; Objet &gt;::getComposantesFortementConnexes()</a>, <a class="el" href="_graphe_8hpp_source.html#l00347">Graphe&lt; Objet &gt;::listerSommetsAdjacents()</a>, <a class="el" href="_graphe_8hpp_source.html#l00020">operator&lt;&lt;()</a>, and <a class="el" href="_graphe_8hpp_source.html#l00068">Graphe&lt; Objet &gt;::Sommet::Sommet()</a>.</p>
+<p>Referenced by <a class="el" href="_graphe_8hpp_source.html#l00111">Graphe&lt; Objet &gt;::_copierGraphe()</a>, <a class="el" href="_graphe_8hpp_source.html#l00164">Graphe&lt; Objet &gt;::_getArc()</a>, <a class="el" href="_graphe_8hpp_source.html#l00274">Graphe&lt; Objet &gt;::ajouterArc()</a>, <a class="el" href="_graphe_8hpp_source.html#l00606">Graphe&lt; Objet &gt;::bellmanFord()</a>, <a class="el" href="_graphe_8hpp_source.html#l00296">Graphe&lt; Objet &gt;::enleverArc()</a>, <a class="el" href="_graphe_8hpp_source.html#l00211">Graphe&lt; Objet &gt;::enleverSommet()</a>, <a class="el" href="_graphe_8hpp_source.html#l00571">Graphe&lt; Objet &gt;::getComposantesFortementConnexes()</a>, <a class="el" href="_graphe_8hpp_source.html#l00442">Graphe&lt; Objet &gt;::listerSommetsAdjacents()</a>, <a class="el" href="_graphe_8hpp_source.html#l00020">operator&lt;&lt;()</a>, and <a class="el" href="_graphe_8hpp_source.html#l00063">Graphe&lt; Objet &gt;::Sommet::Sommet()</a>.</p>
 
 </div>
 </div>
@@ -294,7 +294,7 @@ template&lt;typename Objet&gt; </div>
 
 <p>Definition at line <a class="el" href="_graphe_8h_source.html#l00048">48</a> of file <a class="el" href="_graphe_8h_source.html">Graphe.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_graphe_8hpp_source.html#l00101">Graphe&lt; Objet &gt;::_copierGraphe()</a>, <a class="el" href="_graphe_8hpp_source.html#l00144">Graphe&lt; Objet &gt;::_getArc()</a>, <a class="el" href="_graphe_8hpp_source.html#l00131">Graphe&lt; Objet &gt;::_getSommet()</a>, <a class="el" href="_graphe_8hpp_source.html#l00583">Graphe&lt; Objet &gt;::_isArticulation()</a>, <a class="el" href="_graphe_8hpp_source.html#l00158">Graphe&lt; Objet &gt;::ajouterSommet()</a>, <a class="el" href="_graphe_8hpp_source.html#l00246">Graphe&lt; Objet &gt;::enleverArc()</a>, <a class="el" href="_graphe_8hpp_source.html#l00178">Graphe&lt; Objet &gt;::enleverSommet()</a>, <a class="el" href="_graphe_8hpp_source.html#l00388">Graphe&lt; Objet &gt;::fermetureGraphe()</a>, <a class="el" href="_graphe_8hpp_source.html#l00443">Graphe&lt; Objet &gt;::getComposantesFortementConnexes()</a>, <a class="el" href="_graphe_8hpp_source.html#l00308">Graphe&lt; Objet &gt;::getNumeroSommet()</a>, <a class="el" href="_graphe_8hpp_source.html#l00282">Graphe&lt; Objet &gt;::listerSommets()</a>, <a class="el" href="_graphe_8hpp_source.html#l00020">operator&lt;&lt;()</a>, and <a class="el" href="_graphe_8hpp_source.html#l00068">Graphe&lt; Objet &gt;::Sommet::Sommet()</a>.</p>
+<p>Referenced by <a class="el" href="_graphe_8hpp_source.html#l00111">Graphe&lt; Objet &gt;::_copierGraphe()</a>, <a class="el" href="_graphe_8hpp_source.html#l00164">Graphe&lt; Objet &gt;::_getArc()</a>, <a class="el" href="_graphe_8hpp_source.html#l00146">Graphe&lt; Objet &gt;::_getSommet()</a>, <a class="el" href="_graphe_8hpp_source.html#l00738">Graphe&lt; Objet &gt;::_isArticulation()</a>, <a class="el" href="_graphe_8hpp_source.html#l00186">Graphe&lt; Objet &gt;::ajouterSommet()</a>, <a class="el" href="_graphe_8hpp_source.html#l00296">Graphe&lt; Objet &gt;::enleverArc()</a>, <a class="el" href="_graphe_8hpp_source.html#l00211">Graphe&lt; Objet &gt;::enleverSommet()</a>, <a class="el" href="_graphe_8hpp_source.html#l00508">Graphe&lt; Objet &gt;::fermetureGraphe()</a>, <a class="el" href="_graphe_8hpp_source.html#l00571">Graphe&lt; Objet &gt;::getComposantesFortementConnexes()</a>, <a class="el" href="_graphe_8hpp_source.html#l00376">Graphe&lt; Objet &gt;::getNumeroSommet()</a>, <a class="el" href="_graphe_8hpp_source.html#l00341">Graphe&lt; Objet &gt;::listerSommets()</a>, <a class="el" href="_graphe_8hpp_source.html#l00020">operator&lt;&lt;()</a>, and <a class="el" href="_graphe_8hpp_source.html#l00063">Graphe&lt; Objet &gt;::Sommet::Sommet()</a>.</p>
 
 </div>
 </div>
@@ -315,7 +315,7 @@ template&lt;typename Objet&gt; </div>
 
 <p>Definition at line <a class="el" href="_graphe_8h_source.html#l00057">57</a> of file <a class="el" href="_graphe_8h_source.html">Graphe.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_graphe_8hpp_source.html#l00158">Graphe&lt; Objet &gt;::ajouterSommet()</a>, <a class="el" href="_graphe_8hpp_source.html#l00178">Graphe&lt; Objet &gt;::enleverSommet()</a>, and <a class="el" href="_graphe_8hpp_source.html#l00068">Graphe&lt; Objet &gt;::Sommet::Sommet()</a>.</p>
+<p>Referenced by <a class="el" href="_graphe_8hpp_source.html#l00186">Graphe&lt; Objet &gt;::ajouterSommet()</a>, <a class="el" href="_graphe_8hpp_source.html#l00211">Graphe&lt; Objet &gt;::enleverSommet()</a>, and <a class="el" href="_graphe_8hpp_source.html#l00063">Graphe&lt; Objet &gt;::Sommet::Sommet()</a>.</p>
 
 </div>
 </div>
@@ -336,7 +336,7 @@ template&lt;typename Objet&gt; </div>
 
 <p>Definition at line <a class="el" href="_graphe_8h_source.html#l00054">54</a> of file <a class="el" href="_graphe_8h_source.html">Graphe.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_graphe_8hpp_source.html#l00467">Graphe&lt; Objet &gt;::bellmanFord()</a>, <a class="el" href="_graphe_8hpp_source.html#l00511">Graphe&lt; Objet &gt;::dijkstra()</a>, and <a class="el" href="_graphe_8hpp_source.html#l00068">Graphe&lt; Objet &gt;::Sommet::Sommet()</a>.</p>
+<p>Referenced by <a class="el" href="_graphe_8hpp_source.html#l00606">Graphe&lt; Objet &gt;::bellmanFord()</a>, <a class="el" href="_graphe_8hpp_source.html#l00661">Graphe&lt; Objet &gt;::dijkstra()</a>, and <a class="el" href="_graphe_8hpp_source.html#l00063">Graphe&lt; Objet &gt;::Sommet::Sommet()</a>.</p>
 
 </div>
 </div>
@@ -357,7 +357,7 @@ template&lt;typename Objet&gt; </div>
 
 <p>Definition at line <a class="el" href="_graphe_8h_source.html#l00058">58</a> of file <a class="el" href="_graphe_8h_source.html">Graphe.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_graphe_8hpp_source.html#l00101">Graphe&lt; Objet &gt;::_copierGraphe()</a>, <a class="el" href="_graphe_8hpp_source.html#l00131">Graphe&lt; Objet &gt;::_getSommet()</a>, <a class="el" href="_graphe_8hpp_source.html#l00158">Graphe&lt; Objet &gt;::ajouterSommet()</a>, <a class="el" href="_graphe_8hpp_source.html#l00467">Graphe&lt; Objet &gt;::bellmanFord()</a>, <a class="el" href="_graphe_8hpp_source.html#l00511">Graphe&lt; Objet &gt;::dijkstra()</a>, <a class="el" href="_graphe_8hpp_source.html#l00178">Graphe&lt; Objet &gt;::enleverSommet()</a>, <a class="el" href="_graphe_8hpp_source.html#l00388">Graphe&lt; Objet &gt;::fermetureGraphe()</a>, <a class="el" href="_graphe_8hpp_source.html#l00443">Graphe&lt; Objet &gt;::getComposantesFortementConnexes()</a>, <a class="el" href="_graphe_8hpp_source.html#l00308">Graphe&lt; Objet &gt;::getNumeroSommet()</a>, <a class="el" href="_graphe_8hpp_source.html#l00568">Graphe&lt; Objet &gt;::getPointsArticulation()</a>, <a class="el" href="_graphe_8hpp_source.html#l00295">Graphe&lt; Objet &gt;::listerEtiquetteSommets()</a>, <a class="el" href="_graphe_8hpp_source.html#l00282">Graphe&lt; Objet &gt;::listerSommets()</a>, <a class="el" href="_graphe_8hpp_source.html#l00020">operator&lt;&lt;()</a>, and <a class="el" href="_graphe_8hpp_source.html#l00068">Graphe&lt; Objet &gt;::Sommet::Sommet()</a>.</p>
+<p>Referenced by <a class="el" href="_graphe_8hpp_source.html#l00111">Graphe&lt; Objet &gt;::_copierGraphe()</a>, <a class="el" href="_graphe_8hpp_source.html#l00146">Graphe&lt; Objet &gt;::_getSommet()</a>, <a class="el" href="_graphe_8hpp_source.html#l00186">Graphe&lt; Objet &gt;::ajouterSommet()</a>, <a class="el" href="_graphe_8hpp_source.html#l00606">Graphe&lt; Objet &gt;::bellmanFord()</a>, <a class="el" href="_graphe_8hpp_source.html#l00661">Graphe&lt; Objet &gt;::dijkstra()</a>, <a class="el" href="_graphe_8hpp_source.html#l00211">Graphe&lt; Objet &gt;::enleverSommet()</a>, <a class="el" href="_graphe_8hpp_source.html#l00508">Graphe&lt; Objet &gt;::fermetureGraphe()</a>, <a class="el" href="_graphe_8hpp_source.html#l00571">Graphe&lt; Objet &gt;::getComposantesFortementConnexes()</a>, <a class="el" href="_graphe_8hpp_source.html#l00376">Graphe&lt; Objet &gt;::getNumeroSommet()</a>, <a class="el" href="_graphe_8hpp_source.html#l00723">Graphe&lt; Objet &gt;::getPointsArticulation()</a>, <a class="el" href="_graphe_8hpp_source.html#l00357">Graphe&lt; Objet &gt;::listerEtiquetteSommets()</a>, <a class="el" href="_graphe_8hpp_source.html#l00341">Graphe&lt; Objet &gt;::listerSommets()</a>, <a class="el" href="_graphe_8hpp_source.html#l00020">operator&lt;&lt;()</a>, and <a class="el" href="_graphe_8hpp_source.html#l00063">Graphe&lt; Objet &gt;::Sommet::Sommet()</a>.</p>
 
 </div>
 </div>
@@ -380,7 +380,7 @@ template&lt;typename Objet&gt; </div>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Thu Nov 7 2013 15:19:26 by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Nov 7 2013 16:32:27 by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

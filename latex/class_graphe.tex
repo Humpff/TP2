@@ -22,70 +22,70 @@ class \hyperlink{class_graphe_1_1_sommet}{Sommet}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_graphe_adb8383352920cc36b73929998c90db53}{Graphe} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Constructeur par defaut. \end{DoxyCompactList}\item 
 \hyperlink{class_graphe_ab92769924f1e76dd5e3872c1e85b229c}{Graphe} (const \hyperlink{class_graphe}{Graphe} \&source)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructeur de copie. \end{DoxyCompactList}\item 
 \hyperlink{class_graphe_af33551f1cd40e11d7a1983628d3d5641}{$\sim$Graphe} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
 void \hyperlink{class_graphe_a398d9e6777b28dd6a5ee1572f5128498}{ajouterSommet} (int numero, const Objet \&etiquette)
-\item 
+\begin{DoxyCompactList}\small\item\em Ajout d'un sommet au graphe. \end{DoxyCompactList}\item 
 void \hyperlink{class_graphe_a70470e6b8b0ea59097c1a9a96e631f45}{enleverSommet} (int numero)
-\item 
+\begin{DoxyCompactList}\small\item\em Enlève un sommet du graphe ainsi que tous les arcs qui vont et partent de ce sommet. \end{DoxyCompactList}\item 
 void \hyperlink{class_graphe_a3324e98fb20348bff3ffec78675b0ce5}{ajouterArc} (int numOrigine, int numDestination, int cout)
-\item 
+\begin{DoxyCompactList}\small\item\em Ajout d'un arc au graphe. \end{DoxyCompactList}\item 
 void \hyperlink{class_graphe_aa97c99653199bf922b44e07de8be0a99}{enleverArc} (int numOrigine, int numDestination)
-\item 
+\begin{DoxyCompactList}\small\item\em Enlève un arc du graphe. \end{DoxyCompactList}\item 
 int \hyperlink{class_graphe_a822c112c79faa409d2eeb95a9c2c4e7c}{nombreSommets} () const 
-\item 
+\begin{DoxyCompactList}\small\item\em Retourne le nombre de sommets dans la liste des sommets. \end{DoxyCompactList}\item 
 bool \hyperlink{class_graphe_afd8eb5bce922c62b2d5814dd95decf3e}{estVide} () const 
-\item 
+\begin{DoxyCompactList}\small\item\em Indique si la liste des sommets est vide. \end{DoxyCompactList}\item 
 std::vector$<$ int $>$ \hyperlink{class_graphe_aedac4305a983b11ea0420ba80343635e}{listerSommets} () const 
-\item 
+\begin{DoxyCompactList}\small\item\em Retourne la liste des numéros des sommets dans un vecteur d'entiers. \end{DoxyCompactList}\item 
 std::vector$<$ Objet $>$ \hyperlink{class_graphe_a998f2dd61188d540e7789b6ea631e548}{listerEtiquetteSommets} () const 
-\item 
+\begin{DoxyCompactList}\small\item\em Retourne la liste des étiquettes des sommets dans un vecteur. \end{DoxyCompactList}\item 
 int \hyperlink{class_graphe_a0de2ca6fa1f02d95fde97306217d2031}{getNumeroSommet} (const Objet \&etiquette) const 
-\item 
+\begin{DoxyCompactList}\small\item\em Retourne le numéro d'un sommet selon son etiquette. \end{DoxyCompactList}\item 
 bool \hyperlink{class_graphe_af9a087a2a780133f651af51fb25de677}{sommetExiste} (int numero) const 
-\item 
+\begin{DoxyCompactList}\small\item\em Retourne l'existence d'un sommet. \end{DoxyCompactList}\item 
 Objet \hyperlink{class_graphe_af6efac3e9c660c4aacfa05c6bcba7ddf}{getEtiquetteSommet} (int numero) const 
-\item 
+\begin{DoxyCompactList}\small\item\em Retourne l'étiquette d'un sommet. \end{DoxyCompactList}\item 
 int \hyperlink{class_graphe_a48e32c28c0845c0e112a3a3ae7bdb882}{ordreSortieSommet} (int numero) const 
-\item 
+\begin{DoxyCompactList}\small\item\em Le sommet n'existe pas. \end{DoxyCompactList}\item 
 int \hyperlink{class_graphe_a1123929cab8c05d7fc3f7a4317e88edb}{ordreEntreeSommet} (int numero) const 
-\item 
+\begin{DoxyCompactList}\small\item\em Retourne l'ordre d'entrée d'un sommet. \end{DoxyCompactList}\item 
 std::vector$<$ int $>$ \hyperlink{class_graphe_a73fe579de3baea2990bbefb2b0daf0c9}{listerSommetsAdjacents} (int numeroSommetsAdjacents) const 
-\item 
+\begin{DoxyCompactList}\small\item\em Retourne la liste des numéros des sommets adjacents au sommet passé en argument dans un vecteur d'entiers. \end{DoxyCompactList}\item 
 bool \hyperlink{class_graphe_a866fbd9e68914829c900b2f3a2ef3565}{arcExiste} (int numOrigine, int numDestination) const 
-\item 
+\begin{DoxyCompactList}\small\item\em Retourne l'existence d'un arc. \end{DoxyCompactList}\item 
 int \hyperlink{class_graphe_a5178a5335a20e3a549af0b69c9c83782}{getCoutArc} (int numOrigine, int numDestination) const 
-\item 
+\begin{DoxyCompactList}\small\item\em Retourne le coût d'un arc passé en argument. \end{DoxyCompactList}\item 
 const \hyperlink{class_graphe}{Graphe} \& \hyperlink{class_graphe_aff62a5ca152f992f32671db122d47455}{operator=} (const \hyperlink{class_graphe}{Graphe} \&source)
-\item 
+\begin{DoxyCompactList}\small\item\em Surcharge de l'opérateur d'affectation. \end{DoxyCompactList}\item 
 \hyperlink{class_graphe}{Graphe} \hyperlink{class_graphe_aa6fafc310fd5a096f75d018c7404f9ed}{fermetureGraphe} () const 
-\item 
+\begin{DoxyCompactList}\small\item\em Déterminer la fermeture transitive du graphe. \end{DoxyCompactList}\item 
 bool \hyperlink{class_graphe_abdc4f27fc9498cc3814d03a97c87b7e7}{estFortementConnexe} () const 
-\item 
+\begin{DoxyCompactList}\small\item\em Détermine si le graphe est fortement connexe ou non. \end{DoxyCompactList}\item 
 void \hyperlink{class_graphe_ad63af90bd6395092dfe311a36f15833c}{getComposantesFortementConnexes} (std::vector$<$ std::vector$<$ Objet $>$ $>$ \&composantes) const 
-\item 
+\begin{DoxyCompactList}\small\item\em Détermine les composantes fortement connexes et les mémorise dans un conteneur passé en paramètre. \end{DoxyCompactList}\item 
 int \hyperlink{class_graphe_a077802b65dad92e0d7e593abbca17478}{bellmanFord} (const Objet \&eOrigine, const Objet \&eDestination, std::vector$<$ Objet $>$ \&chemin)
-\item 
+\begin{DoxyCompactList}\small\item\em Trouve le plus court chemin entre deux points en utilisant l'algorithme de Bellman-\/Ford et le retourne. \end{DoxyCompactList}\item 
 int \hyperlink{class_graphe_a46ea944cd82af0d14b67ed66ac57261f}{dijkstra} (const Objet \&eOrigine, const Objet \&eDestination, std::vector$<$ Objet $>$ \&chemin)
-\item 
+\begin{DoxyCompactList}\small\item\em Trouve le plus court chemin entre deux points en utilisant l'algorithme de Dijkstra et le retourne. \end{DoxyCompactList}\item 
 void \hyperlink{class_graphe_acf31ba4346b58850d69ba22ee75bdf48}{getPointsArticulation} (std::vector$<$ Objet $>$ \&sommets)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Trouve les points d'articulation du graphe et les retourne. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_graphe_1_1_sommet}{Sommet} $\ast$ \hyperlink{class_graphe_ac798e3b65595635aaf3e2f83e9a4c58e}{\_\-getSommet} (int numero) const 
-\item 
+\begin{DoxyCompactList}\small\item\em Trouve l'adresse d'un sommet à partir de son numéro. \end{DoxyCompactList}\item 
 \hyperlink{class_graphe_1_1_arc}{Arc} $\ast$ \hyperlink{class_graphe_a5d918be3eb2738ce483dd804d0b8187d}{\_\-getArc} (\hyperlink{class_graphe_1_1_sommet}{Sommet} $\ast$sommet1, \hyperlink{class_graphe_1_1_sommet}{Sommet} $\ast$sommet2) const 
 \item 
 \hyperlink{class_graphe_1_1_arc}{Arc} $\ast$ \hyperlink{class_graphe_a3874c74eb79d536e7974fc5ae218ce1c}{\_\-getArc} (int numOrigine, int numDestination) const 
-\item 
+\begin{DoxyCompactList}\small\item\em Trouve l'adresse d'un arc entre deux sommets. \end{DoxyCompactList}\item 
 void \hyperlink{class_graphe_a8405369dbe4854dd624e140539717fab}{\_\-detruireGraphe} ()
 \item 
 void \hyperlink{class_graphe_a1b8cfc5964a91ed326b4db134471d6e0}{\_\-copierGraphe} (const \hyperlink{class_graphe}{Graphe} \&source)
-\item 
+\begin{DoxyCompactList}\small\item\em Copie d'un graphe. \end{DoxyCompactList}\item 
 void \hyperlink{class_graphe_a2c22cb6d5282d83c940872ec52327d5e}{\_\-enleverSommet} (\hyperlink{class_graphe_1_1_sommet}{Sommet} $\ast$sommetAEnlever)
 \item 
 void \hyperlink{class_graphe_aae4a7becaa21116b48dbe8d0fbd4a57d}{\_\-initPathFinding} (const Objet \&eOrigine, const Objet \&eDestination, \hyperlink{class_graphe_1_1_sommet}{Sommet} $\ast$\&origine, \hyperlink{class_graphe_1_1_sommet}{Sommet} $\ast$\&destination)
@@ -129,7 +129,14 @@ Definition at line 19 of file Graphe.h.
 \label{class_graphe_adb8383352920cc36b73929998c90db53}
 
 
-Definition at line 88 of file Graphe.hpp.
+Constructeur par defaut. 
+
+\begin{DoxyPostcond}{Postcondition}
+Un graphe vide est créé. 
+\end{DoxyPostcond}
+
+
+Definition at line 90 of file Graphe.hpp.
 
 \hypertarget{class_graphe_ab92769924f1e76dd5e3872c1e85b229c}{
 \index{Graphe@{Graphe}!Graphe@{Graphe}}
@@ -142,7 +149,24 @@ Definition at line 88 of file Graphe.hpp.
 \label{class_graphe_ab92769924f1e76dd5e3872c1e85b229c}
 
 
-Definition at line 95 of file Graphe.hpp.
+Constructeur de copie. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em source} & La source du graphe à copier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+Il y a assez de mémoire pour copier le graphe. 
+\end{DoxyPrecond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em bad\_\-alloc} & Il n'y a pas assez de mémoire pour copier le graphe. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 101 of file Graphe.hpp.
 
 \hypertarget{class_graphe_af33551f1cd40e11d7a1983628d3d5641}{
 \index{Graphe@{Graphe}!$\sim$Graphe@{$\sim$Graphe}}
@@ -155,7 +179,14 @@ Definition at line 95 of file Graphe.hpp.
 \label{class_graphe_af33551f1cd40e11d7a1983628d3d5641}
 
 
-Definition at line 125 of file Graphe.hpp.
+Destructeur. 
+
+\begin{DoxyPostcond}{Postcondition}
+Le graphe est détruit. 
+\end{DoxyPostcond}
+
+
+Definition at line 137 of file Graphe.hpp.
 
 
 
@@ -171,7 +202,19 @@ Definition at line 125 of file Graphe.hpp.
 \label{class_graphe_a1b8cfc5964a91ed326b4db134471d6e0}
 
 
-Definition at line 101 of file Graphe.hpp.
+Copie d'un graphe. 
+
+\begin{DoxyPostcond}{Postcondition}
+Une copie profonde à partir du graphe source a été effectuée. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em source} & Le graphe à copier. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 111 of file Graphe.hpp.
 
 
 
@@ -207,7 +250,24 @@ References Graphe$<$ Objet $>$::listSommets, Graphe$<$ Objet $>$::Arc::m\_\-cout
 \label{class_graphe_a3874c74eb79d536e7974fc5ae218ce1c}
 
 
-Definition at line 144 of file Graphe.hpp.
+Trouve l'adresse d'un arc entre deux sommets. 
+
+\begin{DoxyPostcond}{Postcondition}
+L'adresse de l'arc recherché est retournée, 0 si aucun arc n'a été trouvé. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em origine} & L'adresse du sommet d'origine. \\
+\hline
+\mbox{\tt in}  & {\em destination} & L'adresse du sommet de destination. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+L'adresse de l'arc trouvé entre le sommet d'origine et le sommet de destination. 
+\end{DoxyReturn}
+
+
+Definition at line 164 of file Graphe.hpp.
 
 
 
@@ -238,7 +298,19 @@ Referenced by Graphe$<$ Objet $>$::estFortementConnexe(), and Graphe$<$ Objet $>
 \label{class_graphe_ac798e3b65595635aaf3e2f83e9a4c58e}
 
 
-Definition at line 131 of file Graphe.hpp.
+Trouve l'adresse d'un sommet à partir de son numéro. 
+
+\begin{DoxyPostcond}{Postcondition}
+L'adresse du sommet recherché est retournée. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em numero} & Le numéro du sommet. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 146 of file Graphe.hpp.
 
 
 
@@ -268,7 +340,7 @@ References Graphe$<$ Objet $>$::Sommet::m\_\-numero, and Graphe$<$ Objet $>$::So
 \label{class_graphe_ac62e72dd9006cc38115edf51d7c69df2}
 
 
-Definition at line 583 of file Graphe.hpp.
+Definition at line 738 of file Graphe.hpp.
 
 
 
@@ -297,7 +369,35 @@ References Graphe$<$ Objet $>$::enleverSommet(), Graphe$<$ Objet $>$::estForteme
 \label{class_graphe_a3324e98fb20348bff3ffec78675b0ce5}
 
 
-Definition at line 232 of file Graphe.hpp.
+Ajout d'un arc au graphe. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em numOrigine} & Le numéro du sommet d'origine. \\
+\hline
+\mbox{\tt in}  & {\em numDestination} & Le numéro du sommet de destination. \\
+\hline
+\mbox{\tt in}  & {\em cout} & Le cout de l'arc. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+Les deux sommets doivent exister. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Un arc a été ajouté entre le sommet 'numeroOrigine' et le sommet 'numeroDestination'. 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em bad\_\-alloc} & Pas assez de mémoire pour alloué le nouvel arc. \\
+\hline
+{\em logic\_\-error} & Un des deux sommets n'existe pas. \\
+\hline
+{\em logic\_\-error} & Il y a déjà un arc orienté entre ces deux sommets. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 274 of file Graphe.hpp.
 
 
 
@@ -319,7 +419,33 @@ Referenced by tp2::Couverture::Couverture(), and Graphe$<$ Objet $>$::fermetureG
 \label{class_graphe_a398d9e6777b28dd6a5ee1572f5128498}
 
 
-Definition at line 158 of file Graphe.hpp.
+Ajout d'un sommet au graphe. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em etiquette} & Les donnees du sommet à ajouter. \\
+\hline
+\mbox{\tt in}  & {\em numero} & Le numero du sommet à ajouter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+Il y a assez de mémoire pour ajouter un sommet. 
+
+Il n'y a aucun sommet avec le même numéro dans le graphe. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Un sommet contenant les informations passées en argument a été ajouté au \hyperlink{class_graphe}{Graphe}. 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em bad\_\-alloc} & Il n'y a pas assez de mémoire pour ajouter un sommet. \\
+\hline
+{\em logic\_\-error} & Il y a un sommet avec le même numéro dans le graphe. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 186 of file Graphe.hpp.
 
 
 
@@ -341,7 +467,32 @@ Referenced by tp2::Couverture::Couverture(), and Graphe$<$ Objet $>$::fermetureG
 \label{class_graphe_a866fbd9e68914829c900b2f3a2ef3565}
 
 
-Definition at line 363 of file Graphe.hpp.
+Retourne l'existence d'un arc. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em numOrigine} & Le numéro du sommet d'origine. \\
+\hline
+\mbox{\tt in}  & {\em numDestination} & Le numéro du sommet de destination. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True si un arc existe entre les deux sommets, false autrement. 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+Les sommets doivent appartenir au graphe. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Le graphe reste inchangé. 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em logic\_\-error} & L'un ou l'autre, ou les 2 sommets ne font pas partie du graphe. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 465 of file Graphe.hpp.
 
 \hypertarget{class_graphe_a077802b65dad92e0d7e593abbca17478}{
 \index{Graphe@{Graphe}!bellmanFord@{bellmanFord}}
@@ -356,7 +507,40 @@ Definition at line 363 of file Graphe.hpp.
 \label{class_graphe_a077802b65dad92e0d7e593abbca17478}
 
 
-Definition at line 467 of file Graphe.hpp.
+Trouve le plus court chemin entre deux points en utilisant l'algorithme de Bellman-\/Ford et le retourne. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em eOrigine} & l'etiquette du sommet d'origine. \\
+\hline
+\mbox{\tt in}  & {\em eDestination} & l'etiquette du sommet de destination. \\
+\hline
+\mbox{\tt out}  & {\em chemin} & Un vector de type etiquette qui contient le chemin du parcours. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Le coût du parcours trouvé. 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+Il y a assez de mémoire pour placer les composantes du chemin 'chemin' 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Le cout total est retourné, -\/1 s'il n'y a pas de chemin 
+
+Le graphe original reste inchangé 
+
+La liste des étiquettes des sommets à parcourir est retournée dans le vector 'chemin' 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em bad\_\-alloc} & Il n'y a pas assez de mémoire pour placer le chemin dans 'chemin' \\
+\hline
+{\em logic\_\-error} & Le sommet d'origine ou de destination n'existe pas \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 606 of file Graphe.hpp.
 
 
 
@@ -379,7 +563,40 @@ Referenced by tp2::Couverture::bellManFord().
 \label{class_graphe_a46ea944cd82af0d14b67ed66ac57261f}
 
 
-Definition at line 511 of file Graphe.hpp.
+Trouve le plus court chemin entre deux points en utilisant l'algorithme de Dijkstra et le retourne. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em eOrigine} & l'etiquette du sommet d'origine. \\
+\hline
+\mbox{\tt in}  & {\em eDestination} & l'etiquette du sommet de destination. \\
+\hline
+\mbox{\tt out}  & {\em chemin} & Un vector de type etiquette qui contient le chemin du parcours. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Le coût du parcours trouvé. 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+Il y a assez de mémoire pour placer les composantes du chemin 'chemin' 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Le cout total est retourné, -\/1 s'il n'y a pas de chemin 
+
+Le graphe original reste inchangé 
+
+La liste des étiquettes des sommets à parcourir est retournée dans le vector 'chemin' 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em bad\_\-alloc} & Il n'y a pas assez de mémoire pour placer le chemin dans 'chemin' \\
+\hline
+{\em logic\_\-error} & Le sommet d'origine ou de destination n'existe pas \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 661 of file Graphe.hpp.
 
 
 
@@ -401,7 +618,33 @@ Referenced by tp2::Couverture::determinerMinParcours().
 \label{class_graphe_aa97c99653199bf922b44e07de8be0a99}
 
 
-Definition at line 246 of file Graphe.hpp.
+Enlève un arc du graphe. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em numOrigine} & Le numero du sommet d'origine. \\
+\hline
+\mbox{\tt in}  & {\em numDestination} & Le numéro du sommet de destination. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+Les deux sommets identifiés par leur numéro doivent appartenir au graphe. 
+
+Un arc reliant les deux sommets doit exister. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Le graphe contient un arc en moins 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std::logic\_\-error} & Un des deux sommets, ou les deux, n'existent pas. \\
+\hline
+{\em std::logic\_\-error} & Il n'y a pas d'arc entre les 2 sommets. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 296 of file Graphe.hpp.
 
 
 
@@ -418,7 +661,27 @@ References Graphe$<$ Objet $>$::Arc::m\_\-dest, Graphe$<$ Objet $>$::Sommet::m\_
 \label{class_graphe_a70470e6b8b0ea59097c1a9a96e631f45}
 
 
-Definition at line 178 of file Graphe.hpp.
+Enlève un sommet du graphe ainsi que tous les arcs qui vont et partent de ce sommet. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em numero} & Le numéro du sommet à enlever. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+Il y a un sommet avec le numéro 'm\_\-numero' dans le graphe. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Le sommet identifié par 'm\_\-numero' a été enlevé du graphe. 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em logic\_\-error} & Il n'y a aucun sommet avec le numéro 'm\_\-numero' dans le graphe. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 211 of file Graphe.hpp.
 
 
 
@@ -439,7 +702,17 @@ Referenced by Graphe$<$ Objet $>$::\_\-isArticulation(), and Graphe$<$ Objet $>$
 \label{class_graphe_abdc4f27fc9498cc3814d03a97c87b7e7}
 
 
-Definition at line 431 of file Graphe.hpp.
+Détermine si le graphe est fortement connexe ou non. 
+
+\begin{DoxyReturn}{Returns}
+true si le graphe est fortement connexe, false sinon 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+true est retourné si le graphe est fortement connexe, false est retourné sinon. 
+\end{DoxyPostcond}
+
+
+Definition at line 554 of file Graphe.hpp.
 
 
 
@@ -460,7 +733,17 @@ Referenced by Graphe$<$ Objet $>$::\_\-isArticulation(), and tp2::Couverture::vi
 \label{class_graphe_afd8eb5bce922c62b2d5814dd95decf3e}
 
 
-Definition at line 276 of file Graphe.hpp.
+Indique si la liste des sommets est vide. 
+
+\begin{DoxyReturn}{Returns}
+True si le graphe ne contient pas de sommets, false autrement. 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+Le graphe reste inchangé. 
+\end{DoxyPostcond}
+
+
+Definition at line 332 of file Graphe.hpp.
 
 
 
@@ -477,7 +760,24 @@ Referenced by tp2::Couverture::bellManFord(), tp2::Couverture::determinerMinParc
 \label{class_graphe_aa6fafc310fd5a096f75d018c7404f9ed}
 
 
-Definition at line 388 of file Graphe.hpp.
+Déterminer la fermeture transitive du graphe. 
+
+\begin{DoxyPrecond}{Precondition}
+Le graphe est correctement initialisé. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La fermeture transitive du graphe est retournée. 
+
+Le graphe original reste inchangé. 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em bad\_\-alloc} & si pas assez de mémoire application de l'algorithme de Floyd-\/Warshall \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 508 of file Graphe.hpp.
 
 
 
@@ -494,7 +794,27 @@ References Graphe$<$ Objet $>$::ajouterArc(), Graphe$<$ Objet $>$::ajouterSommet
 \label{class_graphe_ad63af90bd6395092dfe311a36f15833c}
 
 
-Definition at line 443 of file Graphe.hpp.
+Détermine les composantes fortement connexes et les mémorise dans un conteneur passé en paramètre. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em composantes} & Les composantes du graphe. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+Il y a assez de mémoire pour placer les composantes fortements connexes dans 'composantes'. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Les composantes fortement connexes du graphe sont placées dans 'composantes'. 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Il} & n'y a pas assez de mémoire pour placer les composantes fortements connexes dans 'composantes'. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 571 of file Graphe.hpp.
 
 
 
@@ -512,7 +832,34 @@ References Graphe$<$ Objet $>$::\_\-getArc(), Graphe$<$ Objet $>$::enleverSommet
 \label{class_graphe_a5178a5335a20e3a549af0b69c9c83782}
 
 
-Definition at line 371 of file Graphe.hpp.
+Retourne le coût d'un arc passé en argument. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em numOrigine} & Le numéro du sommet d'origine. \\
+\hline
+\mbox{\tt in}  & {\em numDestination} & Le numéro du sommet de destination. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Le coût de l'arc entre deux sommets. 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+L'arc doit exister. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Le graphe reste inchangé. 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em logic\_\-error} & Le sommet source et/ou destination n'existent pas. \\
+\hline
+{\em logic\_\-error} & L'arc n'existe pas. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 481 of file Graphe.hpp.
 
 \hypertarget{class_graphe_af6efac3e9c660c4aacfa05c6bcba7ddf}{
 \index{Graphe@{Graphe}!getEtiquetteSommet@{getEtiquetteSommet}}
@@ -525,7 +872,29 @@ Definition at line 371 of file Graphe.hpp.
 \label{class_graphe_af6efac3e9c660c4aacfa05c6bcba7ddf}
 
 
-Definition at line 327 of file Graphe.hpp.
+Retourne l'étiquette d'un sommet. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em numero} & Le numéro du sommet. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Le nom du sommet recherché. 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+Le sommet doit exister. 
+\end{DoxyPrecond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em logic\_\-error} & Il n'y a pas de sommets dans le graphe. \\
+\hline
+{\em logic\_\-error} & Le sommet n'existe pas. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 405 of file Graphe.hpp.
 
 \hypertarget{class_graphe_a0de2ca6fa1f02d95fde97306217d2031}{
 \index{Graphe@{Graphe}!getNumeroSommet@{getNumeroSommet}}
@@ -538,7 +907,30 @@ Definition at line 327 of file Graphe.hpp.
 \label{class_graphe_a0de2ca6fa1f02d95fde97306217d2031}
 
 
-Definition at line 308 of file Graphe.hpp.
+Retourne le numéro d'un sommet selon son etiquette. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em etiquette} & L'étiquette d'un sommet. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Le numéro du sommet recherché 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+Le sommet doit faire partie du graphe. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Le graphe reste inchangé. 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em logic\_\-error} & Le sommet n'existe pas. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 376 of file Graphe.hpp.
 
 
 
@@ -555,7 +947,24 @@ References Graphe$<$ Objet $>$::Sommet::m\_\-etiquette, Graphe$<$ Objet $>$::Som
 \label{class_graphe_acf31ba4346b58850d69ba22ee75bdf48}
 
 
-Definition at line 568 of file Graphe.hpp.
+Trouve les points d'articulation du graphe et les retourne. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em sommets} & Un vector de type Objet qui contient tous les sommets d'articulation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+Il y a assez de mémoire pour placer les sommets dans 'sommets' 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La liste de tous les sommets d'articulation sont retournés dans le vector 'sommets' 
+
+Le graphe original reste inchangé 
+\end{DoxyPostcond}
+
+
+Definition at line 723 of file Graphe.hpp.
 
 
 
@@ -576,7 +985,17 @@ Referenced by tp2::Couverture::villesCritiques().
 \label{class_graphe_a998f2dd61188d540e7789b6ea631e548}
 
 
-Definition at line 295 of file Graphe.hpp.
+Retourne la liste des étiquettes des sommets dans un vecteur. 
+
+\begin{DoxyReturn}{Returns}
+Un vector de type Objet qui contient une liste de toutes les étiquettes des sommets. 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+Le graphe reste inchangé. 
+\end{DoxyPostcond}
+
+
+Definition at line 357 of file Graphe.hpp.
 
 
 
@@ -593,7 +1012,17 @@ References Graphe$<$ Objet $>$::Sommet::m\_\-etiquette, and Graphe$<$ Objet $>$:
 \label{class_graphe_aedac4305a983b11ea0420ba80343635e}
 
 
-Definition at line 282 of file Graphe.hpp.
+Retourne la liste des numéros des sommets dans un vecteur d'entiers. 
+
+\begin{DoxyReturn}{Returns}
+Un vector de type int qui contient une liste de tous les numéros des sommets. 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+Le graphe reste inchangé. 
+\end{DoxyPostcond}
+
+
+Definition at line 341 of file Graphe.hpp.
 
 
 
@@ -614,7 +1043,30 @@ Referenced by Graphe$<$ Objet $>$::estFortementConnexe().
 \label{class_graphe_a73fe579de3baea2990bbefb2b0daf0c9}
 
 
-Definition at line 347 of file Graphe.hpp.
+Retourne la liste des numéros des sommets adjacents au sommet passé en argument dans un vecteur d'entiers. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em numeroSommetsAdjacents} & Le numéro du sommet dont on cherche les sommets adjacents. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un vector de type int qui contient une liste de tous les numéros des sommets adjacents au sommet demandé. 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+Le sommet doit appartenir au graphe. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Le graphe reste inchangé. 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em logic\_\-error} & si le sommet n'existe pas. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 442 of file Graphe.hpp.
 
 
 
@@ -631,7 +1083,17 @@ References Graphe$<$ Objet $>$::Arc::m\_\-dest, Graphe$<$ Objet $>$::Sommet::m\_
 \label{class_graphe_a822c112c79faa409d2eeb95a9c2c4e7c}
 
 
-Definition at line 270 of file Graphe.hpp.
+Retourne le nombre de sommets dans la liste des sommets. 
+
+\begin{DoxyReturn}{Returns}
+Le nombre de sommets dans le graphe. 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+Le graphe reste inchangé. 
+\end{DoxyPostcond}
+
+
+Definition at line 323 of file Graphe.hpp.
 
 \hypertarget{class_graphe_aff62a5ca152f992f32671db122d47455}{
 \index{Graphe@{Graphe}!operator=@{operator=}}
@@ -644,7 +1106,27 @@ Definition at line 270 of file Graphe.hpp.
 \label{class_graphe_aff62a5ca152f992f32671db122d47455}
 
 
-Definition at line 381 of file Graphe.hpp.
+Surcharge de l'opérateur d'affectation. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em source} & Le graphe à copier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+Il doit y avoir assez de mémoire. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Le graphe a un contenu identique à 'source'. 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em bad\_\-alloc} & S'il n'y a pas assez de mémoire. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 496 of file Graphe.hpp.
 
 \hypertarget{class_graphe_a1123929cab8c05d7fc3f7a4317e88edb}{
 \index{Graphe@{Graphe}!ordreEntreeSommet@{ordreEntreeSommet}}
@@ -657,7 +1139,30 @@ Definition at line 381 of file Graphe.hpp.
 \label{class_graphe_a1123929cab8c05d7fc3f7a4317e88edb}
 
 
-Definition at line 341 of file Graphe.hpp.
+Retourne l'ordre d'entrée d'un sommet. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Le} & numéro du sommet. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+L'odre d'entrée d'un sommet. 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+Le sommet doit exister 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Le graphe reste inchangé. 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em logic\_\-error} & Le sommet n'existe pas. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 430 of file Graphe.hpp.
 
 \hypertarget{class_graphe_a48e32c28c0845c0e112a3a3ae7bdb882}{
 \index{Graphe@{Graphe}!ordreSortieSommet@{ordreSortieSommet}}
@@ -670,7 +1175,27 @@ Definition at line 341 of file Graphe.hpp.
 \label{class_graphe_a48e32c28c0845c0e112a3a3ae7bdb882}
 
 
-Definition at line 335 of file Graphe.hpp.
+Le sommet n'existe pas. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Le} & numéro du sommet. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+L'odre de sortie d'un sommet. 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+Le sommet doit exister. 
+\end{DoxyPrecond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em logic\_\-error} & Le sommet n'existe pas. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 418 of file Graphe.hpp.
 
 \hypertarget{class_graphe_af9a087a2a780133f651af51fb25de677}{
 \index{Graphe@{Graphe}!sommetExiste@{sommetExiste}}
@@ -683,7 +1208,22 @@ Definition at line 335 of file Graphe.hpp.
 \label{class_graphe_af9a087a2a780133f651af51fb25de677}
 
 
-Definition at line 321 of file Graphe.hpp.
+Retourne l'existence d'un sommet. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em numero} & Le numéro du sommet. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True si le sommet existe, false autrement. 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+Le graphe reste inchangé. 
+\end{DoxyPostcond}
+
+
+Definition at line 393 of file Graphe.hpp.
 
 
 

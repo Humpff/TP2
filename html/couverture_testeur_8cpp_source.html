@@ -94,19 +94,63 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00043"></a>00043   EXPECT_FALSE(couv.villesCritiques().empty());
 <a name="l00044"></a>00044 }
 <a name="l00045"></a>00045 
-<a name="l00046"></a><a class="code" href="couverture_testeur_8cpp.html#abc37846f9cf1b5de6fcd2d3082e4e653">00046</a> <a class="code" href="couverture_testeur_8cpp.html#adf3dbc6b16c5b94d3e48a78828e13334">TEST_F</a>(<a class="code" href="class_couverture_test.html">CouvertureTest</a>, determinerMinParcours)
+<a name="l00046"></a><a class="code" href="couverture_testeur_8cpp.html#a64c57fb46d2506ebff809b2a3cb76234">00046</a> <a class="code" href="couverture_testeur_8cpp.html#adf3dbc6b16c5b94d3e48a78828e13334">TEST_F</a>(<a class="code" href="class_couverture_test.html">CouvertureTest</a>, dureeMinParcours)
 <a name="l00047"></a>00047 {
 <a name="l00048"></a>00048   <a class="code" href="classtp2_1_1_ville.html">tp2::Ville</a> depart(<span class="stringliteral">&quot;ville1&quot;</span>, <span class="stringliteral">&quot;a1&quot;</span>);
 <a name="l00049"></a>00049   <a class="code" href="classtp2_1_1_ville.html">tp2::Ville</a> arrivee(<span class="stringliteral">&quot;ville4&quot;</span>, <span class="stringliteral">&quot;d4&quot;</span>);
 <a name="l00050"></a>00050   <span class="keywordtype">int</span> duree;
 <a name="l00051"></a>00051   couv.determinerMinParcours(depart, arrivee, duree);
-<a name="l00052"></a>00052 }
-<a name="l00053"></a>00053 
-<a name="l00054"></a><a class="code" href="couverture_testeur_8cpp.html#adacbe0175a79dff748855d8c9839f82b">00054</a> <span class="keywordtype">int</span> <a class="code" href="couverture_testeur_8cpp.html#adacbe0175a79dff748855d8c9839f82b">main</a>(<span class="keywordtype">int</span> ac, <span class="keywordtype">char</span>* av[])
-<a name="l00055"></a>00055 {
-<a name="l00056"></a>00056   testing::InitGoogleTest(&amp;ac, av);
-<a name="l00057"></a>00057   <span class="keywordflow">return</span> RUN_ALL_TESTS();
-<a name="l00058"></a>00058 }
+<a name="l00052"></a>00052   EXPECT_EQ(duree, 90);
+<a name="l00053"></a>00053 }
+<a name="l00054"></a>00054 
+<a name="l00055"></a><a class="code" href="couverture_testeur_8cpp.html#aa59898a5bd7a637ad6ac0e9225eb346e">00055</a> <a class="code" href="couverture_testeur_8cpp.html#adf3dbc6b16c5b94d3e48a78828e13334">TEST_F</a>(<a class="code" href="class_couverture_test.html">CouvertureTest</a>, dureeMinParcoursImpossible)
+<a name="l00056"></a>00056 {
+<a name="l00057"></a>00057   <a class="code" href="classtp2_1_1_ville.html">tp2::Ville</a> depart(<span class="stringliteral">&quot;ville1&quot;</span>, <span class="stringliteral">&quot;a1&quot;</span>);
+<a name="l00058"></a>00058   <a class="code" href="classtp2_1_1_ville.html">tp2::Ville</a> arrivee(<span class="stringliteral">&quot;ville4&quot;</span>, <span class="stringliteral">&quot;d4&quot;</span>);
+<a name="l00059"></a>00059   <span class="keywordtype">int</span> duree;
+<a name="l00060"></a>00060   fcouv.determinerMinParcours(depart, arrivee, duree);
+<a name="l00061"></a>00061   EXPECT_EQ(duree, -1);
+<a name="l00062"></a>00062 }
+<a name="l00063"></a>00063 
+<a name="l00064"></a><a class="code" href="couverture_testeur_8cpp.html#ac385e2dff0900f01ede65ed9a71cc77a">00064</a> <a class="code" href="couverture_testeur_8cpp.html#adf3dbc6b16c5b94d3e48a78828e13334">TEST_F</a>(<a class="code" href="class_couverture_test.html">CouvertureTest</a>, dureeMinParcoursException)
+<a name="l00065"></a>00065 {
+<a name="l00066"></a>00066   <a class="code" href="classtp2_1_1_ville.html">tp2::Ville</a> depart(<span class="stringliteral">&quot;ville1&quot;</span>, <span class="stringliteral">&quot;a1&quot;</span>);
+<a name="l00067"></a>00067   <a class="code" href="classtp2_1_1_ville.html">tp2::Ville</a> arrivee(<span class="stringliteral">&quot;ville7&quot;</span>, <span class="stringliteral">&quot;g7&quot;</span>);
+<a name="l00068"></a>00068   <span class="keywordtype">int</span> duree;
+<a name="l00069"></a>00069   EXPECT_THROW(couv.determinerMinParcours(depart, arrivee, duree), std::logic_error);
+<a name="l00070"></a>00070 }
+<a name="l00071"></a>00071 
+<a name="l00072"></a><a class="code" href="couverture_testeur_8cpp.html#ae331feefc87b2720f60983c2c72bd19a">00072</a> <a class="code" href="couverture_testeur_8cpp.html#adf3dbc6b16c5b94d3e48a78828e13334">TEST_F</a>(<a class="code" href="class_couverture_test.html">CouvertureTest</a>, bellmanFord)
+<a name="l00073"></a>00073 {
+<a name="l00074"></a>00074   <a class="code" href="classtp2_1_1_ville.html">tp2::Ville</a> depart(<span class="stringliteral">&quot;ville1&quot;</span>, <span class="stringliteral">&quot;a1&quot;</span>);
+<a name="l00075"></a>00075   <a class="code" href="classtp2_1_1_ville.html">tp2::Ville</a> arrivee(<span class="stringliteral">&quot;ville4&quot;</span>, <span class="stringliteral">&quot;d4&quot;</span>);
+<a name="l00076"></a>00076   <span class="keywordtype">int</span> duree;
+<a name="l00077"></a>00077   couv.bellManFord(depart, arrivee, duree);
+<a name="l00078"></a>00078   EXPECT_EQ(duree, 90);
+<a name="l00079"></a>00079 }
+<a name="l00080"></a>00080 
+<a name="l00081"></a><a class="code" href="couverture_testeur_8cpp.html#aebd549695f31e368ca9a8e86b16feafe">00081</a> <a class="code" href="couverture_testeur_8cpp.html#adf3dbc6b16c5b94d3e48a78828e13334">TEST_F</a>(<a class="code" href="class_couverture_test.html">CouvertureTest</a>, bellmanFordImpossible)
+<a name="l00082"></a>00082 {
+<a name="l00083"></a>00083   <a class="code" href="classtp2_1_1_ville.html">tp2::Ville</a> depart(<span class="stringliteral">&quot;ville1&quot;</span>, <span class="stringliteral">&quot;a1&quot;</span>);
+<a name="l00084"></a>00084   <a class="code" href="classtp2_1_1_ville.html">tp2::Ville</a> arrivee(<span class="stringliteral">&quot;ville4&quot;</span>, <span class="stringliteral">&quot;d4&quot;</span>);
+<a name="l00085"></a>00085   <span class="keywordtype">int</span> duree;
+<a name="l00086"></a>00086   fcouv.bellManFord(depart, arrivee, duree);
+<a name="l00087"></a>00087   EXPECT_EQ(duree, -1);
+<a name="l00088"></a>00088 }
+<a name="l00089"></a>00089 
+<a name="l00090"></a><a class="code" href="couverture_testeur_8cpp.html#ad47255243a1ebc3f5c6247f239a9a132">00090</a> <a class="code" href="couverture_testeur_8cpp.html#adf3dbc6b16c5b94d3e48a78828e13334">TEST_F</a>(<a class="code" href="class_couverture_test.html">CouvertureTest</a>, bellmanFordException)
+<a name="l00091"></a>00091 {
+<a name="l00092"></a>00092   <a class="code" href="classtp2_1_1_ville.html">tp2::Ville</a> depart(<span class="stringliteral">&quot;ville1&quot;</span>, <span class="stringliteral">&quot;a1&quot;</span>);
+<a name="l00093"></a>00093   <a class="code" href="classtp2_1_1_ville.html">tp2::Ville</a> arrivee(<span class="stringliteral">&quot;ville7&quot;</span>, <span class="stringliteral">&quot;g7&quot;</span>);
+<a name="l00094"></a>00094   <span class="keywordtype">int</span> duree;
+<a name="l00095"></a>00095   EXPECT_THROW(couv.bellManFord(depart, arrivee, duree), std::logic_error);
+<a name="l00096"></a>00096 }
+<a name="l00097"></a>00097 
+<a name="l00098"></a><a class="code" href="couverture_testeur_8cpp.html#adacbe0175a79dff748855d8c9839f82b">00098</a> <span class="keywordtype">int</span> <a class="code" href="couverture_testeur_8cpp.html#adacbe0175a79dff748855d8c9839f82b">main</a>(<span class="keywordtype">int</span> ac, <span class="keywordtype">char</span>* av[])
+<a name="l00099"></a>00099 {
+<a name="l00100"></a>00100   testing::InitGoogleTest(&amp;ac, av);
+<a name="l00101"></a>00101   <span class="keywordflow">return</span> RUN_ALL_TESTS();
+<a name="l00102"></a>00102 }
 </pre></div></div>
 </div>
 <!-- window showing the filter options -->
@@ -123,7 +167,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Thu Nov 7 2013 15:19:26 by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Nov 7 2013 16:32:26 by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

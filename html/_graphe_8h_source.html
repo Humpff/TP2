@@ -103,7 +103,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00064"></a>00064     {
 <a name="l00065"></a>00065     <span class="keyword">public</span>:
 <a name="l00066"></a>00066 
-<a name="l00067"></a>00067         <a class="code" href="class_graphe_1_1_arc.html#a3b485959423829dcc2ba7f5c1092a456">Arc</a>(<a class="code" href="class_graphe_1_1_sommet.html" title="Classe représentant un sommet dans un graphe.">Sommet</a> * dest, <span class="keywordtype">int</span> cout);
+<a name="l00067"></a>00067         <a class="code" href="class_graphe_1_1_arc.html#a3b485959423829dcc2ba7f5c1092a456" title="Constructeur avec paramètres.">Arc</a>(<a class="code" href="class_graphe_1_1_sommet.html" title="Classe représentant un sommet dans un graphe.">Sommet</a> * dest, <span class="keywordtype">int</span> cout);
 <a name="l00068"></a>00068         <a class="code" href="class_graphe_1_1_arc.html#a775ea7fc101c2f8a45419f5a3be58166">~Arc</a>();
 <a name="l00069"></a>00069 
 <a name="l00070"></a><a class="code" href="class_graphe_1_1_arc.html#a9d1f11eb639df5e712b859b95d8c6d15">00070</a>         <a class="code" href="class_graphe_1_1_sommet.html" title="Classe représentant un sommet dans un graphe.">Sommet</a> * <a class="code" href="class_graphe_1_1_arc.html#a9d1f11eb639df5e712b859b95d8c6d15" title="Un pointeur sur le sommet de destination.">m_dest</a>; 
@@ -118,58 +118,58 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00079"></a>00079     <span class="comment">// _________________________________________________________________________________________________</span>
 <a name="l00080"></a>00080 
 <a name="l00081"></a>00081 
-<a name="l00082"></a>00082     <a class="code" href="class_graphe.html#adb8383352920cc36b73929998c90db53">Graphe</a>();
-<a name="l00083"></a>00083     <a class="code" href="class_graphe.html#adb8383352920cc36b73929998c90db53">Graphe</a>(<span class="keyword">const</span> <a class="code" href="class_graphe.html" title="Classe représentant un graphe orienté, coloré dont les étiquettes sont des comparables.">Graphe</a> &amp;source);
+<a name="l00082"></a>00082     <a class="code" href="class_graphe.html#adb8383352920cc36b73929998c90db53" title="Constructeur par defaut.">Graphe</a>();
+<a name="l00083"></a>00083     <a class="code" href="class_graphe.html#adb8383352920cc36b73929998c90db53" title="Constructeur par defaut.">Graphe</a>(<span class="keyword">const</span> <a class="code" href="class_graphe.html" title="Classe représentant un graphe orienté, coloré dont les étiquettes sont des comparables.">Graphe</a> &amp;source);
 <a name="l00084"></a>00084 
-<a name="l00085"></a>00085     <a class="code" href="class_graphe.html#af33551f1cd40e11d7a1983628d3d5641">~Graphe</a>();
+<a name="l00085"></a>00085     <a class="code" href="class_graphe.html#af33551f1cd40e11d7a1983628d3d5641" title="Destructeur.">~Graphe</a>();
 <a name="l00086"></a>00086 
 <a name="l00087"></a>00087     <span class="comment">// ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯</span>
 <a name="l00088"></a>00088     <span class="comment">//  Ajout/suppression de sommets et d&#39;arcs</span>
 <a name="l00089"></a>00089     <span class="comment">// _________________________________________________________________________________________________</span>
 <a name="l00090"></a>00090 
-<a name="l00091"></a>00091     <span class="keywordtype">void</span> <a class="code" href="class_graphe.html#a398d9e6777b28dd6a5ee1572f5128498">ajouterSommet</a>(<span class="keywordtype">int</span> numero, <span class="keyword">const</span> Objet&amp; etiquette);
-<a name="l00092"></a>00092     <span class="keywordtype">void</span> <a class="code" href="class_graphe.html#a70470e6b8b0ea59097c1a9a96e631f45">enleverSommet</a>(<span class="keywordtype">int</span> numero);
+<a name="l00091"></a>00091     <span class="keywordtype">void</span> <a class="code" href="class_graphe.html#a398d9e6777b28dd6a5ee1572f5128498" title="Ajout d&#39;un sommet au graphe.">ajouterSommet</a>(<span class="keywordtype">int</span> numero, <span class="keyword">const</span> Objet&amp; etiquette);
+<a name="l00092"></a>00092     <span class="keywordtype">void</span> <a class="code" href="class_graphe.html#a70470e6b8b0ea59097c1a9a96e631f45" title="Enlève un sommet du graphe ainsi que tous les arcs qui vont et partent de ce sommet.">enleverSommet</a>(<span class="keywordtype">int</span> numero);
 <a name="l00093"></a>00093 
-<a name="l00094"></a>00094     <span class="keywordtype">void</span> <a class="code" href="class_graphe.html#a3324e98fb20348bff3ffec78675b0ce5">ajouterArc</a>(<span class="keywordtype">int</span> numOrigine, <span class="keywordtype">int</span> numDestination, <span class="keywordtype">int</span> cout);
-<a name="l00095"></a>00095     <span class="keywordtype">void</span> <a class="code" href="class_graphe.html#aa97c99653199bf922b44e07de8be0a99">enleverArc</a>(<span class="keywordtype">int</span> numOrigine, <span class="keywordtype">int</span> numDestination);
+<a name="l00094"></a>00094     <span class="keywordtype">void</span> <a class="code" href="class_graphe.html#a3324e98fb20348bff3ffec78675b0ce5" title="Ajout d&#39;un arc au graphe.">ajouterArc</a>(<span class="keywordtype">int</span> numOrigine, <span class="keywordtype">int</span> numDestination, <span class="keywordtype">int</span> cout);
+<a name="l00095"></a>00095     <span class="keywordtype">void</span> <a class="code" href="class_graphe.html#aa97c99653199bf922b44e07de8be0a99" title="Enlève un arc du graphe.">enleverArc</a>(<span class="keywordtype">int</span> numOrigine, <span class="keywordtype">int</span> numDestination);
 <a name="l00096"></a>00096 
 <a name="l00097"></a>00097     <span class="comment">// ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯</span>
 <a name="l00098"></a>00098     <span class="comment">//  Données sur le graphe (incluant listes de sommets)</span>
 <a name="l00099"></a>00099     <span class="comment">// _________________________________________________________________________________________________</span>
 <a name="l00100"></a>00100 
-<a name="l00101"></a>00101     <span class="keywordtype">int</span> <a class="code" href="class_graphe.html#a822c112c79faa409d2eeb95a9c2c4e7c">nombreSommets</a>() <span class="keyword">const</span>;
-<a name="l00102"></a>00102     <span class="keywordtype">bool</span> <a class="code" href="class_graphe.html#afd8eb5bce922c62b2d5814dd95decf3e">estVide</a>() <span class="keyword">const</span>;
-<a name="l00103"></a>00103     std::vector&lt;int&gt; <a class="code" href="class_graphe.html#aedac4305a983b11ea0420ba80343635e">listerSommets</a>() <span class="keyword">const</span>;
-<a name="l00104"></a>00104     std::vector&lt;Objet&gt; <a class="code" href="class_graphe.html#a998f2dd61188d540e7789b6ea631e548">listerEtiquetteSommets</a>() <span class="keyword">const</span>;
+<a name="l00101"></a>00101     <span class="keywordtype">int</span> <a class="code" href="class_graphe.html#a822c112c79faa409d2eeb95a9c2c4e7c" title="Retourne le nombre de sommets dans la liste des sommets.">nombreSommets</a>() <span class="keyword">const</span>;
+<a name="l00102"></a>00102     <span class="keywordtype">bool</span> <a class="code" href="class_graphe.html#afd8eb5bce922c62b2d5814dd95decf3e" title="Indique si la liste des sommets est vide.">estVide</a>() <span class="keyword">const</span>;
+<a name="l00103"></a>00103     std::vector&lt;int&gt; <a class="code" href="class_graphe.html#aedac4305a983b11ea0420ba80343635e" title="Retourne la liste des numéros des sommets dans un vecteur d&#39;entiers.">listerSommets</a>() <span class="keyword">const</span>;
+<a name="l00104"></a>00104     std::vector&lt;Objet&gt; <a class="code" href="class_graphe.html#a998f2dd61188d540e7789b6ea631e548" title="Retourne la liste des étiquettes des sommets dans un vecteur.">listerEtiquetteSommets</a>() <span class="keyword">const</span>;
 <a name="l00105"></a>00105 
 <a name="l00106"></a>00106     <span class="comment">// ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯</span>
 <a name="l00107"></a>00107     <span class="comment">//  Trouver numéro sommet</span>
 <a name="l00108"></a>00108     <span class="comment">// _________________________________________________________________________________________________</span>
 <a name="l00109"></a>00109 
-<a name="l00110"></a>00110     <span class="keywordtype">int</span> <a class="code" href="class_graphe.html#a0de2ca6fa1f02d95fde97306217d2031">getNumeroSommet</a>(<span class="keyword">const</span> Objet&amp; etiquette) <span class="keyword">const</span> ;
+<a name="l00110"></a>00110     <span class="keywordtype">int</span> <a class="code" href="class_graphe.html#a0de2ca6fa1f02d95fde97306217d2031" title="Retourne le numéro d&#39;un sommet selon son etiquette.">getNumeroSommet</a>(<span class="keyword">const</span> Objet&amp; etiquette) <span class="keyword">const</span> ;
 <a name="l00111"></a>00111 
 <a name="l00112"></a>00112     <span class="comment">// ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯</span>
 <a name="l00113"></a>00113     <span class="comment">//  Données à propos des sommets</span>
 <a name="l00114"></a>00114     <span class="comment">// _________________________________________________________________________________________________</span>
 <a name="l00115"></a>00115 
-<a name="l00116"></a>00116     <span class="keywordtype">bool</span> <a class="code" href="class_graphe.html#af9a087a2a780133f651af51fb25de677">sommetExiste</a>(<span class="keywordtype">int</span> numero) <span class="keyword">const</span>;
-<a name="l00117"></a>00117     Objet <a class="code" href="class_graphe.html#af6efac3e9c660c4aacfa05c6bcba7ddf">getEtiquetteSommet</a>(<span class="keywordtype">int</span> numero) <span class="keyword">const</span> ;
-<a name="l00118"></a>00118     <span class="keywordtype">int</span> <a class="code" href="class_graphe.html#a48e32c28c0845c0e112a3a3ae7bdb882">ordreSortieSommet</a>(<span class="keywordtype">int</span> numero) <span class="keyword">const</span> ;
-<a name="l00119"></a>00119     <span class="keywordtype">int</span> <a class="code" href="class_graphe.html#a1123929cab8c05d7fc3f7a4317e88edb">ordreEntreeSommet</a>(<span class="keywordtype">int</span> numero) <span class="keyword">const</span> ;
-<a name="l00120"></a>00120     std::vector&lt;int&gt; <a class="code" href="class_graphe.html#a73fe579de3baea2990bbefb2b0daf0c9">listerSommetsAdjacents</a>(<span class="keywordtype">int</span> numeroSommetsAdjacents) <span class="keyword">const</span> ;
+<a name="l00116"></a>00116     <span class="keywordtype">bool</span> <a class="code" href="class_graphe.html#af9a087a2a780133f651af51fb25de677" title="Retourne l&#39;existence d&#39;un sommet.">sommetExiste</a>(<span class="keywordtype">int</span> numero) <span class="keyword">const</span>;
+<a name="l00117"></a>00117     Objet <a class="code" href="class_graphe.html#af6efac3e9c660c4aacfa05c6bcba7ddf" title="Retourne l&#39;étiquette d&#39;un sommet.">getEtiquetteSommet</a>(<span class="keywordtype">int</span> numero) <span class="keyword">const</span> ;
+<a name="l00118"></a>00118     <span class="keywordtype">int</span> <a class="code" href="class_graphe.html#a48e32c28c0845c0e112a3a3ae7bdb882" title="Le sommet n&#39;existe pas.">ordreSortieSommet</a>(<span class="keywordtype">int</span> numero) <span class="keyword">const</span> ;
+<a name="l00119"></a>00119     <span class="keywordtype">int</span> <a class="code" href="class_graphe.html#a1123929cab8c05d7fc3f7a4317e88edb" title="Retourne l&#39;ordre d&#39;entrée d&#39;un sommet.">ordreEntreeSommet</a>(<span class="keywordtype">int</span> numero) <span class="keyword">const</span> ;
+<a name="l00120"></a>00120     std::vector&lt;int&gt; <a class="code" href="class_graphe.html#a73fe579de3baea2990bbefb2b0daf0c9" title="Retourne la liste des numéros des sommets adjacents au sommet passé en argument dans un vecteur d&#39;ent...">listerSommetsAdjacents</a>(<span class="keywordtype">int</span> numeroSommetsAdjacents) <span class="keyword">const</span> ;
 <a name="l00121"></a>00121 
 <a name="l00122"></a>00122     <span class="comment">// ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯</span>
 <a name="l00123"></a>00123     <span class="comment">//  Données à propos des arcs</span>
 <a name="l00124"></a>00124     <span class="comment">// _________________________________________________________________________________________________</span>
 <a name="l00125"></a>00125 
-<a name="l00126"></a>00126     <span class="keywordtype">bool</span> <a class="code" href="class_graphe.html#a866fbd9e68914829c900b2f3a2ef3565">arcExiste</a>(<span class="keywordtype">int</span> numOrigine, <span class="keywordtype">int</span> numDestination) <span class="keyword">const</span>;
-<a name="l00127"></a>00127     <span class="keywordtype">int</span> <a class="code" href="class_graphe.html#a5178a5335a20e3a549af0b69c9c83782">getCoutArc</a>(<span class="keywordtype">int</span> numOrigine, <span class="keywordtype">int</span> numDestination) <span class="keyword">const</span>;
+<a name="l00126"></a>00126     <span class="keywordtype">bool</span> <a class="code" href="class_graphe.html#a866fbd9e68914829c900b2f3a2ef3565" title="Retourne l&#39;existence d&#39;un arc.">arcExiste</a>(<span class="keywordtype">int</span> numOrigine, <span class="keywordtype">int</span> numDestination) <span class="keyword">const</span>;
+<a name="l00127"></a>00127     <span class="keywordtype">int</span> <a class="code" href="class_graphe.html#a5178a5335a20e3a549af0b69c9c83782" title="Retourne le coût d&#39;un arc passé en argument.">getCoutArc</a>(<span class="keywordtype">int</span> numOrigine, <span class="keywordtype">int</span> numDestination) <span class="keyword">const</span>;
 <a name="l00128"></a>00128 
 <a name="l00129"></a>00129     <span class="comment">// ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯</span>
 <a name="l00130"></a>00130     <span class="comment">//  Surcharge d&#39;opérateurs</span>
 <a name="l00131"></a>00131     <span class="comment">// _________________________________________________________________________________________________</span>
 <a name="l00132"></a>00132 
-<a name="l00133"></a>00133     <span class="keyword">const</span> <a class="code" href="class_graphe.html" title="Classe représentant un graphe orienté, coloré dont les étiquettes sont des comparables.">Graphe</a>&amp; <a class="code" href="class_graphe.html#aff62a5ca152f992f32671db122d47455">operator =</a>(<span class="keyword">const</span> <a class="code" href="class_graphe.html" title="Classe représentant un graphe orienté, coloré dont les étiquettes sont des comparables.">Graphe</a>&amp; source);
+<a name="l00133"></a>00133     <span class="keyword">const</span> <a class="code" href="class_graphe.html" title="Classe représentant un graphe orienté, coloré dont les étiquettes sont des comparables.">Graphe</a>&amp; <a class="code" href="class_graphe.html#aff62a5ca152f992f32671db122d47455" title="Surcharge de l&#39;opérateur d&#39;affectation.">operator =</a>(<span class="keyword">const</span> <a class="code" href="class_graphe.html" title="Classe représentant un graphe orienté, coloré dont les étiquettes sont des comparables.">Graphe</a>&amp; source);
 <a name="l00134"></a>00134     <span class="keyword">template</span>&lt;<span class="keyword">class</span> U&gt; <span class="keyword">friend</span> std::ostream&amp; <a class="code" href="class_graphe.html#a418117b04914b57a9a0f6202b519ceee">operator &lt;&lt;</a>(std::ostream&amp; out,
 <a name="l00135"></a>00135             <span class="keyword">const</span> <a class="code" href="class_graphe.html" title="Classe représentant un graphe orienté, coloré dont les étiquettes sont des comparables.">Graphe&lt;U&gt;</a>&amp; g);
 <a name="l00136"></a>00136 
@@ -178,15 +178,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00139"></a>00139     <span class="comment">// _________________________________________________________________________________________________</span>
 <a name="l00140"></a>00140 
 <a name="l00141"></a>00141 
-<a name="l00142"></a>00142     <a class="code" href="class_graphe.html" title="Classe représentant un graphe orienté, coloré dont les étiquettes sont des comparables.">Graphe</a> <a class="code" href="class_graphe.html#aa6fafc310fd5a096f75d018c7404f9ed">fermetureGraphe</a>() <span class="keyword">const</span> ;
-<a name="l00143"></a>00143     <span class="keywordtype">bool</span> <a class="code" href="class_graphe.html#abdc4f27fc9498cc3814d03a97c87b7e7">estFortementConnexe</a>() <span class="keyword">const</span>;
-<a name="l00144"></a>00144     <span class="keywordtype">void</span> <a class="code" href="class_graphe.html#ad63af90bd6395092dfe311a36f15833c">getComposantesFortementConnexes</a>(
+<a name="l00142"></a>00142     <a class="code" href="class_graphe.html" title="Classe représentant un graphe orienté, coloré dont les étiquettes sont des comparables.">Graphe</a> <a class="code" href="class_graphe.html#aa6fafc310fd5a096f75d018c7404f9ed" title="Déterminer la fermeture transitive du graphe.">fermetureGraphe</a>() <span class="keyword">const</span> ;
+<a name="l00143"></a>00143     <span class="keywordtype">bool</span> <a class="code" href="class_graphe.html#abdc4f27fc9498cc3814d03a97c87b7e7" title="Détermine si le graphe est fortement connexe ou non.">estFortementConnexe</a>() <span class="keyword">const</span>;
+<a name="l00144"></a>00144     <span class="keywordtype">void</span> <a class="code" href="class_graphe.html#ad63af90bd6395092dfe311a36f15833c" title="Détermine les composantes fortement connexes et les mémorise dans un conteneur passé en paramètre...">getComposantesFortementConnexes</a>(
 <a name="l00145"></a>00145             std::vector&lt;std::vector&lt;Objet&gt; &gt; &amp; composantes) <span class="keyword">const</span>;
-<a name="l00146"></a>00146     <span class="keywordtype">int</span> <a class="code" href="class_graphe.html#a077802b65dad92e0d7e593abbca17478">bellmanFord</a>(<span class="keyword">const</span> Objet&amp; eOrigine, <span class="keyword">const</span> Objet&amp; eDestination,
+<a name="l00146"></a>00146     <span class="keywordtype">int</span> <a class="code" href="class_graphe.html#a077802b65dad92e0d7e593abbca17478" title="Trouve le plus court chemin entre deux points en utilisant l&#39;algorithme de Bellman-Ford et le retourn...">bellmanFord</a>(<span class="keyword">const</span> Objet&amp; eOrigine, <span class="keyword">const</span> Objet&amp; eDestination,
 <a name="l00147"></a>00147             std::vector&lt;Objet&gt; &amp; chemin);
-<a name="l00148"></a>00148     <span class="keywordtype">int</span> <a class="code" href="class_graphe.html#a46ea944cd82af0d14b67ed66ac57261f">dijkstra</a>(<span class="keyword">const</span> Objet&amp; eOrigine, <span class="keyword">const</span> Objet&amp; eDestination,
+<a name="l00148"></a>00148     <span class="keywordtype">int</span> <a class="code" href="class_graphe.html#a46ea944cd82af0d14b67ed66ac57261f" title="Trouve le plus court chemin entre deux points en utilisant l&#39;algorithme de Dijkstra et le retourne...">dijkstra</a>(<span class="keyword">const</span> Objet&amp; eOrigine, <span class="keyword">const</span> Objet&amp; eDestination,
 <a name="l00149"></a>00149             std::vector&lt;Objet&gt; &amp; chemin);
-<a name="l00150"></a>00150     <span class="keywordtype">void</span> <a class="code" href="class_graphe.html#acf31ba4346b58850d69ba22ee75bdf48">getPointsArticulation</a>(std::vector&lt;Objet&gt; &amp; sommets);
+<a name="l00150"></a>00150     <span class="keywordtype">void</span> <a class="code" href="class_graphe.html#acf31ba4346b58850d69ba22ee75bdf48" title="Trouve les points d&#39;articulation du graphe et les retourne.">getPointsArticulation</a>(std::vector&lt;Objet&gt; &amp; sommets);
 <a name="l00151"></a>00151 
 <a name="l00152"></a>00152 <span class="keyword">private</span>:
 <a name="l00153"></a>00153 
@@ -200,7 +200,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00162"></a>00162     <span class="comment">//  Méthodes auxiliaires (getters)</span>
 <a name="l00163"></a>00163     <span class="comment">// _________________________________________________________________________________________________</span>
 <a name="l00164"></a>00164 
-<a name="l00165"></a>00165     Sommet *<a class="code" href="class_graphe.html#ac798e3b65595635aaf3e2f83e9a4c58e">_getSommet</a>(<span class="keywordtype">int</span> numero) <span class="keyword">const</span>;
+<a name="l00165"></a>00165     Sommet *<a class="code" href="class_graphe.html#ac798e3b65595635aaf3e2f83e9a4c58e" title="Trouve l&#39;adresse d&#39;un sommet à partir de son numéro.">_getSommet</a>(<span class="keywordtype">int</span> numero) <span class="keyword">const</span>;
 <a name="l00166"></a>00166     Arc * <a class="code" href="class_graphe.html#a5d918be3eb2738ce483dd804d0b8187d">_getArc</a>(Sommet * sommet1, Sommet * sommet2) <span class="keyword">const</span>;
 <a name="l00167"></a>00167     Arc * <a class="code" href="class_graphe.html#a5d918be3eb2738ce483dd804d0b8187d">_getArc</a>(<span class="keywordtype">int</span> numOrigine, <span class="keywordtype">int</span> numDestination) <span class="keyword">const</span>;
 <a name="l00168"></a>00168 
@@ -209,7 +209,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00171"></a>00171     <span class="comment">// _________________________________________________________________________________________________</span>
 <a name="l00172"></a>00172 
 <a name="l00173"></a>00173     <span class="keywordtype">void</span> <a class="code" href="class_graphe.html#a8405369dbe4854dd624e140539717fab">_detruireGraphe</a>();
-<a name="l00174"></a>00174     <span class="keywordtype">void</span> <a class="code" href="class_graphe.html#a1b8cfc5964a91ed326b4db134471d6e0">_copierGraphe</a>(<span class="keyword">const</span> <a class="code" href="class_graphe.html" title="Classe représentant un graphe orienté, coloré dont les étiquettes sont des comparables.">Graphe</a> &amp;source);
+<a name="l00174"></a>00174     <span class="keywordtype">void</span> <a class="code" href="class_graphe.html#a1b8cfc5964a91ed326b4db134471d6e0" title="Copie d&#39;un graphe.">_copierGraphe</a>(<span class="keyword">const</span> <a class="code" href="class_graphe.html" title="Classe représentant un graphe orienté, coloré dont les étiquettes sont des comparables.">Graphe</a> &amp;source);
 <a name="l00175"></a>00175     <span class="keywordtype">void</span> <a class="code" href="class_graphe.html#a2c22cb6d5282d83c940872ec52327d5e">_enleverSommet</a>(Sommet * sommetAEnlever);
 <a name="l00176"></a>00176 
 <a name="l00177"></a>00177     <span class="comment">// ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯</span>
@@ -240,7 +240,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Thu Nov 7 2013 15:19:26 by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Nov 7 2013 16:32:26 by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>
