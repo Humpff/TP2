@@ -74,6 +74,16 @@ namespace tp2
     //	cout << m_graphe;
   }
 
+  Couverture::Couverture()
+  {}
+
+  Couverture& Couverture::operator=(Couverture const& p_couverture)
+  {
+    m_graphe = p_couverture.reqGraphe();
+
+    return *this;
+  }
+
   //! \brief		Affiche une liste de villes de la couverture à l'écran.
   //! \param[in]	p_vVilles		Une liste de villes dans un vector.
   //! \post		Le contenu de la liste p_vVilles est affiché.
@@ -182,5 +192,13 @@ namespace tp2
       {
 	throw;
       }
+  }
+
+  //! \brief		Le getter du graphe des villes.
+  //! \post		L'instance courante n'est pas modifiée.
+  //! \return		Le graphe des villes faisant partie de la couverture.
+  Graphe<Ville> const& Couverture::reqGraphe() const
+  {
+    return m_graphe;
   }
 }//namespace tp2

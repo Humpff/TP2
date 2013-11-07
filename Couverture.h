@@ -21,6 +21,10 @@ public:
 	// _______________________________________________________
 	Couverture(std::ifstream & p_fichierEntree);
 
+	// Necessaires pour le google test
+	Couverture();
+	Couverture& operator=(Couverture const& p_couverture);
+
 	// ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
 	//	Affichage
 	// _______________________________________________________
@@ -40,6 +44,11 @@ public:
 			const Ville & p_destination, int & p_duree);
 	std::vector<Ville> bellManFord(const Ville & p_origine,
 			const Ville & p_destination, int & p_duree);
+
+	// ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+	//	Getter
+	// _______________________________________________________
+	Graphe<Ville> const& reqGraphe() const;
 
 private:
 	Graphe<Ville> m_graphe; //< Le graphe de la couverture
