@@ -1,0 +1,263 @@
+\hypertarget{class_graphe_1_1_sommet}{
+\section{Graphe$<$ Objet $>$::Sommet Class Reference}
+\label{class_graphe_1_1_sommet}\index{Graphe::Sommet@{Graphe::Sommet}}
+}
+
+
+Classe représentant un sommet dans un graphe.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_graphe_1_1_sommet_a25fad13c1d9ca98b4ae6a320760f0f0a}{Sommet} (int numero, const Objet \&Etiquette)
+\begin{DoxyCompactList}\small\item\em Constructeur avec paramètres. \end{DoxyCompactList}\item 
+\hyperlink{class_graphe_1_1_sommet_adc557f556a6736bac7ea3de0198b093c}{Sommet} (\hyperlink{class_graphe_1_1_sommet}{Sommet} $\ast$source)
+\begin{DoxyCompactList}\small\item\em Constructeur par copie. \end{DoxyCompactList}\item 
+\hyperlink{class_graphe_1_1_sommet_a20f8a30b1f54aa5ccde192da6baa2668}{$\sim$Sommet} ()
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_graphe_1_1_sommet_a02b6810e0eb22f2d412c60dba9e01f4d}{m\_\-numero}
+\begin{DoxyCompactList}\small\item\em Le numéro du sommet. \end{DoxyCompactList}\item 
+Objet \hyperlink{class_graphe_1_1_sommet_a02d396509bdc1e8bff8e26504835d13e}{m\_\-etiquette}
+\item 
+\hyperlink{class_graphe_1_1_arc}{Arc} $\ast$ \hyperlink{class_graphe_1_1_sommet_ab172987c3dac44234c56949387a0a2d4}{m\_\-listeDest}
+\begin{DoxyCompactList}\small\item\em La liste des arcs entre le sommet et les sommets qui lui sont adjacents. \end{DoxyCompactList}\item 
+bool \hyperlink{class_graphe_1_1_sommet_a8c825d391f276d2b862ec21bc3b28a37}{m\_\-etat}
+\begin{DoxyCompactList}\small\item\em Pour marquer un routeur. \end{DoxyCompactList}\item 
+\hyperlink{class_graphe_1_1_sommet}{Sommet} $\ast$ \hyperlink{class_graphe_1_1_sommet_ad7ba92f37fbdc082f0582e8d9e6783d5}{m\_\-predecesseur}
+\begin{DoxyCompactList}\small\item\em Pour Dijkstra et Bellman-\/Ford. \end{DoxyCompactList}\item 
+int \hyperlink{class_graphe_1_1_sommet_a66336413f22107bc96c1c9d95d4d3b0a}{m\_\-cout}
+\begin{DoxyCompactList}\small\item\em Pour Dijkstra et Bellman-\/Ford. \end{DoxyCompactList}\item 
+\hyperlink{class_graphe_1_1_sommet}{Sommet} $\ast$ \hyperlink{class_graphe_1_1_sommet_ab2a172434d603dd488664049764f8ddc}{m\_\-precedent}
+\begin{DoxyCompactList}\small\item\em le sommet précédent dans la liste des sommets \end{DoxyCompactList}\item 
+\hyperlink{class_graphe_1_1_sommet}{Sommet} $\ast$ \hyperlink{class_graphe_1_1_sommet_a2c2fae1f10bccddf92cb95a3b6ecbb36}{m\_\-suivant}
+\begin{DoxyCompactList}\small\item\em Le prochain sommet dans la liste. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Objet$>$class Graphe$<$ Objet $>$::Sommet}
+
+Classe représentant un sommet dans un graphe. 
+
+Definition at line 32 of file Graphe.h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_graphe_1_1_sommet_a25fad13c1d9ca98b4ae6a320760f0f0a}{
+\index{Graphe::Sommet@{Graphe::Sommet}!Sommet@{Sommet}}
+\index{Sommet@{Sommet}!Graphe::Sommet@{Graphe::Sommet}}
+\subsubsection[{Sommet}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet$>$ {\bf Graphe}$<$ Objet $>$::Sommet::Sommet (
+\begin{DoxyParamCaption}
+\item[{int}]{numero, }
+\item[{const Objet \&}]{Etiquette}
+\end{DoxyParamCaption}
+)}}
+\label{class_graphe_1_1_sommet_a25fad13c1d9ca98b4ae6a320760f0f0a}
+
+
+Constructeur avec paramètres. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Etiquette} & Les donnees d'un sommet \\
+\hline
+\mbox{\tt in}  & {\em numero} & Le numero du sommet \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Le sommet est initialise avec les parametres 
+\end{DoxyPostcond}
+
+
+Definition at line 54 of file Graphe.hpp.
+
+\hypertarget{class_graphe_1_1_sommet_adc557f556a6736bac7ea3de0198b093c}{
+\index{Graphe::Sommet@{Graphe::Sommet}!Sommet@{Sommet}}
+\index{Sommet@{Sommet}!Graphe::Sommet@{Graphe::Sommet}}
+\subsubsection[{Sommet}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet$>$ {\bf Graphe}$<$ Objet $>$::Sommet::Sommet (
+\begin{DoxyParamCaption}
+\item[{{\bf Sommet} $\ast$}]{source}
+\end{DoxyParamCaption}
+)}}
+\label{class_graphe_1_1_sommet_adc557f556a6736bac7ea3de0198b093c}
+
+
+Constructeur par copie. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em source} & Le sommet à copier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Copie profonde du sommet source 
+\end{DoxyPostcond}
+
+
+Definition at line 68 of file Graphe.hpp.
+
+
+
+References Graphe$<$ Objet $>$::Sommet::m\_\-cout, Graphe$<$ Objet $>$::Sommet::m\_\-etat, Graphe$<$ Objet $>$::Sommet::m\_\-etiquette, Graphe$<$ Objet $>$::Sommet::m\_\-listeDest, Graphe$<$ Objet $>$::Sommet::m\_\-numero, Graphe$<$ Objet $>$::Sommet::m\_\-precedent, Graphe$<$ Objet $>$::Sommet::m\_\-predecesseur, and Graphe$<$ Objet $>$::Sommet::m\_\-suivant.
+
+\hypertarget{class_graphe_1_1_sommet_a20f8a30b1f54aa5ccde192da6baa2668}{
+\index{Graphe::Sommet@{Graphe::Sommet}!$\sim$Sommet@{$\sim$Sommet}}
+\index{$\sim$Sommet@{$\sim$Sommet}!Graphe::Sommet@{Graphe::Sommet}}
+\subsubsection[{$\sim$Sommet}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet$>$ {\bf Graphe}$<$ Objet $>$::Sommet::$\sim$Sommet (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_graphe_1_1_sommet_a20f8a30b1f54aa5ccde192da6baa2668}
+
+
+Destructeur. 
+
+\begin{DoxyPostcond}{Postcondition}
+Le sommet est detruit 
+\end{DoxyPostcond}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_graphe_1_1_sommet_a66336413f22107bc96c1c9d95d4d3b0a}{
+\index{Graphe::Sommet@{Graphe::Sommet}!m\_\-cout@{m\_\-cout}}
+\index{m\_\-cout@{m\_\-cout}!Graphe::Sommet@{Graphe::Sommet}}
+\subsubsection[{m\_\-cout}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet$>$ int {\bf Graphe}$<$ Objet $>$::{\bf Sommet::m\_\-cout}}}
+\label{class_graphe_1_1_sommet_a66336413f22107bc96c1c9d95d4d3b0a}
+
+
+Pour Dijkstra et Bellman-\/Ford. 
+
+
+
+Definition at line 55 of file Graphe.h.
+
+
+
+Referenced by Graphe$<$ Objet $>$::bellmanFord(), Graphe$<$ Objet $>$::dijkstra(), and Graphe$<$ Objet $>$::Sommet::Sommet().
+
+\hypertarget{class_graphe_1_1_sommet_a8c825d391f276d2b862ec21bc3b28a37}{
+\index{Graphe::Sommet@{Graphe::Sommet}!m\_\-etat@{m\_\-etat}}
+\index{m\_\-etat@{m\_\-etat}!Graphe::Sommet@{Graphe::Sommet}}
+\subsubsection[{m\_\-etat}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet$>$ bool {\bf Graphe}$<$ Objet $>$::{\bf Sommet::m\_\-etat}}}
+\label{class_graphe_1_1_sommet_a8c825d391f276d2b862ec21bc3b28a37}
+
+
+Pour marquer un routeur. 
+
+
+
+Definition at line 53 of file Graphe.h.
+
+
+
+Referenced by Graphe$<$ Objet $>$::dijkstra(), and Graphe$<$ Objet $>$::Sommet::Sommet().
+
+\hypertarget{class_graphe_1_1_sommet_a02d396509bdc1e8bff8e26504835d13e}{
+\index{Graphe::Sommet@{Graphe::Sommet}!m\_\-etiquette@{m\_\-etiquette}}
+\index{m\_\-etiquette@{m\_\-etiquette}!Graphe::Sommet@{Graphe::Sommet}}
+\subsubsection[{m\_\-etiquette}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet$>$ Objet {\bf Graphe}$<$ Objet $>$::{\bf Sommet::m\_\-etiquette}}}
+\label{class_graphe_1_1_sommet_a02d396509bdc1e8bff8e26504835d13e}
+
+
+Definition at line 49 of file Graphe.h.
+
+
+
+Referenced by Graphe$<$ Objet $>$::\_\-copierGraphe(), Graphe$<$ Objet $>$::bellmanFord(), Graphe$<$ Objet $>$::dijkstra(), Graphe$<$ Objet $>$::fermetureGraphe(), Graphe$<$ Objet $>$::getComposantesFortementConnexes(), Graphe$<$ Objet $>$::getNumeroSommet(), Graphe$<$ Objet $>$::getPointsArticulation(), Graphe$<$ Objet $>$::listerEtiquetteSommets(), operator$<$$<$(), and Graphe$<$ Objet $>$::Sommet::Sommet().
+
+\hypertarget{class_graphe_1_1_sommet_ab172987c3dac44234c56949387a0a2d4}{
+\index{Graphe::Sommet@{Graphe::Sommet}!m\_\-listeDest@{m\_\-listeDest}}
+\index{m\_\-listeDest@{m\_\-listeDest}!Graphe::Sommet@{Graphe::Sommet}}
+\subsubsection[{m\_\-listeDest}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet$>$ {\bf Arc}$\ast$ {\bf Graphe}$<$ Objet $>$::{\bf Sommet::m\_\-listeDest}}}
+\label{class_graphe_1_1_sommet_ab172987c3dac44234c56949387a0a2d4}
+
+
+La liste des arcs entre le sommet et les sommets qui lui sont adjacents. 
+
+
+
+Definition at line 51 of file Graphe.h.
+
+
+
+Referenced by Graphe$<$ Objet $>$::\_\-copierGraphe(), Graphe$<$ Objet $>$::\_\-getArc(), Graphe$<$ Objet $>$::ajouterArc(), Graphe$<$ Objet $>$::bellmanFord(), Graphe$<$ Objet $>$::enleverArc(), Graphe$<$ Objet $>$::enleverSommet(), Graphe$<$ Objet $>$::getComposantesFortementConnexes(), Graphe$<$ Objet $>$::listerSommetsAdjacents(), operator$<$$<$(), and Graphe$<$ Objet $>$::Sommet::Sommet().
+
+\hypertarget{class_graphe_1_1_sommet_a02b6810e0eb22f2d412c60dba9e01f4d}{
+\index{Graphe::Sommet@{Graphe::Sommet}!m\_\-numero@{m\_\-numero}}
+\index{m\_\-numero@{m\_\-numero}!Graphe::Sommet@{Graphe::Sommet}}
+\subsubsection[{m\_\-numero}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet$>$ int {\bf Graphe}$<$ Objet $>$::{\bf Sommet::m\_\-numero}}}
+\label{class_graphe_1_1_sommet_a02b6810e0eb22f2d412c60dba9e01f4d}
+
+
+Le numéro du sommet. 
+
+
+
+Definition at line 48 of file Graphe.h.
+
+
+
+Referenced by Graphe$<$ Objet $>$::\_\-copierGraphe(), Graphe$<$ Objet $>$::\_\-getArc(), Graphe$<$ Objet $>$::\_\-getSommet(), Graphe$<$ Objet $>$::\_\-isArticulation(), Graphe$<$ Objet $>$::ajouterSommet(), Graphe$<$ Objet $>$::enleverArc(), Graphe$<$ Objet $>$::enleverSommet(), Graphe$<$ Objet $>$::fermetureGraphe(), Graphe$<$ Objet $>$::getComposantesFortementConnexes(), Graphe$<$ Objet $>$::getNumeroSommet(), Graphe$<$ Objet $>$::listerSommets(), operator$<$$<$(), and Graphe$<$ Objet $>$::Sommet::Sommet().
+
+\hypertarget{class_graphe_1_1_sommet_ab2a172434d603dd488664049764f8ddc}{
+\index{Graphe::Sommet@{Graphe::Sommet}!m\_\-precedent@{m\_\-precedent}}
+\index{m\_\-precedent@{m\_\-precedent}!Graphe::Sommet@{Graphe::Sommet}}
+\subsubsection[{m\_\-precedent}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet$>$ {\bf Sommet}$\ast$ {\bf Graphe}$<$ Objet $>$::{\bf Sommet::m\_\-precedent}}}
+\label{class_graphe_1_1_sommet_ab2a172434d603dd488664049764f8ddc}
+
+
+le sommet précédent dans la liste des sommets 
+
+
+
+Definition at line 57 of file Graphe.h.
+
+
+
+Referenced by Graphe$<$ Objet $>$::ajouterSommet(), Graphe$<$ Objet $>$::enleverSommet(), and Graphe$<$ Objet $>$::Sommet::Sommet().
+
+\hypertarget{class_graphe_1_1_sommet_ad7ba92f37fbdc082f0582e8d9e6783d5}{
+\index{Graphe::Sommet@{Graphe::Sommet}!m\_\-predecesseur@{m\_\-predecesseur}}
+\index{m\_\-predecesseur@{m\_\-predecesseur}!Graphe::Sommet@{Graphe::Sommet}}
+\subsubsection[{m\_\-predecesseur}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet$>$ {\bf Sommet}$\ast$ {\bf Graphe}$<$ Objet $>$::{\bf Sommet::m\_\-predecesseur}}}
+\label{class_graphe_1_1_sommet_ad7ba92f37fbdc082f0582e8d9e6783d5}
+
+
+Pour Dijkstra et Bellman-\/Ford. 
+
+
+
+Definition at line 54 of file Graphe.h.
+
+
+
+Referenced by Graphe$<$ Objet $>$::bellmanFord(), Graphe$<$ Objet $>$::dijkstra(), and Graphe$<$ Objet $>$::Sommet::Sommet().
+
+\hypertarget{class_graphe_1_1_sommet_a2c2fae1f10bccddf92cb95a3b6ecbb36}{
+\index{Graphe::Sommet@{Graphe::Sommet}!m\_\-suivant@{m\_\-suivant}}
+\index{m\_\-suivant@{m\_\-suivant}!Graphe::Sommet@{Graphe::Sommet}}
+\subsubsection[{m\_\-suivant}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet$>$ {\bf Sommet}$\ast$ {\bf Graphe}$<$ Objet $>$::{\bf Sommet::m\_\-suivant}}}
+\label{class_graphe_1_1_sommet_a2c2fae1f10bccddf92cb95a3b6ecbb36}
+
+
+Le prochain sommet dans la liste. 
+
+
+
+Definition at line 58 of file Graphe.h.
+
+
+
+Referenced by Graphe$<$ Objet $>$::\_\-copierGraphe(), Graphe$<$ Objet $>$::\_\-getSommet(), Graphe$<$ Objet $>$::ajouterSommet(), Graphe$<$ Objet $>$::bellmanFord(), Graphe$<$ Objet $>$::dijkstra(), Graphe$<$ Objet $>$::enleverSommet(), Graphe$<$ Objet $>$::fermetureGraphe(), Graphe$<$ Objet $>$::getComposantesFortementConnexes(), Graphe$<$ Objet $>$::getNumeroSommet(), Graphe$<$ Objet $>$::getPointsArticulation(), Graphe$<$ Objet $>$::listerEtiquetteSommets(), Graphe$<$ Objet $>$::listerSommets(), operator$<$$<$(), and Graphe$<$ Objet $>$::Sommet::Sommet().
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_graphe_8h}{Graphe.h}\item 
+\hyperlink{_graphe_8hpp}{Graphe.hpp}\end{DoxyCompactItemize}

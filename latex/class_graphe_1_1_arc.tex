@@ -1,0 +1,120 @@
+\hypertarget{class_graphe_1_1_arc}{
+\section{Graphe$<$ Objet $>$::Arc Class Reference}
+\label{class_graphe_1_1_arc}\index{Graphe::Arc@{Graphe::Arc}}
+}
+
+
+Classe interne représentant un arc entre deux sommets dans le graphe.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_graphe_1_1_arc_a3b485959423829dcc2ba7f5c1092a456}{Arc} (\hyperlink{class_graphe_1_1_sommet}{Sommet} $\ast$dest, int cout)
+\item 
+\hyperlink{class_graphe_1_1_arc_a775ea7fc101c2f8a45419f5a3be58166}{$\sim$Arc} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_graphe_1_1_sommet}{Sommet} $\ast$ \hyperlink{class_graphe_1_1_arc_a9d1f11eb639df5e712b859b95d8c6d15}{m\_\-dest}
+\begin{DoxyCompactList}\small\item\em Un pointeur sur le sommet de destination. \end{DoxyCompactList}\item 
+int \hyperlink{class_graphe_1_1_arc_a7db3231570655fd43acc6be1a228b74c}{m\_\-cout}
+\begin{DoxyCompactList}\small\item\em Le coût entre les deux sommets reliés par l'arc. \end{DoxyCompactList}\item 
+\hyperlink{class_graphe_1_1_arc}{Arc} $\ast$ \hyperlink{class_graphe_1_1_arc_a48a25d83dfc9f2230050c40939a1cbe9}{m\_\-suivDest}
+\begin{DoxyCompactList}\small\item\em Le prochain sommet de destination. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Objet$>$class Graphe$<$ Objet $>$::Arc}
+
+Classe interne représentant un arc entre deux sommets dans le graphe. 
+
+Definition at line 63 of file Graphe.h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_graphe_1_1_arc_a3b485959423829dcc2ba7f5c1092a456}{
+\index{Graphe::Arc@{Graphe::Arc}!Arc@{Arc}}
+\index{Arc@{Arc}!Graphe::Arc@{Graphe::Arc}}
+\subsubsection[{Arc}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet $>$ {\bf Graphe}$<$ Objet $>$::Arc::Arc (
+\begin{DoxyParamCaption}
+\item[{{\bf Sommet} $\ast$}]{dest, }
+\item[{int}]{cout}
+\end{DoxyParamCaption}
+)}}
+\label{class_graphe_1_1_arc_a3b485959423829dcc2ba7f5c1092a456}
+
+
+Definition at line 81 of file Graphe.hpp.
+
+\hypertarget{class_graphe_1_1_arc_a775ea7fc101c2f8a45419f5a3be58166}{
+\index{Graphe::Arc@{Graphe::Arc}!$\sim$Arc@{$\sim$Arc}}
+\index{$\sim$Arc@{$\sim$Arc}!Graphe::Arc@{Graphe::Arc}}
+\subsubsection[{$\sim$Arc}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet$>$ {\bf Graphe}$<$ Objet $>$::Arc::$\sim$Arc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_graphe_1_1_arc_a775ea7fc101c2f8a45419f5a3be58166}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_graphe_1_1_arc_a7db3231570655fd43acc6be1a228b74c}{
+\index{Graphe::Arc@{Graphe::Arc}!m\_\-cout@{m\_\-cout}}
+\index{m\_\-cout@{m\_\-cout}!Graphe::Arc@{Graphe::Arc}}
+\subsubsection[{m\_\-cout}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet$>$ int {\bf Graphe}$<$ Objet $>$::{\bf Arc::m\_\-cout}}}
+\label{class_graphe_1_1_arc_a7db3231570655fd43acc6be1a228b74c}
+
+
+Le coût entre les deux sommets reliés par l'arc. 
+
+
+
+Definition at line 71 of file Graphe.h.
+
+
+
+Referenced by Graphe$<$ Objet $>$::\_\-copierGraphe(), Graphe$<$ Objet $>$::bellmanFord(), Graphe$<$ Objet $>$::dijkstra(), and operator$<$$<$().
+
+\hypertarget{class_graphe_1_1_arc_a9d1f11eb639df5e712b859b95d8c6d15}{
+\index{Graphe::Arc@{Graphe::Arc}!m\_\-dest@{m\_\-dest}}
+\index{m\_\-dest@{m\_\-dest}!Graphe::Arc@{Graphe::Arc}}
+\subsubsection[{m\_\-dest}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet$>$ {\bf Sommet}$\ast$ {\bf Graphe}$<$ Objet $>$::{\bf Arc::m\_\-dest}}}
+\label{class_graphe_1_1_arc_a9d1f11eb639df5e712b859b95d8c6d15}
+
+
+Un pointeur sur le sommet de destination. 
+
+
+
+Definition at line 70 of file Graphe.h.
+
+
+
+Referenced by Graphe$<$ Objet $>$::\_\-copierGraphe(), Graphe$<$ Objet $>$::\_\-getArc(), Graphe$<$ Objet $>$::bellmanFord(), Graphe$<$ Objet $>$::dijkstra(), Graphe$<$ Objet $>$::enleverArc(), Graphe$<$ Objet $>$::enleverSommet(), Graphe$<$ Objet $>$::getComposantesFortementConnexes(), Graphe$<$ Objet $>$::listerSommetsAdjacents(), and operator$<$$<$().
+
+\hypertarget{class_graphe_1_1_arc_a48a25d83dfc9f2230050c40939a1cbe9}{
+\index{Graphe::Arc@{Graphe::Arc}!m\_\-suivDest@{m\_\-suivDest}}
+\index{m\_\-suivDest@{m\_\-suivDest}!Graphe::Arc@{Graphe::Arc}}
+\subsubsection[{m\_\-suivDest}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet$>$ {\bf Arc}$\ast$ {\bf Graphe}$<$ Objet $>$::{\bf Arc::m\_\-suivDest}}}
+\label{class_graphe_1_1_arc_a48a25d83dfc9f2230050c40939a1cbe9}
+
+
+Le prochain sommet de destination. 
+
+
+
+Definition at line 72 of file Graphe.h.
+
+
+
+Referenced by Graphe$<$ Objet $>$::\_\-copierGraphe(), Graphe$<$ Objet $>$::\_\-getArc(), Graphe$<$ Objet $>$::ajouterArc(), Graphe$<$ Objet $>$::bellmanFord(), Graphe$<$ Objet $>$::dijkstra(), Graphe$<$ Objet $>$::enleverArc(), Graphe$<$ Objet $>$::enleverSommet(), Graphe$<$ Objet $>$::getComposantesFortementConnexes(), Graphe$<$ Objet $>$::listerSommetsAdjacents(), and operator$<$$<$().
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_graphe_8h}{Graphe.h}\item 
+\hyperlink{_graphe_8hpp}{Graphe.hpp}\end{DoxyCompactItemize}

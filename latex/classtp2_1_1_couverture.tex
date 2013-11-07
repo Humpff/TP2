@@ -1,0 +1,378 @@
+\hypertarget{classtp2_1_1_couverture}{
+\section{tp2::Couverture Class Reference}
+\label{classtp2_1_1_couverture}\index{tp2::Couverture@{tp2::Couverture}}
+}
+
+
+{\ttfamily \#include $<$Couverture.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtp2_1_1_couverture_a09d50ea815624aca22ff92847c76318d}{Couverture} (std::ifstream \&p\_\-fichierEntree)
+\begin{DoxyCompactList}\small\item\em Constructeur à partir d'un fichier en entrée. \end{DoxyCompactList}\item 
+\hyperlink{classtp2_1_1_couverture_a282d4cb84b4447ad17a291f379e815f9}{Couverture} ()
+\item 
+\hyperlink{classtp2_1_1_couverture}{Couverture} \& \hyperlink{classtp2_1_1_couverture_a6c87e1b01b08a9ab2593ab5b08034a94}{operator=} (\hyperlink{classtp2_1_1_couverture}{Couverture} const \&p\_\-couverture)
+\item 
+void \hyperlink{classtp2_1_1_couverture_ad2404ee49646bff274f688da3e9432fd}{afficherVilles} (std::vector$<$ \hyperlink{classtp2_1_1_ville}{Ville} $>$ \&p\_\-vVilles)
+\begin{DoxyCompactList}\small\item\em Affiche une liste de villes de la couverture à l'écran. \end{DoxyCompactList}\item 
+void \hyperlink{classtp2_1_1_couverture_a35cd466b6de9645503f1f9990737fba8}{afficherVilles} ()
+\item 
+bool \hyperlink{classtp2_1_1_couverture_a5833a97dda1028931023acc524bb3a2d}{villesAccessibles} ()
+\begin{DoxyCompactList}\small\item\em Détermine si toutes les villes de la couverture sont accessibles à partir de n'importe où. \end{DoxyCompactList}\item 
+std::vector$<$ \hyperlink{classtp2_1_1_ville}{Ville} $>$ \hyperlink{classtp2_1_1_couverture_ab581fbf5e7bc482776425510704602da}{villesCritiques} ()
+\begin{DoxyCompactList}\small\item\em Trouve les points d'articulation de la couverture et les retourne. \end{DoxyCompactList}\item 
+std::vector$<$ \hyperlink{classtp2_1_1_ville}{Ville} $>$ \hyperlink{classtp2_1_1_couverture_ae02fdb4ef4c726327740e8343ba8b5fa}{determinerMinParcours} (const \hyperlink{classtp2_1_1_ville}{Ville} \&p\_\-origine, const \hyperlink{classtp2_1_1_ville}{Ville} \&p\_\-destination, int \&p\_\-duree)
+\begin{DoxyCompactList}\small\item\em Trouve le plus court chemin entre deux points en utilisant l'algorithme de Dijsktra et le retourne. \end{DoxyCompactList}\item 
+std::vector$<$ \hyperlink{classtp2_1_1_ville}{Ville} $>$ \hyperlink{classtp2_1_1_couverture_ad5d03d00aac730bc9694d7714189b47e}{bellManFord} (const \hyperlink{classtp2_1_1_ville}{Ville} \&p\_\-origine, const \hyperlink{classtp2_1_1_ville}{Ville} \&p\_\-destination, int \&p\_\-duree)
+\begin{DoxyCompactList}\small\item\em Trouve le plus court chemin entre deux points en utilisant l'algorithme de Bellman-\/Ford et le retourne. \end{DoxyCompactList}\item 
+\hyperlink{class_graphe}{Graphe}$<$ \hyperlink{classtp2_1_1_ville}{Ville} $>$ const \& \hyperlink{classtp2_1_1_couverture_adcfd305e117e692f5531e0a16028a5d9}{reqGraphe} () const 
+\begin{DoxyCompactList}\small\item\em Le getter du graphe des villes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_graphe}{Graphe}$<$ \hyperlink{classtp2_1_1_ville}{Ville} $>$ \hyperlink{classtp2_1_1_couverture_a6a620a08b2a810862999c0059c87408e}{m\_\-graphe}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 16 of file Couverture.h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classtp2_1_1_couverture_a09d50ea815624aca22ff92847c76318d}{
+\index{tp2::Couverture@{tp2::Couverture}!Couverture@{Couverture}}
+\index{Couverture@{Couverture}!tp2::Couverture@{tp2::Couverture}}
+\subsubsection[{Couverture}]{\setlength{\rightskip}{0pt plus 5cm}tp2::Couverture::Couverture (
+\begin{DoxyParamCaption}
+\item[{std::ifstream \&}]{p\_\-fichierEntree}
+\end{DoxyParamCaption}
+)}}
+\label{classtp2_1_1_couverture_a09d50ea815624aca22ff92847c76318d}
+
+
+Constructeur à partir d'un fichier en entrée. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\_\-fichierEntree} & pointeur sur le fichier contenant la liste des villes à charger ainsi que les liaisons. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+Il y a assez de mémoire pour charger toutes les ville de la liste. 
+
+Le fichier {\itshape fichierEntree\/} est ouvert corectement. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Le fichier {\itshape fichierEntree\/} n'est pas fermé par la fonction. 
+
+Si les préconditions sont respectées, les données de la couverture contenues dans le fichier en entrée sont organisées dans un graphe en mémoire. 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em bad\_\-alloc} & si pas assez de mémoire contenir toute la liste du fichier. \\
+\hline
+{\em logic\_\-error} & si le fichier {\itshape fichierEntree\/} n'est pas ouvert correctement. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 24 of file Couverture.cpp.
+
+
+
+References Graphe$<$ Objet $>$::ajouterArc(), Graphe$<$ Objet $>$::ajouterSommet(), and m\_\-graphe.
+
+\hypertarget{classtp2_1_1_couverture_a282d4cb84b4447ad17a291f379e815f9}{
+\index{tp2::Couverture@{tp2::Couverture}!Couverture@{Couverture}}
+\index{Couverture@{Couverture}!tp2::Couverture@{tp2::Couverture}}
+\subsubsection[{Couverture}]{\setlength{\rightskip}{0pt plus 5cm}tp2::Couverture::Couverture (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classtp2_1_1_couverture_a282d4cb84b4447ad17a291f379e815f9}
+
+
+Definition at line 77 of file Couverture.cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classtp2_1_1_couverture_ad2404ee49646bff274f688da3e9432fd}{
+\index{tp2::Couverture@{tp2::Couverture}!afficherVilles@{afficherVilles}}
+\index{afficherVilles@{afficherVilles}!tp2::Couverture@{tp2::Couverture}}
+\subsubsection[{afficherVilles}]{\setlength{\rightskip}{0pt plus 5cm}void tp2::Couverture::afficherVilles (
+\begin{DoxyParamCaption}
+\item[{std::vector$<$ {\bf Ville} $>$ \&}]{p\_\-vVilles}
+\end{DoxyParamCaption}
+)}}
+\label{classtp2_1_1_couverture_ad2404ee49646bff274f688da3e9432fd}
+
+
+Affiche une liste de villes de la couverture à l'écran. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\_\-vVilles} & Une liste de villes dans un vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Le contenu de la liste p\_\-vVilles est affiché. 
+\end{DoxyPostcond}
+
+
+Definition at line 90 of file Couverture.cpp.
+
+\hypertarget{classtp2_1_1_couverture_a35cd466b6de9645503f1f9990737fba8}{
+\index{tp2::Couverture@{tp2::Couverture}!afficherVilles@{afficherVilles}}
+\index{afficherVilles@{afficherVilles}!tp2::Couverture@{tp2::Couverture}}
+\subsubsection[{afficherVilles}]{\setlength{\rightskip}{0pt plus 5cm}void tp2::Couverture::afficherVilles (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classtp2_1_1_couverture_a35cd466b6de9645503f1f9990737fba8}
+\hypertarget{classtp2_1_1_couverture_ad5d03d00aac730bc9694d7714189b47e}{
+\index{tp2::Couverture@{tp2::Couverture}!bellManFord@{bellManFord}}
+\index{bellManFord@{bellManFord}!tp2::Couverture@{tp2::Couverture}}
+\subsubsection[{bellManFord}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$ {\bf Ville} $>$ tp2::Couverture::bellManFord (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ville} \&}]{p\_\-origine, }
+\item[{const {\bf Ville} \&}]{p\_\-destination, }
+\item[{int \&}]{p\_\-duree}
+\end{DoxyParamCaption}
+)}}
+\label{classtp2_1_1_couverture_ad5d03d00aac730bc9694d7714189b47e}
+
+
+Trouve le plus court chemin entre deux points en utilisant l'algorithme de Bellman-\/Ford et le retourne. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\_\-origine} & la ville de l'origine. \\
+\hline
+\mbox{\tt in}  & {\em p\_\-destination} & la ville de destination. \\
+\hline
+\mbox{\tt out}  & {\em p\_\-duree} & le temps de vol total. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un vecteur contenant la liste des villes a parcourir. 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+Il y a assez de mémoire pour retourner les composantes du chemin. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Le temps de vol total est retourné, -\/1 s'il n'y a pas de chemin. 
+
+Le graphe original reste inchangé. 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em bad\_\-alloc} & s'il n'y a pas assez de mémoire pour retourner le chemin. \\
+\hline
+{\em logic\_\-error} & si le sommet d'origine ou de destination n'existe pas. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 180 of file Couverture.cpp.
+
+
+
+References Graphe$<$ Objet $>$::bellmanFord(), Graphe$<$ Objet $>$::estVide(), and m\_\-graphe.
+
+\hypertarget{classtp2_1_1_couverture_ae02fdb4ef4c726327740e8343ba8b5fa}{
+\index{tp2::Couverture@{tp2::Couverture}!determinerMinParcours@{determinerMinParcours}}
+\index{determinerMinParcours@{determinerMinParcours}!tp2::Couverture@{tp2::Couverture}}
+\subsubsection[{determinerMinParcours}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$ {\bf Ville} $>$ tp2::Couverture::determinerMinParcours (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ville} \&}]{p\_\-origine, }
+\item[{const {\bf Ville} \&}]{p\_\-destination, }
+\item[{int \&}]{p\_\-duree}
+\end{DoxyParamCaption}
+)}}
+\label{classtp2_1_1_couverture_ae02fdb4ef4c726327740e8343ba8b5fa}
+
+
+Trouve le plus court chemin entre deux points en utilisant l'algorithme de Dijsktra et le retourne. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\_\-origine} & la ville de l'origine. \\
+\hline
+\mbox{\tt in}  & {\em p\_\-destination} & la ville de destination. \\
+\hline
+\mbox{\tt out}  & {\em p\_\-duree} & le temps de vol total. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un vecteur contenant la liste des villes a parcourir. 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+Il y a assez de mémoire pour retourner les composantes du chemin. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Le temps de vol total est retourné, -\/1 s'il n'y a pas de chemin. 
+
+Le graphe original reste inchangé. 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em bad\_\-alloc} & s'il n'y a pas assez de mémoire pour retourner le chemin. \\
+\hline
+{\em logic\_\-error} & si le sommet d'origine ou de destination n'existe pas. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 149 of file Couverture.cpp.
+
+
+
+References Graphe$<$ Objet $>$::dijkstra(), Graphe$<$ Objet $>$::estVide(), and m\_\-graphe.
+
+\hypertarget{classtp2_1_1_couverture_a6c87e1b01b08a9ab2593ab5b08034a94}{
+\index{tp2::Couverture@{tp2::Couverture}!operator=@{operator=}}
+\index{operator=@{operator=}!tp2::Couverture@{tp2::Couverture}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Couverture} \& tp2::Couverture::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf Couverture} const \&}]{p\_\-couverture}
+\end{DoxyParamCaption}
+)}}
+\label{classtp2_1_1_couverture_a6c87e1b01b08a9ab2593ab5b08034a94}
+
+
+Definition at line 80 of file Couverture.cpp.
+
+
+
+References m\_\-graphe, and reqGraphe().
+
+\hypertarget{classtp2_1_1_couverture_adcfd305e117e692f5531e0a16028a5d9}{
+\index{tp2::Couverture@{tp2::Couverture}!reqGraphe@{reqGraphe}}
+\index{reqGraphe@{reqGraphe}!tp2::Couverture@{tp2::Couverture}}
+\subsubsection[{reqGraphe}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Graphe}$<$ {\bf Ville} $>$ const \& tp2::Couverture::reqGraphe (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}
+\label{classtp2_1_1_couverture_adcfd305e117e692f5531e0a16028a5d9}
+
+
+Le getter du graphe des villes. 
+
+\begin{DoxyPostcond}{Postcondition}
+L'instance courante n'est pas modifiée. 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Le graphe des villes faisant partie de la couverture. 
+\end{DoxyReturn}
+
+
+Definition at line 202 of file Couverture.cpp.
+
+
+
+References m\_\-graphe.
+
+
+
+Referenced by operator=().
+
+\hypertarget{classtp2_1_1_couverture_a5833a97dda1028931023acc524bb3a2d}{
+\index{tp2::Couverture@{tp2::Couverture}!villesAccessibles@{villesAccessibles}}
+\index{villesAccessibles@{villesAccessibles}!tp2::Couverture@{tp2::Couverture}}
+\subsubsection[{villesAccessibles}]{\setlength{\rightskip}{0pt plus 5cm}bool tp2::Couverture::villesAccessibles (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classtp2_1_1_couverture_a5833a97dda1028931023acc524bb3a2d}
+
+
+Détermine si toutes les villes de la couverture sont accessibles à partir de n'importe où. 
+
+\begin{DoxyPrecond}{Precondition}
+La couverture est non vide. 
+\end{DoxyPrecond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em logic\_\-error} & si le graphe ne contient aucun sommet \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+VRAI si toute ville est accessible depuis une autre, sinon FAUX dans tous les autres cas. 
+\end{DoxyReturn}
+
+
+Definition at line 109 of file Couverture.cpp.
+
+
+
+References Graphe$<$ Objet $>$::estFortementConnexe(), Graphe$<$ Objet $>$::estVide(), and m\_\-graphe.
+
+\hypertarget{classtp2_1_1_couverture_ab581fbf5e7bc482776425510704602da}{
+\index{tp2::Couverture@{tp2::Couverture}!villesCritiques@{villesCritiques}}
+\index{villesCritiques@{villesCritiques}!tp2::Couverture@{tp2::Couverture}}
+\subsubsection[{villesCritiques}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$ {\bf Ville} $>$ tp2::Couverture::villesCritiques (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classtp2_1_1_couverture_ab581fbf5e7bc482776425510704602da}
+
+
+Trouve les points d'articulation de la couverture et les retourne. 
+
+\begin{DoxyPrecond}{Precondition}
+Il y a assez de mémoire pour retourner les points d'articulation. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Le graphe original reste inchangé. 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+La liste de tous les sommets d'articulation est retournée. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em bad\_\-alloc} & s'il n'y a pas assez de mémoire pour retourner les noms des sommets. \\
+\hline
+{\em logic\_\-error} & si la couverture ne contient aucune ville. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 122 of file Couverture.cpp.
+
+
+
+References Graphe$<$ Objet $>$::estVide(), Graphe$<$ Objet $>$::getPointsArticulation(), and m\_\-graphe.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classtp2_1_1_couverture_a6a620a08b2a810862999c0059c87408e}{
+\index{tp2::Couverture@{tp2::Couverture}!m\_\-graphe@{m\_\-graphe}}
+\index{m\_\-graphe@{m\_\-graphe}!tp2::Couverture@{tp2::Couverture}}
+\subsubsection[{m\_\-graphe}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Graphe}$<${\bf Ville}$>$ {\bf tp2::Couverture::m\_\-graphe}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{classtp2_1_1_couverture_a6a620a08b2a810862999c0059c87408e}
+
+
+Definition at line 54 of file Couverture.h.
+
+
+
+Referenced by bellManFord(), Couverture(), determinerMinParcours(), operator=(), reqGraphe(), villesAccessibles(), and villesCritiques().
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_couverture_8h}{Couverture.h}\item 
+\hyperlink{_couverture_8cpp}{Couverture.cpp}\end{DoxyCompactItemize}

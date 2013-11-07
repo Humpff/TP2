@@ -1,0 +1,739 @@
+\hypertarget{class_graphe}{
+\section{Graphe$<$ Objet $>$ Class Template Reference}
+\label{class_graphe}\index{Graphe@{Graphe}}
+}
+
+
+Classe représentant un graphe orienté, coloré dont les étiquettes sont des comparables.  
+
+
+
+
+{\ttfamily \#include $<$Graphe.h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_graphe_1_1_arc}{Arc}
+\begin{DoxyCompactList}\small\item\em Classe interne représentant un arc entre deux sommets dans le graphe. \end{DoxyCompactList}\item 
+class \hyperlink{class_graphe_1_1_sommet}{Sommet}
+\begin{DoxyCompactList}\small\item\em Classe représentant un sommet dans un graphe. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_graphe_adb8383352920cc36b73929998c90db53}{Graphe} ()
+\item 
+\hyperlink{class_graphe_ab92769924f1e76dd5e3872c1e85b229c}{Graphe} (const \hyperlink{class_graphe}{Graphe} \&source)
+\item 
+\hyperlink{class_graphe_af33551f1cd40e11d7a1983628d3d5641}{$\sim$Graphe} ()
+\item 
+void \hyperlink{class_graphe_a398d9e6777b28dd6a5ee1572f5128498}{ajouterSommet} (int numero, const Objet \&etiquette)
+\item 
+void \hyperlink{class_graphe_a70470e6b8b0ea59097c1a9a96e631f45}{enleverSommet} (int numero)
+\item 
+void \hyperlink{class_graphe_a3324e98fb20348bff3ffec78675b0ce5}{ajouterArc} (int numOrigine, int numDestination, int cout)
+\item 
+void \hyperlink{class_graphe_aa97c99653199bf922b44e07de8be0a99}{enleverArc} (int numOrigine, int numDestination)
+\item 
+int \hyperlink{class_graphe_a822c112c79faa409d2eeb95a9c2c4e7c}{nombreSommets} () const 
+\item 
+bool \hyperlink{class_graphe_afd8eb5bce922c62b2d5814dd95decf3e}{estVide} () const 
+\item 
+std::vector$<$ int $>$ \hyperlink{class_graphe_aedac4305a983b11ea0420ba80343635e}{listerSommets} () const 
+\item 
+std::vector$<$ Objet $>$ \hyperlink{class_graphe_a998f2dd61188d540e7789b6ea631e548}{listerEtiquetteSommets} () const 
+\item 
+int \hyperlink{class_graphe_a0de2ca6fa1f02d95fde97306217d2031}{getNumeroSommet} (const Objet \&etiquette) const 
+\item 
+bool \hyperlink{class_graphe_af9a087a2a780133f651af51fb25de677}{sommetExiste} (int numero) const 
+\item 
+Objet \hyperlink{class_graphe_af6efac3e9c660c4aacfa05c6bcba7ddf}{getEtiquetteSommet} (int numero) const 
+\item 
+int \hyperlink{class_graphe_a48e32c28c0845c0e112a3a3ae7bdb882}{ordreSortieSommet} (int numero) const 
+\item 
+int \hyperlink{class_graphe_a1123929cab8c05d7fc3f7a4317e88edb}{ordreEntreeSommet} (int numero) const 
+\item 
+std::vector$<$ int $>$ \hyperlink{class_graphe_a73fe579de3baea2990bbefb2b0daf0c9}{listerSommetsAdjacents} (int numeroSommetsAdjacents) const 
+\item 
+bool \hyperlink{class_graphe_a866fbd9e68914829c900b2f3a2ef3565}{arcExiste} (int numOrigine, int numDestination) const 
+\item 
+int \hyperlink{class_graphe_a5178a5335a20e3a549af0b69c9c83782}{getCoutArc} (int numOrigine, int numDestination) const 
+\item 
+const \hyperlink{class_graphe}{Graphe} \& \hyperlink{class_graphe_aff62a5ca152f992f32671db122d47455}{operator=} (const \hyperlink{class_graphe}{Graphe} \&source)
+\item 
+\hyperlink{class_graphe}{Graphe} \hyperlink{class_graphe_aa6fafc310fd5a096f75d018c7404f9ed}{fermetureGraphe} () const 
+\item 
+bool \hyperlink{class_graphe_abdc4f27fc9498cc3814d03a97c87b7e7}{estFortementConnexe} () const 
+\item 
+void \hyperlink{class_graphe_ad63af90bd6395092dfe311a36f15833c}{getComposantesFortementConnexes} (std::vector$<$ std::vector$<$ Objet $>$ $>$ \&composantes) const 
+\item 
+int \hyperlink{class_graphe_a077802b65dad92e0d7e593abbca17478}{bellmanFord} (const Objet \&eOrigine, const Objet \&eDestination, std::vector$<$ Objet $>$ \&chemin)
+\item 
+int \hyperlink{class_graphe_a46ea944cd82af0d14b67ed66ac57261f}{dijkstra} (const Objet \&eOrigine, const Objet \&eDestination, std::vector$<$ Objet $>$ \&chemin)
+\item 
+void \hyperlink{class_graphe_acf31ba4346b58850d69ba22ee75bdf48}{getPointsArticulation} (std::vector$<$ Objet $>$ \&sommets)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_graphe_1_1_sommet}{Sommet} $\ast$ \hyperlink{class_graphe_ac798e3b65595635aaf3e2f83e9a4c58e}{\_\-getSommet} (int numero) const 
+\item 
+\hyperlink{class_graphe_1_1_arc}{Arc} $\ast$ \hyperlink{class_graphe_a5d918be3eb2738ce483dd804d0b8187d}{\_\-getArc} (\hyperlink{class_graphe_1_1_sommet}{Sommet} $\ast$sommet1, \hyperlink{class_graphe_1_1_sommet}{Sommet} $\ast$sommet2) const 
+\item 
+\hyperlink{class_graphe_1_1_arc}{Arc} $\ast$ \hyperlink{class_graphe_a3874c74eb79d536e7974fc5ae218ce1c}{\_\-getArc} (int numOrigine, int numDestination) const 
+\item 
+void \hyperlink{class_graphe_a8405369dbe4854dd624e140539717fab}{\_\-detruireGraphe} ()
+\item 
+void \hyperlink{class_graphe_a1b8cfc5964a91ed326b4db134471d6e0}{\_\-copierGraphe} (const \hyperlink{class_graphe}{Graphe} \&source)
+\item 
+void \hyperlink{class_graphe_a2c22cb6d5282d83c940872ec52327d5e}{\_\-enleverSommet} (\hyperlink{class_graphe_1_1_sommet}{Sommet} $\ast$sommetAEnlever)
+\item 
+void \hyperlink{class_graphe_aae4a7becaa21116b48dbe8d0fbd4a57d}{\_\-initPathFinding} (const Objet \&eOrigine, const Objet \&eDestination, \hyperlink{class_graphe_1_1_sommet}{Sommet} $\ast$\&origine, \hyperlink{class_graphe_1_1_sommet}{Sommet} $\ast$\&destination)
+\item 
+void \hyperlink{class_graphe_ad45ebb3761173879209aca61ed7d825b}{\_\-recupererChemin} (\hyperlink{class_graphe_1_1_sommet}{Sommet} $\ast$destination, std::vector$<$ Objet $>$ \&chemin)
+\item 
+bool \hyperlink{class_graphe_ac62e72dd9006cc38115edf51d7c69df2}{\_\-isArticulation} (\hyperlink{class_graphe}{Graphe}$<$ Objet $>$ graphe, \hyperlink{class_graphe_1_1_sommet}{Sommet} $\ast$sommet)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_graphe_a68b553a71b69dba498e36aa2f22525af}{nbSommets}
+\begin{DoxyCompactList}\small\item\em Le nombre de sommets dans le graphe. \end{DoxyCompactList}\item 
+\hyperlink{class_graphe_1_1_sommet}{Sommet} $\ast$ \hyperlink{class_graphe_acf9528aa62599ce05830f02df42af339}{listSommets}
+\begin{DoxyCompactList}\small\item\em Liste des sommets du graphe. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class U $>$ }\\std::ostream \& \hyperlink{class_graphe_a418117b04914b57a9a0f6202b519ceee}{operator$<$$<$} (std::ostream \&out, const \hyperlink{class_graphe}{Graphe}$<$ U $>$ \&g)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Objet$>$class Graphe$<$ Objet $>$}
+
+Classe représentant un graphe orienté, coloré dont les étiquettes sont des comparables. 
+
+Definition at line 19 of file Graphe.h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_graphe_adb8383352920cc36b73929998c90db53}{
+\index{Graphe@{Graphe}!Graphe@{Graphe}}
+\index{Graphe@{Graphe}!Graphe@{Graphe}}
+\subsubsection[{Graphe}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet $>$ {\bf Graphe}$<$ Objet $>$::{\bf Graphe} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_graphe_adb8383352920cc36b73929998c90db53}
+
+
+Definition at line 88 of file Graphe.hpp.
+
+\hypertarget{class_graphe_ab92769924f1e76dd5e3872c1e85b229c}{
+\index{Graphe@{Graphe}!Graphe@{Graphe}}
+\index{Graphe@{Graphe}!Graphe@{Graphe}}
+\subsubsection[{Graphe}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet $>$ {\bf Graphe}$<$ Objet $>$::{\bf Graphe} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Graphe}$<$ Objet $>$ \&}]{source}
+\end{DoxyParamCaption}
+)}}
+\label{class_graphe_ab92769924f1e76dd5e3872c1e85b229c}
+
+
+Definition at line 95 of file Graphe.hpp.
+
+\hypertarget{class_graphe_af33551f1cd40e11d7a1983628d3d5641}{
+\index{Graphe@{Graphe}!$\sim$Graphe@{$\sim$Graphe}}
+\index{$\sim$Graphe@{$\sim$Graphe}!Graphe@{Graphe}}
+\subsubsection[{$\sim$Graphe}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet $>$ {\bf Graphe}$<$ Objet $>$::$\sim${\bf Graphe} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_graphe_af33551f1cd40e11d7a1983628d3d5641}
+
+
+Definition at line 125 of file Graphe.hpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_graphe_a1b8cfc5964a91ed326b4db134471d6e0}{
+\index{Graphe@{Graphe}!\_\-copierGraphe@{\_\-copierGraphe}}
+\index{\_\-copierGraphe@{\_\-copierGraphe}!Graphe@{Graphe}}
+\subsubsection[{\_\-copierGraphe}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet $>$ void {\bf Graphe}$<$ Objet $>$::\_\-copierGraphe (
+\begin{DoxyParamCaption}
+\item[{const {\bf Graphe}$<$ Objet $>$ \&}]{source}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_graphe_a1b8cfc5964a91ed326b4db134471d6e0}
+
+
+Definition at line 101 of file Graphe.hpp.
+
+
+
+References Graphe$<$ Objet $>$::listSommets, Graphe$<$ Objet $>$::Arc::m\_\-cout, Graphe$<$ Objet $>$::Arc::m\_\-dest, Graphe$<$ Objet $>$::Sommet::m\_\-etiquette, Graphe$<$ Objet $>$::Sommet::m\_\-listeDest, Graphe$<$ Objet $>$::Sommet::m\_\-numero, Graphe$<$ Objet $>$::Sommet::m\_\-suivant, and Graphe$<$ Objet $>$::Arc::m\_\-suivDest.
+
+\hypertarget{class_graphe_a8405369dbe4854dd624e140539717fab}{
+\index{Graphe@{Graphe}!\_\-detruireGraphe@{\_\-detruireGraphe}}
+\index{\_\-detruireGraphe@{\_\-detruireGraphe}!Graphe@{Graphe}}
+\subsubsection[{\_\-detruireGraphe}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet$>$ void {\bf Graphe}$<$ Objet $>$::\_\-detruireGraphe (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_graphe_a8405369dbe4854dd624e140539717fab}
+\hypertarget{class_graphe_a2c22cb6d5282d83c940872ec52327d5e}{
+\index{Graphe@{Graphe}!\_\-enleverSommet@{\_\-enleverSommet}}
+\index{\_\-enleverSommet@{\_\-enleverSommet}!Graphe@{Graphe}}
+\subsubsection[{\_\-enleverSommet}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet$>$ void {\bf Graphe}$<$ Objet $>$::\_\-enleverSommet (
+\begin{DoxyParamCaption}
+\item[{{\bf Sommet} $\ast$}]{sommetAEnlever}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_graphe_a2c22cb6d5282d83c940872ec52327d5e}
+\hypertarget{class_graphe_a3874c74eb79d536e7974fc5ae218ce1c}{
+\index{Graphe@{Graphe}!\_\-getArc@{\_\-getArc}}
+\index{\_\-getArc@{\_\-getArc}!Graphe@{Graphe}}
+\subsubsection[{\_\-getArc}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet $>$ {\bf Graphe}$<$ Objet $>$::{\bf Arc} $\ast$ {\bf Graphe}$<$ Objet $>$::\_\-getArc (
+\begin{DoxyParamCaption}
+\item[{int}]{numOrigine, }
+\item[{int}]{numDestination}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_graphe_a3874c74eb79d536e7974fc5ae218ce1c}
+
+
+Definition at line 144 of file Graphe.hpp.
+
+
+
+References Graphe$<$ Objet $>$::Arc::m\_\-dest, Graphe$<$ Objet $>$::Sommet::m\_\-listeDest, Graphe$<$ Objet $>$::Sommet::m\_\-numero, and Graphe$<$ Objet $>$::Arc::m\_\-suivDest.
+
+\hypertarget{class_graphe_a5d918be3eb2738ce483dd804d0b8187d}{
+\index{Graphe@{Graphe}!\_\-getArc@{\_\-getArc}}
+\index{\_\-getArc@{\_\-getArc}!Graphe@{Graphe}}
+\subsubsection[{\_\-getArc}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet$>$ {\bf Arc}$\ast$ {\bf Graphe}$<$ Objet $>$::\_\-getArc (
+\begin{DoxyParamCaption}
+\item[{{\bf Sommet} $\ast$}]{sommet1, }
+\item[{{\bf Sommet} $\ast$}]{sommet2}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_graphe_a5d918be3eb2738ce483dd804d0b8187d}
+
+
+Referenced by Graphe$<$ Objet $>$::estFortementConnexe(), and Graphe$<$ Objet $>$::getComposantesFortementConnexes().
+
+\hypertarget{class_graphe_ac798e3b65595635aaf3e2f83e9a4c58e}{
+\index{Graphe@{Graphe}!\_\-getSommet@{\_\-getSommet}}
+\index{\_\-getSommet@{\_\-getSommet}!Graphe@{Graphe}}
+\subsubsection[{\_\-getSommet}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet $>$ {\bf Graphe}$<$ Objet $>$::{\bf Sommet} $\ast$ {\bf Graphe}$<$ Objet $>$::\_\-getSommet (
+\begin{DoxyParamCaption}
+\item[{int}]{numero}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_graphe_ac798e3b65595635aaf3e2f83e9a4c58e}
+
+
+Definition at line 131 of file Graphe.hpp.
+
+
+
+References Graphe$<$ Objet $>$::Sommet::m\_\-numero, and Graphe$<$ Objet $>$::Sommet::m\_\-suivant.
+
+\hypertarget{class_graphe_aae4a7becaa21116b48dbe8d0fbd4a57d}{
+\index{Graphe@{Graphe}!\_\-initPathFinding@{\_\-initPathFinding}}
+\index{\_\-initPathFinding@{\_\-initPathFinding}!Graphe@{Graphe}}
+\subsubsection[{\_\-initPathFinding}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet$>$ void {\bf Graphe}$<$ Objet $>$::\_\-initPathFinding (
+\begin{DoxyParamCaption}
+\item[{const Objet \&}]{eOrigine, }
+\item[{const Objet \&}]{eDestination, }
+\item[{{\bf Sommet} $\ast$\&}]{origine, }
+\item[{{\bf Sommet} $\ast$\&}]{destination}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_graphe_aae4a7becaa21116b48dbe8d0fbd4a57d}
+\hypertarget{class_graphe_ac62e72dd9006cc38115edf51d7c69df2}{
+\index{Graphe@{Graphe}!\_\-isArticulation@{\_\-isArticulation}}
+\index{\_\-isArticulation@{\_\-isArticulation}!Graphe@{Graphe}}
+\subsubsection[{\_\-isArticulation}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet$>$ bool {\bf Graphe}$<$ Objet $>$::\_\-isArticulation (
+\begin{DoxyParamCaption}
+\item[{{\bf Graphe}$<$ Objet $>$}]{graphe, }
+\item[{{\bf Sommet} $\ast$}]{sommet}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_graphe_ac62e72dd9006cc38115edf51d7c69df2}
+
+
+Definition at line 583 of file Graphe.hpp.
+
+
+
+References Graphe$<$ Objet $>$::enleverSommet(), Graphe$<$ Objet $>$::estFortementConnexe(), and Graphe$<$ Objet $>$::Sommet::m\_\-numero.
+
+\hypertarget{class_graphe_ad45ebb3761173879209aca61ed7d825b}{
+\index{Graphe@{Graphe}!\_\-recupererChemin@{\_\-recupererChemin}}
+\index{\_\-recupererChemin@{\_\-recupererChemin}!Graphe@{Graphe}}
+\subsubsection[{\_\-recupererChemin}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet$>$ void {\bf Graphe}$<$ Objet $>$::\_\-recupererChemin (
+\begin{DoxyParamCaption}
+\item[{{\bf Sommet} $\ast$}]{destination, }
+\item[{std::vector$<$ Objet $>$ \&}]{chemin}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_graphe_ad45ebb3761173879209aca61ed7d825b}
+\hypertarget{class_graphe_a3324e98fb20348bff3ffec78675b0ce5}{
+\index{Graphe@{Graphe}!ajouterArc@{ajouterArc}}
+\index{ajouterArc@{ajouterArc}!Graphe@{Graphe}}
+\subsubsection[{ajouterArc}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet $>$ void {\bf Graphe}$<$ Objet $>$::ajouterArc (
+\begin{DoxyParamCaption}
+\item[{int}]{numOrigine, }
+\item[{int}]{numDestination, }
+\item[{int}]{cout}
+\end{DoxyParamCaption}
+)}}
+\label{class_graphe_a3324e98fb20348bff3ffec78675b0ce5}
+
+
+Definition at line 232 of file Graphe.hpp.
+
+
+
+References Graphe$<$ Objet $>$::Sommet::m\_\-listeDest, and Graphe$<$ Objet $>$::Arc::m\_\-suivDest.
+
+
+
+Referenced by tp2::Couverture::Couverture(), and Graphe$<$ Objet $>$::fermetureGraphe().
+
+\hypertarget{class_graphe_a398d9e6777b28dd6a5ee1572f5128498}{
+\index{Graphe@{Graphe}!ajouterSommet@{ajouterSommet}}
+\index{ajouterSommet@{ajouterSommet}!Graphe@{Graphe}}
+\subsubsection[{ajouterSommet}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet$>$ void {\bf Graphe}$<$ Objet $>$::ajouterSommet (
+\begin{DoxyParamCaption}
+\item[{int}]{numero, }
+\item[{const Objet \&}]{etiquette}
+\end{DoxyParamCaption}
+)}}
+\label{class_graphe_a398d9e6777b28dd6a5ee1572f5128498}
+
+
+Definition at line 158 of file Graphe.hpp.
+
+
+
+References Graphe$<$ Objet $>$::Sommet::m\_\-numero, Graphe$<$ Objet $>$::Sommet::m\_\-precedent, and Graphe$<$ Objet $>$::Sommet::m\_\-suivant.
+
+
+
+Referenced by tp2::Couverture::Couverture(), and Graphe$<$ Objet $>$::fermetureGraphe().
+
+\hypertarget{class_graphe_a866fbd9e68914829c900b2f3a2ef3565}{
+\index{Graphe@{Graphe}!arcExiste@{arcExiste}}
+\index{arcExiste@{arcExiste}!Graphe@{Graphe}}
+\subsubsection[{arcExiste}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet $>$ bool {\bf Graphe}$<$ Objet $>$::arcExiste (
+\begin{DoxyParamCaption}
+\item[{int}]{numOrigine, }
+\item[{int}]{numDestination}
+\end{DoxyParamCaption}
+) const}}
+\label{class_graphe_a866fbd9e68914829c900b2f3a2ef3565}
+
+
+Definition at line 363 of file Graphe.hpp.
+
+\hypertarget{class_graphe_a077802b65dad92e0d7e593abbca17478}{
+\index{Graphe@{Graphe}!bellmanFord@{bellmanFord}}
+\index{bellmanFord@{bellmanFord}!Graphe@{Graphe}}
+\subsubsection[{bellmanFord}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet$>$ int {\bf Graphe}$<$ Objet $>$::bellmanFord (
+\begin{DoxyParamCaption}
+\item[{const Objet \&}]{eOrigine, }
+\item[{const Objet \&}]{eDestination, }
+\item[{std::vector$<$ Objet $>$ \&}]{chemin}
+\end{DoxyParamCaption}
+)}}
+\label{class_graphe_a077802b65dad92e0d7e593abbca17478}
+
+
+Definition at line 467 of file Graphe.hpp.
+
+
+
+References Graphe$<$ Objet $>$::Arc::m\_\-cout, Graphe$<$ Objet $>$::Sommet::m\_\-cout, Graphe$<$ Objet $>$::Arc::m\_\-dest, Graphe$<$ Objet $>$::Sommet::m\_\-etiquette, Graphe$<$ Objet $>$::Sommet::m\_\-listeDest, Graphe$<$ Objet $>$::Sommet::m\_\-predecesseur, Graphe$<$ Objet $>$::Sommet::m\_\-suivant, and Graphe$<$ Objet $>$::Arc::m\_\-suivDest.
+
+
+
+Referenced by tp2::Couverture::bellManFord().
+
+\hypertarget{class_graphe_a46ea944cd82af0d14b67ed66ac57261f}{
+\index{Graphe@{Graphe}!dijkstra@{dijkstra}}
+\index{dijkstra@{dijkstra}!Graphe@{Graphe}}
+\subsubsection[{dijkstra}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet$>$ int {\bf Graphe}$<$ Objet $>$::dijkstra (
+\begin{DoxyParamCaption}
+\item[{const Objet \&}]{eOrigine, }
+\item[{const Objet \&}]{eDestination, }
+\item[{std::vector$<$ Objet $>$ \&}]{chemin}
+\end{DoxyParamCaption}
+)}}
+\label{class_graphe_a46ea944cd82af0d14b67ed66ac57261f}
+
+
+Definition at line 511 of file Graphe.hpp.
+
+
+
+References Graphe$<$ Objet $>$::Arc::m\_\-cout, Graphe$<$ Objet $>$::Sommet::m\_\-cout, Graphe$<$ Objet $>$::Arc::m\_\-dest, Graphe$<$ Objet $>$::Sommet::m\_\-etat, Graphe$<$ Objet $>$::Sommet::m\_\-etiquette, Graphe$<$ Objet $>$::Sommet::m\_\-predecesseur, Graphe$<$ Objet $>$::Sommet::m\_\-suivant, and Graphe$<$ Objet $>$::Arc::m\_\-suivDest.
+
+
+
+Referenced by tp2::Couverture::determinerMinParcours().
+
+\hypertarget{class_graphe_aa97c99653199bf922b44e07de8be0a99}{
+\index{Graphe@{Graphe}!enleverArc@{enleverArc}}
+\index{enleverArc@{enleverArc}!Graphe@{Graphe}}
+\subsubsection[{enleverArc}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet $>$ void {\bf Graphe}$<$ Objet $>$::enleverArc (
+\begin{DoxyParamCaption}
+\item[{int}]{numOrigine, }
+\item[{int}]{numDestination}
+\end{DoxyParamCaption}
+)}}
+\label{class_graphe_aa97c99653199bf922b44e07de8be0a99}
+
+
+Definition at line 246 of file Graphe.hpp.
+
+
+
+References Graphe$<$ Objet $>$::Arc::m\_\-dest, Graphe$<$ Objet $>$::Sommet::m\_\-listeDest, Graphe$<$ Objet $>$::Sommet::m\_\-numero, and Graphe$<$ Objet $>$::Arc::m\_\-suivDest.
+
+\hypertarget{class_graphe_a70470e6b8b0ea59097c1a9a96e631f45}{
+\index{Graphe@{Graphe}!enleverSommet@{enleverSommet}}
+\index{enleverSommet@{enleverSommet}!Graphe@{Graphe}}
+\subsubsection[{enleverSommet}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet $>$ void {\bf Graphe}$<$ Objet $>$::enleverSommet (
+\begin{DoxyParamCaption}
+\item[{int}]{numero}
+\end{DoxyParamCaption}
+)}}
+\label{class_graphe_a70470e6b8b0ea59097c1a9a96e631f45}
+
+
+Definition at line 178 of file Graphe.hpp.
+
+
+
+References Graphe$<$ Objet $>$::Arc::m\_\-dest, Graphe$<$ Objet $>$::Sommet::m\_\-listeDest, Graphe$<$ Objet $>$::Sommet::m\_\-numero, Graphe$<$ Objet $>$::Sommet::m\_\-precedent, Graphe$<$ Objet $>$::Sommet::m\_\-suivant, and Graphe$<$ Objet $>$::Arc::m\_\-suivDest.
+
+
+
+Referenced by Graphe$<$ Objet $>$::\_\-isArticulation(), and Graphe$<$ Objet $>$::getComposantesFortementConnexes().
+
+\hypertarget{class_graphe_abdc4f27fc9498cc3814d03a97c87b7e7}{
+\index{Graphe@{Graphe}!estFortementConnexe@{estFortementConnexe}}
+\index{estFortementConnexe@{estFortementConnexe}!Graphe@{Graphe}}
+\subsubsection[{estFortementConnexe}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet $>$ bool {\bf Graphe}$<$ Objet $>$::estFortementConnexe (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}
+\label{class_graphe_abdc4f27fc9498cc3814d03a97c87b7e7}
+
+
+Definition at line 431 of file Graphe.hpp.
+
+
+
+References Graphe$<$ Objet $>$::\_\-getArc(), and Graphe$<$ Objet $>$::listerSommets().
+
+
+
+Referenced by Graphe$<$ Objet $>$::\_\-isArticulation(), and tp2::Couverture::villesAccessibles().
+
+\hypertarget{class_graphe_afd8eb5bce922c62b2d5814dd95decf3e}{
+\index{Graphe@{Graphe}!estVide@{estVide}}
+\index{estVide@{estVide}!Graphe@{Graphe}}
+\subsubsection[{estVide}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet $>$ bool {\bf Graphe}$<$ Objet $>$::estVide (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}
+\label{class_graphe_afd8eb5bce922c62b2d5814dd95decf3e}
+
+
+Definition at line 276 of file Graphe.hpp.
+
+
+
+Referenced by tp2::Couverture::bellManFord(), tp2::Couverture::determinerMinParcours(), tp2::Couverture::villesAccessibles(), and tp2::Couverture::villesCritiques().
+
+\hypertarget{class_graphe_aa6fafc310fd5a096f75d018c7404f9ed}{
+\index{Graphe@{Graphe}!fermetureGraphe@{fermetureGraphe}}
+\index{fermetureGraphe@{fermetureGraphe}!Graphe@{Graphe}}
+\subsubsection[{fermetureGraphe}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet $>$ {\bf Graphe}$<$ Objet $>$ {\bf Graphe}$<$ Objet $>$::fermetureGraphe (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}
+\label{class_graphe_aa6fafc310fd5a096f75d018c7404f9ed}
+
+
+Definition at line 388 of file Graphe.hpp.
+
+
+
+References Graphe$<$ Objet $>$::ajouterArc(), Graphe$<$ Objet $>$::ajouterSommet(), Graphe$<$ Objet $>$::Sommet::m\_\-etiquette, Graphe$<$ Objet $>$::Sommet::m\_\-numero, and Graphe$<$ Objet $>$::Sommet::m\_\-suivant.
+
+\hypertarget{class_graphe_ad63af90bd6395092dfe311a36f15833c}{
+\index{Graphe@{Graphe}!getComposantesFortementConnexes@{getComposantesFortementConnexes}}
+\index{getComposantesFortementConnexes@{getComposantesFortementConnexes}!Graphe@{Graphe}}
+\subsubsection[{getComposantesFortementConnexes}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet$>$ void {\bf Graphe}$<$ Objet $>$::getComposantesFortementConnexes (
+\begin{DoxyParamCaption}
+\item[{std::vector$<$ std::vector$<$ Objet $>$ $>$ \&}]{composantes}
+\end{DoxyParamCaption}
+) const}}
+\label{class_graphe_ad63af90bd6395092dfe311a36f15833c}
+
+
+Definition at line 443 of file Graphe.hpp.
+
+
+
+References Graphe$<$ Objet $>$::\_\-getArc(), Graphe$<$ Objet $>$::enleverSommet(), Graphe$<$ Objet $>$::listSommets, Graphe$<$ Objet $>$::Arc::m\_\-dest, Graphe$<$ Objet $>$::Sommet::m\_\-etiquette, Graphe$<$ Objet $>$::Sommet::m\_\-listeDest, Graphe$<$ Objet $>$::Sommet::m\_\-numero, Graphe$<$ Objet $>$::Sommet::m\_\-suivant, and Graphe$<$ Objet $>$::Arc::m\_\-suivDest.
+
+\hypertarget{class_graphe_a5178a5335a20e3a549af0b69c9c83782}{
+\index{Graphe@{Graphe}!getCoutArc@{getCoutArc}}
+\index{getCoutArc@{getCoutArc}!Graphe@{Graphe}}
+\subsubsection[{getCoutArc}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet $>$ int {\bf Graphe}$<$ Objet $>$::getCoutArc (
+\begin{DoxyParamCaption}
+\item[{int}]{numOrigine, }
+\item[{int}]{numDestination}
+\end{DoxyParamCaption}
+) const}}
+\label{class_graphe_a5178a5335a20e3a549af0b69c9c83782}
+
+
+Definition at line 371 of file Graphe.hpp.
+
+\hypertarget{class_graphe_af6efac3e9c660c4aacfa05c6bcba7ddf}{
+\index{Graphe@{Graphe}!getEtiquetteSommet@{getEtiquetteSommet}}
+\index{getEtiquetteSommet@{getEtiquetteSommet}!Graphe@{Graphe}}
+\subsubsection[{getEtiquetteSommet}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet $>$ Objet {\bf Graphe}$<$ Objet $>$::getEtiquetteSommet (
+\begin{DoxyParamCaption}
+\item[{int}]{numero}
+\end{DoxyParamCaption}
+) const}}
+\label{class_graphe_af6efac3e9c660c4aacfa05c6bcba7ddf}
+
+
+Definition at line 327 of file Graphe.hpp.
+
+\hypertarget{class_graphe_a0de2ca6fa1f02d95fde97306217d2031}{
+\index{Graphe@{Graphe}!getNumeroSommet@{getNumeroSommet}}
+\index{getNumeroSommet@{getNumeroSommet}!Graphe@{Graphe}}
+\subsubsection[{getNumeroSommet}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet$>$ int {\bf Graphe}$<$ Objet $>$::getNumeroSommet (
+\begin{DoxyParamCaption}
+\item[{const Objet \&}]{etiquette}
+\end{DoxyParamCaption}
+) const}}
+\label{class_graphe_a0de2ca6fa1f02d95fde97306217d2031}
+
+
+Definition at line 308 of file Graphe.hpp.
+
+
+
+References Graphe$<$ Objet $>$::Sommet::m\_\-etiquette, Graphe$<$ Objet $>$::Sommet::m\_\-numero, and Graphe$<$ Objet $>$::Sommet::m\_\-suivant.
+
+\hypertarget{class_graphe_acf31ba4346b58850d69ba22ee75bdf48}{
+\index{Graphe@{Graphe}!getPointsArticulation@{getPointsArticulation}}
+\index{getPointsArticulation@{getPointsArticulation}!Graphe@{Graphe}}
+\subsubsection[{getPointsArticulation}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet$>$ void {\bf Graphe}$<$ Objet $>$::getPointsArticulation (
+\begin{DoxyParamCaption}
+\item[{std::vector$<$ Objet $>$ \&}]{sommets}
+\end{DoxyParamCaption}
+)}}
+\label{class_graphe_acf31ba4346b58850d69ba22ee75bdf48}
+
+
+Definition at line 568 of file Graphe.hpp.
+
+
+
+References Graphe$<$ Objet $>$::listSommets, Graphe$<$ Objet $>$::Sommet::m\_\-etiquette, and Graphe$<$ Objet $>$::Sommet::m\_\-suivant.
+
+
+
+Referenced by tp2::Couverture::villesCritiques().
+
+\hypertarget{class_graphe_a998f2dd61188d540e7789b6ea631e548}{
+\index{Graphe@{Graphe}!listerEtiquetteSommets@{listerEtiquetteSommets}}
+\index{listerEtiquetteSommets@{listerEtiquetteSommets}!Graphe@{Graphe}}
+\subsubsection[{listerEtiquetteSommets}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet $>$ std::vector$<$ Objet $>$ {\bf Graphe}$<$ Objet $>$::listerEtiquetteSommets (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}
+\label{class_graphe_a998f2dd61188d540e7789b6ea631e548}
+
+
+Definition at line 295 of file Graphe.hpp.
+
+
+
+References Graphe$<$ Objet $>$::Sommet::m\_\-etiquette, and Graphe$<$ Objet $>$::Sommet::m\_\-suivant.
+
+\hypertarget{class_graphe_aedac4305a983b11ea0420ba80343635e}{
+\index{Graphe@{Graphe}!listerSommets@{listerSommets}}
+\index{listerSommets@{listerSommets}!Graphe@{Graphe}}
+\subsubsection[{listerSommets}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet $>$ std::vector$<$ int $>$ {\bf Graphe}$<$ Objet $>$::listerSommets (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}
+\label{class_graphe_aedac4305a983b11ea0420ba80343635e}
+
+
+Definition at line 282 of file Graphe.hpp.
+
+
+
+References Graphe$<$ Objet $>$::Sommet::m\_\-numero, and Graphe$<$ Objet $>$::Sommet::m\_\-suivant.
+
+
+
+Referenced by Graphe$<$ Objet $>$::estFortementConnexe().
+
+\hypertarget{class_graphe_a73fe579de3baea2990bbefb2b0daf0c9}{
+\index{Graphe@{Graphe}!listerSommetsAdjacents@{listerSommetsAdjacents}}
+\index{listerSommetsAdjacents@{listerSommetsAdjacents}!Graphe@{Graphe}}
+\subsubsection[{listerSommetsAdjacents}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet $>$ std::vector$<$ int $>$ {\bf Graphe}$<$ Objet $>$::listerSommetsAdjacents (
+\begin{DoxyParamCaption}
+\item[{int}]{numeroSommetsAdjacents}
+\end{DoxyParamCaption}
+) const}}
+\label{class_graphe_a73fe579de3baea2990bbefb2b0daf0c9}
+
+
+Definition at line 347 of file Graphe.hpp.
+
+
+
+References Graphe$<$ Objet $>$::Arc::m\_\-dest, Graphe$<$ Objet $>$::Sommet::m\_\-listeDest, and Graphe$<$ Objet $>$::Arc::m\_\-suivDest.
+
+\hypertarget{class_graphe_a822c112c79faa409d2eeb95a9c2c4e7c}{
+\index{Graphe@{Graphe}!nombreSommets@{nombreSommets}}
+\index{nombreSommets@{nombreSommets}!Graphe@{Graphe}}
+\subsubsection[{nombreSommets}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet $>$ int {\bf Graphe}$<$ Objet $>$::nombreSommets (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}
+\label{class_graphe_a822c112c79faa409d2eeb95a9c2c4e7c}
+
+
+Definition at line 270 of file Graphe.hpp.
+
+\hypertarget{class_graphe_aff62a5ca152f992f32671db122d47455}{
+\index{Graphe@{Graphe}!operator=@{operator=}}
+\index{operator=@{operator=}!Graphe@{Graphe}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet $>$ const {\bf Graphe}$<$ Objet $>$ \& {\bf Graphe}$<$ Objet $>$::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Graphe}$<$ Objet $>$ \&}]{source}
+\end{DoxyParamCaption}
+)}}
+\label{class_graphe_aff62a5ca152f992f32671db122d47455}
+
+
+Definition at line 381 of file Graphe.hpp.
+
+\hypertarget{class_graphe_a1123929cab8c05d7fc3f7a4317e88edb}{
+\index{Graphe@{Graphe}!ordreEntreeSommet@{ordreEntreeSommet}}
+\index{ordreEntreeSommet@{ordreEntreeSommet}!Graphe@{Graphe}}
+\subsubsection[{ordreEntreeSommet}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet $>$ int {\bf Graphe}$<$ Objet $>$::ordreEntreeSommet (
+\begin{DoxyParamCaption}
+\item[{int}]{numero}
+\end{DoxyParamCaption}
+) const}}
+\label{class_graphe_a1123929cab8c05d7fc3f7a4317e88edb}
+
+
+Definition at line 341 of file Graphe.hpp.
+
+\hypertarget{class_graphe_a48e32c28c0845c0e112a3a3ae7bdb882}{
+\index{Graphe@{Graphe}!ordreSortieSommet@{ordreSortieSommet}}
+\index{ordreSortieSommet@{ordreSortieSommet}!Graphe@{Graphe}}
+\subsubsection[{ordreSortieSommet}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet $>$ int {\bf Graphe}$<$ Objet $>$::ordreSortieSommet (
+\begin{DoxyParamCaption}
+\item[{int}]{numero}
+\end{DoxyParamCaption}
+) const}}
+\label{class_graphe_a48e32c28c0845c0e112a3a3ae7bdb882}
+
+
+Definition at line 335 of file Graphe.hpp.
+
+\hypertarget{class_graphe_af9a087a2a780133f651af51fb25de677}{
+\index{Graphe@{Graphe}!sommetExiste@{sommetExiste}}
+\index{sommetExiste@{sommetExiste}!Graphe@{Graphe}}
+\subsubsection[{sommetExiste}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet $>$ bool {\bf Graphe}$<$ Objet $>$::sommetExiste (
+\begin{DoxyParamCaption}
+\item[{int}]{numero}
+\end{DoxyParamCaption}
+) const}}
+\label{class_graphe_af9a087a2a780133f651af51fb25de677}
+
+
+Definition at line 321 of file Graphe.hpp.
+
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_graphe_a418117b04914b57a9a0f6202b519ceee}{
+\index{Graphe@{Graphe}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Graphe@{Graphe}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet$>$ template$<$class U $>$ std::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std::ostream \&}]{out, }
+\item[{const {\bf Graphe}$<$ U $>$ \&}]{g}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{class_graphe_a418117b04914b57a9a0f6202b519ceee}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_graphe_acf9528aa62599ce05830f02df42af339}{
+\index{Graphe@{Graphe}!listSommets@{listSommets}}
+\index{listSommets@{listSommets}!Graphe@{Graphe}}
+\subsubsection[{listSommets}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet$>$ {\bf Sommet}$\ast$ {\bf Graphe}$<$ Objet $>$::{\bf listSommets}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_graphe_acf9528aa62599ce05830f02df42af339}
+
+
+Liste des sommets du graphe. 
+
+
+
+Definition at line 159 of file Graphe.h.
+
+
+
+Referenced by Graphe$<$ Objet $>$::\_\-copierGraphe(), Graphe$<$ Objet $>$::getComposantesFortementConnexes(), and Graphe$<$ Objet $>$::getPointsArticulation().
+
+\hypertarget{class_graphe_a68b553a71b69dba498e36aa2f22525af}{
+\index{Graphe@{Graphe}!nbSommets@{nbSommets}}
+\index{nbSommets@{nbSommets}!Graphe@{Graphe}}
+\subsubsection[{nbSommets}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet$>$ int {\bf Graphe}$<$ Objet $>$::{\bf nbSommets}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_graphe_a68b553a71b69dba498e36aa2f22525af}
+
+
+Le nombre de sommets dans le graphe. 
+
+
+
+Definition at line 158 of file Graphe.h.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_graphe_8h}{Graphe.h}\item 
+\hyperlink{_graphe_8hpp}{Graphe.hpp}\end{DoxyCompactItemize}

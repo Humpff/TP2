@@ -1,0 +1,224 @@
+\hypertarget{classtp2_1_1_ville}{
+\section{tp2::Ville Class Reference}
+\label{classtp2_1_1_ville}\index{tp2::Ville@{tp2::Ville}}
+}
+
+
+{\ttfamily \#include $<$Ville.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtp2_1_1_ville_ad9514b31741e0c064c952399c0f2d9df}{Ville} ()
+\item 
+\hyperlink{classtp2_1_1_ville_a5ce647798421e22449c8825eb39e72ae}{Ville} (const std::string \&p\_\-nom, const std::string \&p\_\-codeAeroport)
+\begin{DoxyCompactList}\small\item\em Constructeur a partir du nom d'une ville et d'un code d'aeroport. \end{DoxyCompactList}\item 
+std::string \hyperlink{classtp2_1_1_ville_a43c4386edae16ad0c2cd67b44aeaf536}{reqCodeAeroport} () const 
+\item 
+std::string \hyperlink{classtp2_1_1_ville_a7abe57d51aa825269f77f46a8e7d1c14}{reqNom} () const 
+\item 
+bool \hyperlink{classtp2_1_1_ville_aae02a533b1480dd5302e1a8f66dc7737}{operator==} (const \hyperlink{classtp2_1_1_ville}{Ville} \&p\_\-ville) const 
+\begin{DoxyCompactList}\small\item\em Surcharge de l'opÃ©rateur == qui compare deux villes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std::string \hyperlink{classtp2_1_1_ville_a0d09e7e88fdb306b3fe93f94bbd3f27f}{m\_\-nom}
+\item 
+std::string \hyperlink{classtp2_1_1_ville_ab0d8cfb732eba3b860385a04e8d6b151}{m\_\-codeAeroport}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std::ostream \& \hyperlink{classtp2_1_1_ville_ace72ca1e6e94135f0304ac3146f6984d}{operator$<$$<$} (std::ostream \&out, const \hyperlink{classtp2_1_1_ville}{Ville} \&p\_\-ville)
+\begin{DoxyCompactList}\small\item\em Surcharge de l'opÃ©rateur $<$$<$ qui affiche les donnÃ©es d'une ville. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 15 of file Ville.h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classtp2_1_1_ville_ad9514b31741e0c064c952399c0f2d9df}{
+\index{tp2::Ville@{tp2::Ville}!Ville@{Ville}}
+\index{Ville@{Ville}!tp2::Ville@{tp2::Ville}}
+\subsubsection[{Ville}]{\setlength{\rightskip}{0pt plus 5cm}tp2::Ville::Ville (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classtp2_1_1_ville_ad9514b31741e0c064c952399c0f2d9df}
+
+
+Definition at line 11 of file Ville.cpp.
+
+\hypertarget{classtp2_1_1_ville_a5ce647798421e22449c8825eb39e72ae}{
+\index{tp2::Ville@{tp2::Ville}!Ville@{Ville}}
+\index{Ville@{Ville}!tp2::Ville@{tp2::Ville}}
+\subsubsection[{Ville}]{\setlength{\rightskip}{0pt plus 5cm}tp2::Ville::Ville (
+\begin{DoxyParamCaption}
+\item[{const std::string \&}]{p\_\-nom, }
+\item[{const std::string \&}]{p\_\-codeAeroport}
+\end{DoxyParamCaption}
+)}}
+\label{classtp2_1_1_ville_a5ce647798421e22449c8825eb39e72ae}
+
+
+Constructeur a partir du nom d'une ville et d'un code d'aeroport. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\_\-nom} & nom d'une ville. \\
+\hline
+\mbox{\tt in}  & {\em p\_\-codeAeroport} & code d'un aeroport. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Une ville est crÃ©Ã©e. 
+\end{DoxyPostcond}
+
+
+Definition at line 18 of file Ville.cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classtp2_1_1_ville_aae02a533b1480dd5302e1a8f66dc7737}{
+\index{tp2::Ville@{tp2::Ville}!operator==@{operator==}}
+\index{operator==@{operator==}!tp2::Ville@{tp2::Ville}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool tp2::Ville::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ville} \&}]{p\_\-ville}
+\end{DoxyParamCaption}
+) const}}
+\label{classtp2_1_1_ville_aae02a533b1480dd5302e1a8f66dc7737}
+
+
+Surcharge de l'opÃ©rateur == qui compare deux villes. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Une} & ville a comparer avec l'instance courante. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vrai si les villes sont identiques, sinon faux. 
+\end{DoxyReturn}
+
+
+Definition at line 25 of file Ville.cpp.
+
+
+
+References m\_\-codeAeroport, m\_\-nom, reqCodeAeroport(), and reqNom().
+
+\hypertarget{classtp2_1_1_ville_a43c4386edae16ad0c2cd67b44aeaf536}{
+\index{tp2::Ville@{tp2::Ville}!reqCodeAeroport@{reqCodeAeroport}}
+\index{reqCodeAeroport@{reqCodeAeroport}!tp2::Ville@{tp2::Ville}}
+\subsubsection[{reqCodeAeroport}]{\setlength{\rightskip}{0pt plus 5cm}std::string tp2::Ville::reqCodeAeroport (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classtp2_1_1_ville_a43c4386edae16ad0c2cd67b44aeaf536}
+
+
+Definition at line 30 of file Ville.h.
+
+
+
+References m\_\-codeAeroport.
+
+
+
+Referenced by tp2::operator$<$$<$(), and operator==().
+
+\hypertarget{classtp2_1_1_ville_a7abe57d51aa825269f77f46a8e7d1c14}{
+\index{tp2::Ville@{tp2::Ville}!reqNom@{reqNom}}
+\index{reqNom@{reqNom}!tp2::Ville@{tp2::Ville}}
+\subsubsection[{reqNom}]{\setlength{\rightskip}{0pt plus 5cm}std::string tp2::Ville::reqNom (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classtp2_1_1_ville_a7abe57d51aa825269f77f46a8e7d1c14}
+
+
+Definition at line 36 of file Ville.h.
+
+
+
+References m\_\-nom.
+
+
+
+Referenced by tp2::operator$<$$<$(), and operator==().
+
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classtp2_1_1_ville_ace72ca1e6e94135f0304ac3146f6984d}{
+\index{tp2::Ville@{tp2::Ville}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!tp2::Ville@{tp2::Ville}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}std::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std::ostream \&}]{out, }
+\item[{const {\bf Ville} \&}]{p\_\-ville}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classtp2_1_1_ville_ace72ca1e6e94135f0304ac3146f6984d}
+
+
+Surcharge de l'opÃ©rateur $<$$<$ qui affiche les donnÃ©es d'une ville. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Un} & stream. \\
+\hline
+\mbox{\tt in}  & {\em Une} & ville. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Les donnÃ©es de la ville sont affichÃ©es. 
+\end{DoxyPostcond}
+
+
+Definition at line 36 of file Ville.cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classtp2_1_1_ville_ab0d8cfb732eba3b860385a04e8d6b151}{
+\index{tp2::Ville@{tp2::Ville}!m\_\-codeAeroport@{m\_\-codeAeroport}}
+\index{m\_\-codeAeroport@{m\_\-codeAeroport}!tp2::Ville@{tp2::Ville}}
+\subsubsection[{m\_\-codeAeroport}]{\setlength{\rightskip}{0pt plus 5cm}std::string {\bf tp2::Ville::m\_\-codeAeroport}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{classtp2_1_1_ville_ab0d8cfb732eba3b860385a04e8d6b151}
+
+
+Definition at line 27 of file Ville.h.
+
+
+
+Referenced by operator==(), and reqCodeAeroport().
+
+\hypertarget{classtp2_1_1_ville_a0d09e7e88fdb306b3fe93f94bbd3f27f}{
+\index{tp2::Ville@{tp2::Ville}!m\_\-nom@{m\_\-nom}}
+\index{m\_\-nom@{m\_\-nom}!tp2::Ville@{tp2::Ville}}
+\subsubsection[{m\_\-nom}]{\setlength{\rightskip}{0pt plus 5cm}std::string {\bf tp2::Ville::m\_\-nom}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{classtp2_1_1_ville_a0d09e7e88fdb306b3fe93f94bbd3f27f}
+
+
+Definition at line 26 of file Ville.h.
+
+
+
+Referenced by operator==(), and reqNom().
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_ville_8h}{Ville.h}\item 
+\hyperlink{_ville_8cpp}{Ville.cpp}\end{DoxyCompactItemize}

@@ -3,9 +3,9 @@
 //! \author theud1
 //! \version 0.1 graphe générique
 //! \date 2013-10-03
+
 #include "Graphe.h"
 #include <limits>
-//vous pouvez inclure d'autres librairies si c'est nécessaire
 
 //! \brief		Surcharge de l'opérateur de sortie.
 //! \param[in]	p_out		Le flux de sortie.
@@ -44,6 +44,12 @@ std::ostream& operator <<(std::ostream& p_out, const Graphe<Objet>& p_graphe)
 	return p_out;
 }
 
+//! \brief Constructeur avec paramètres
+//!
+//! \param[in] Etiquette Les donnees d'un sommet
+//! \param[in] numero Le numero du sommet
+//! \post Le sommet est initialise avec les parametres
+
 template<typename Objet>
 Graphe<Objet>::Sommet::Sommet(int numero, const Objet& Etiquette)
 :m_numero(numero),m_etiquette(Etiquette), m_listeDest(0), m_etat(false), m_predecesseur(0),
@@ -51,6 +57,12 @@ Graphe<Objet>::Sommet::Sommet(int numero, const Objet& Etiquette)
 {
 
 }
+
+/**
+ * \brief Constructeur par copie
+ * \param[in] source Le sommet à copier
+ * \post Copie profonde du sommet source
+ */
 
 template<typename Objet>
 Graphe<Objet>::Sommet::Sommet(Sommet * source)
@@ -64,6 +76,13 @@ Graphe<Objet>::Sommet::Sommet(Sommet * source)
 	m_precedent = source->m_precedent;
 	m_suivant = source->m_suivant;
 }
+
+/**
+ * \brief Constructeur avec parametres
+ * \param[in] dest Le sommet de destination de l'arc
+ * \param[in] cout Le cout de l'arc
+ * \post Arc initialise
+ */
 
 template<typename Objet>
 Graphe<Objet>::Arc::Arc(Sommet * dest, int cout)
@@ -573,5 +592,3 @@ bool Graphe<Objet>::_isArticulation(Graphe<Objet> graphe, Sommet * sommet)
 	graphe.enleverSommet(sommet->m_numero);
 	return graphe.estFortementConnexe() ? false : true;
 }
-
-//À compléter par les autres méthodes demandées sur le type Graphe
