@@ -90,7 +90,6 @@ TEST_F(GrapheTest, bellman)
 	graphe.ajouterArc(4, 3, 2);
 	graphe.ajouterArc(3, 4, 6);
 	std::vector<int> test;
-	graphe.bellmanFord(0, 5, test);
-	graphe.dijkstra(0, 5, test);
+	EXPECT_EQ(graphe.bellmanFord(0, 5, test), graphe.dijkstra(0, 5, test));
 	graphe.getPointsArticulation(test);
 }

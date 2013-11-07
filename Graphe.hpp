@@ -88,8 +88,25 @@ Graphe<Objet>::Graphe(const Graphe &source)
 template<typename Objet>
 void Graphe<Objet>::_copierGraphe(const Graphe &source)
 {
-	nbSommets = source.nbSommets;
-	listSommets = source.listSommets;
+	nbSommets = 0;
+	listSommets = 0;
+	Sommet * cur = source.listSommets;
+	while (cur)
+	{
+		this->ajouterSommet(cur->m_numero, cur->m_etiquette);
+		cur = cur->m_suivant;
+	}
+	cur = source.listSommets;
+	while (cur)
+	{
+		Arc * curArc = cur->m_listeDest;
+		while (curArc)
+		{
+			this->ajouterArc(cur->m_numero, curArc->m_dest->m_numero, curArc->m_cout);
+			curArc = curArc->m_suivDest;
+		}
+		cur = cur->m_suivant;
+	}
 }
 
 template<typename Objet>
@@ -371,15 +388,15 @@ Graphe<Objet> Graphe<Objet>::fermetureGraphe() const
 		for (int i = 0; i < nbSommets; i++)
 			for (int j = 0; j < nbSommets; j++)
 				mat[i][j] = mat[i][j] || (mat[i][k] && mat[k][j]);
-	for (int i = 0; i < nbSommets; i++)
-		std::cout << listeSommets[i] << " ";
-	std::cout << std::endl;
-	for (int i = 0; i < nbSommets; i++)
-	{
-		for (int j = 0; j < nbSommets; j++)
-			std::cout << mat[i][j] << " ";
-		std::cout << std::endl;
-	}
+//	for (int i = 0; i < nbSommets; i++)
+//		std::cout << listeSommets[i] << " ";
+//	std::cout << std::endl;
+//	for (int i = 0; i < nbSommets; i++)
+//	{
+//		for (int j = 0; j < nbSommets; j++)
+//			std::cout << mat[i][j] << " ";
+//		std::cout << std::endl;
+//	}
 	Graphe<Objet> fermeture;
 	Sommet * cur = listSommets;
 	while (cur)
@@ -440,7 +457,6 @@ int Graphe<Objet>::bellmanFord(const Objet& eOrigine, const Objet& eDestination,
 	if (this->sommetExiste(this->getNumeroSommet(eOrigine)) == false || sommetExiste(this->getNumeroSommet(eDestination)) == false)
 		throw std::logic_error("Un de ces sommets n'existe pas !");
 	Sommet * cur = listSommets;
-	std::cout << "Start" << std::endl;
 	while (cur)
 	{
 		cur->m_predecesseur = 0;
@@ -448,10 +464,8 @@ int Graphe<Objet>::bellmanFord(const Objet& eOrigine, const Objet& eDestination,
 			cur->m_cout = 0;
 		else
 			cur->m_cout = -1;
-		std::cout << cur->m_cout << std::endl;
 		cur = cur->m_suivant;
 	}
-	std::cout << "Loop" << std::endl;
 	for (int i = 0; i < nbSommets; i++)
 	{
 		cur = listSommets;
@@ -471,13 +485,10 @@ int Graphe<Objet>::bellmanFord(const Objet& eOrigine, const Objet& eDestination,
 			cur = cur->m_suivant;
 		}
 	}
-	std::cout << *this << std::endl;
 	cur = _getSommet(getNumeroSommet(eDestination));
-	std::cout << cur->m_numero << " " << cur->m_cout << std::endl;
 	int coutChemin = cur->m_cout;
 	while (cur->m_predecesseur)
 	{
-		std::cout << cur->m_numero << " " << cur->m_cout << std::endl;
 		chemin.push_back(cur->m_etiquette);
 		cur = cur->m_predecesseur;
 	}
@@ -491,7 +502,6 @@ int Graphe<Objet>::dijkstra(const Objet& eOrigine, const Objet& eDestination, st
 		throw std::logic_error("Un de ces sommets n'existe pas !");
 	Sommet * cur = listSommets;
 	std::vector<Sommet *> queue;
-	std::cout << "Start" << std::endl;
 	while (cur)
 	{
 		cur->m_predecesseur = 0;
@@ -500,7 +510,6 @@ int Graphe<Objet>::dijkstra(const Objet& eOrigine, const Objet& eDestination, st
 			cur->m_cout = 0;
 		else
 			cur->m_cout = -1;
-		std::cout << cur->m_cout << std::endl;
 		cur = cur->m_suivant;
 	}
 	queue.push_back(_getSommet(getNumeroSommet(eOrigine)));
@@ -530,11 +539,9 @@ int Graphe<Objet>::dijkstra(const Objet& eOrigine, const Objet& eDestination, st
 		}
 	}
 	cur = _getSommet(getNumeroSommet(eDestination));
-	std::cout << cur->m_numero << " " << cur->m_cout << std::endl;
 	int coutChemin = cur->m_cout;
 	while (cur->m_predecesseur)
 	{
-		std::cout << cur->m_numero << " " << cur->m_cout << std::endl;
 		chemin.push_back(cur->m_etiquette);
 		cur = cur->m_predecesseur;
 	}

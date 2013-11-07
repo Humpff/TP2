@@ -15,6 +15,7 @@ namespace tp2
   class Ville
   {
   public:
+	  Ville();
     Ville(const std::string& p_nom,
 	  const std::string& p_codeAeroport);
     std::string reqCodeAeroport() const;

@@ -8,6 +8,9 @@
 
 namespace tp2
 {
+	Ville::Ville()
+	: m_nom(""), m_codeAeroport("")
+	{}
   //! \brief		Constructeur a partir du nom d'une ville et d'un code d'aeroport.
   //! \param[in]	p_nom nom d'une ville.
   //! \param[in]	p_codeAeroport code d'un aeroport.
