@@ -528,7 +528,10 @@ int Graphe<Objet>::dijkstra(const Objet& eOrigine, const Objet& eDestination, st
 		Arc * curArc = (*itCur)->m_listeDest;
 		while (curArc)
 		{
+			if (!(*itCur))
+			  std::cout << "itCur est null" << std::endl;
 			int curCout = (*itCur)->m_cout + curArc->m_cout;
+
 			if (curArc->m_dest->m_etat == false && (curArc->m_dest->m_cout == -1 || curCout < curArc->m_dest->m_cout))
 			{
 				curArc->m_dest->m_cout = curCout;

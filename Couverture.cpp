@@ -153,7 +153,9 @@ namespace tp2
     try
       {
 	std::vector<Ville> chemin;
+	std::cout << "kikoo1" << std::endl;
 	p_duree = m_graphe.dijkstra(p_origine, p_destination, chemin);
+	std::cout << "kikoo2" << std::endl;
 	if (chemin.empty())
 	  p_duree = -1;
 
