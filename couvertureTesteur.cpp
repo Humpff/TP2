@@ -14,6 +14,7 @@ class CouvertureTest: public ::testing::Test
 {
 public:
   tp2::Couverture couv;
+  tp2::Couverture fcouv;
 
   CouvertureTest();
 };
@@ -21,7 +22,9 @@ public:
 CouvertureTest::CouvertureTest()
 {
   std::ifstream ifs("couverture.txt", std::ifstream::in);
+  std::ifstream ifs2("couverture_fail.txt", std::ifstream::in);
   couv = tp2::Couverture(ifs);
+  fcouv = tp2::Couverture(ifs2);
 }
 
 TEST_F(CouvertureTest, constructeurFichier)
@@ -32,6 +35,7 @@ TEST_F(CouvertureTest, constructeurFichier)
 TEST_F(CouvertureTest, villesAccessibles)
 {
   EXPECT_TRUE(couv.villesAccessibles());
+  EXPECT_FALSE(fcouv.villesAccessibles());
 }
 
 TEST_F(CouvertureTest, villesCritiques)
