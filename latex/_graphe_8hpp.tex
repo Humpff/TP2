@@ -1,0 +1,77 @@
+\hypertarget{_graphe_8hpp}{
+\section{Graphe.hpp File Reference}
+\label{_graphe_8hpp}\index{Graphe.hpp@{Graphe.hpp}}
+}
+
+
+Implémentation des méthodes définies dans \hyperlink{_graphe_8h}{Graphe.h}.  
+
+
+{\ttfamily \#include \char`\"{}Graphe.h\char`\"{}}\par
+{\ttfamily \#include $<$limits$>$}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Objet $>$ }\\std::ostream \& \hyperlink{_graphe_8hpp_ab5beb81f3f74f188fd187546884064c8}{operator$<$$<$} (std::ostream \&p\_\-out, const \hyperlink{class_graphe}{Graphe}$<$ Objet $>$ \&p\_\-graphe)
+\begin{DoxyCompactList}\small\item\em Surcharge de l'opérateur de sortie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implémentation des méthodes définies dans \hyperlink{_graphe_8h}{Graphe.h}. \begin{DoxyAuthor}{Author}
+theud1 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.1 graphe générique 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2013-\/10-\/03 
+\end{DoxyDate}
+
+
+Definition in file \hyperlink{_graphe_8hpp_source}{Graphe.hpp}.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{_graphe_8hpp_ab5beb81f3f74f188fd187546884064c8}{
+\index{Graphe.hpp@{Graphe.hpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Graphe.hpp@{Graphe.hpp}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Objet $>$ std::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std::ostream \&}]{p\_\-out, }
+\item[{const {\bf Graphe}$<$ Objet $>$ \&}]{p\_\-graphe}
+\end{DoxyParamCaption}
+)}}
+\label{_graphe_8hpp_ab5beb81f3f74f188fd187546884064c8}
+
+
+Surcharge de l'opérateur de sortie. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\_\-out} & Le flux de sortie. \\
+\hline
+\mbox{\tt in}  & {\em p\_\-graphe} & Le graphe à  afficher. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Le flux de sortie. 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+l'étiquette est un objet comparable, l'opérateur $<$$<$ y est surchargé 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Le nombre de sommets du graphe sera affiché 
+
+Pour chaque sommet, son numéro, son étiquette seront affichés 
+
+Pour chaque sommet, tous ses liens, le numéro des voisins, seront affichés 
+\end{DoxyPostcond}
+
+
+Definition at line 20 of file Graphe.hpp.
+
+
+
+References Graphe$<$ Objet $>$::Arc::m\_\-cout, Graphe$<$ Objet $>$::Arc::m\_\-dest, Graphe$<$ Objet $>$::Sommet::m\_\-etiquette, Graphe$<$ Objet $>$::Sommet::m\_\-listeDest, Graphe$<$ Objet $>$::Sommet::m\_\-numero, Graphe$<$ Objet $>$::Sommet::m\_\-suivant, and Graphe$<$ Objet $>$::Arc::m\_\-suivDest.
+

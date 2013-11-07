@@ -35,21 +35,7 @@ private:
 
 		//Constructeurs
 
-		//!
-		//! \brief Constructeur avec paramètres
-		//!
-		//! \param[in] Etiquette Les donnees d'un sommet
-		//! \param[in] numero Le numero du sommet
-		//! \post Le sommet est initialise avec les parametres
-
 		Sommet(int numero, const Objet& Etiquette);
-
-		/**
-		 * \brief Constructeur par copie
-		 * \param[in] source Le sommet à copier
-		 * \post Copie profonde du sommet source
-		 */
-
 		Sommet(Sommet * source);
 
 		//Destructeur

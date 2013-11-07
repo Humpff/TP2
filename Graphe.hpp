@@ -3,9 +3,9 @@
 //! \author theud1
 //! \version 0.1 graphe générique
 //! \date 2013-10-03
+
 #include "Graphe.h"
 #include <limits>
-//vous pouvez inclure d'autres librairies si c'est nécessaire
 
 //! \brief		Surcharge de l'opérateur de sortie.
 //! \param[in]	p_out		Le flux de sortie.
@@ -71,6 +71,7 @@ Graphe<Objet>::Sommet::Sommet(Sommet * source)
 	m_precedent = source->m_precedent;
 	m_suivant = source->m_suivant;
 }
+
 
 //! \brief Constructeur avec paramètres.
 //! \param[in] dest Le sommet de destination.
@@ -739,5 +740,3 @@ bool Graphe<Objet>::_isArticulation(Graphe<Objet> graphe, Sommet * sommet)
 	graphe.enleverSommet(sommet->m_numero);
 	return graphe.estFortementConnexe() ? false : true;
 }
-
-//À compléter par les autres méthodes demandées sur le type Graphe
