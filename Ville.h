@@ -12,30 +12,30 @@
 namespace tp2
 {
 
-class Ville
-{
-public:
-	Ville(const std::string& p_nom,
-			const std::string& p_codeAeroport);
-	std::string reqCodeAeroport() const;
-	std::string reqNom() const;
-	bool operator==(const Ville& p_ville) const;
-	friend std::ostream& operator <<(std::ostream& out, const Ville& p_ville);
-private:
-	std::string m_nom;
-	std::string m_codeAeroport;
-};
+  class Ville
+  {
+  public:
+    Ville(const std::string& p_nom,
+	  const std::string& p_codeAeroport);
+    std::string reqCodeAeroport() const;
+    std::string reqNom() const;
+    bool operator==(const Ville& p_ville) const;
+    friend std::ostream& operator <<(std::ostream& out, const Ville& p_ville);
+  private:
+    std::string m_nom;
+    std::string m_codeAeroport;
+  };
 
-inline std::string Ville::reqCodeAeroport() const
-{
-	return m_codeAeroport;
-}
+  inline std::string Ville::reqCodeAeroport() const
+  {
+    return m_codeAeroport;
+  }
 
 
-inline std::string Ville::reqNom() const
-{
-	return m_nom;
-}
+  inline std::string Ville::reqNom() const
+  {
+    return m_nom;
+  }
 
 }
 
