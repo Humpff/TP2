@@ -551,7 +551,7 @@ void Graphe<Objet>::getPointsArticulation(std::vector<Objet> & sommets)
 	while (cur)
 	{
 		if (_isArticulation(copie, cur))
-			sommets.push_back(cur);
+			sommets.push_back(cur->m_etiquette);
 		cur = cur->m_suivant;
 	}
 }

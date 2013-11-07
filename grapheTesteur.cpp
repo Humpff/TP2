@@ -92,4 +92,5 @@ TEST_F(GrapheTest, bellman)
 	std::vector<int> test;
 	graphe.bellmanFord(0, 5, test);
 	graphe.dijkstra(0, 5, test);
+	graphe.getPointsArticulation(test);
 }
