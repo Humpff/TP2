@@ -521,21 +521,22 @@ int Graphe<Objet>::dijkstra(const Objet& eOrigine, const Objet& eDestination, st
 			if ((*it)->m_cout < (*itCur)->m_cout)
 				itCur = it;
 		}
+		Sommet * curSommet = *itCur;
 		queue.erase(itCur);
-		if ((*itCur)->m_etiquette == eDestination)
+		if ((curSommet)->m_etiquette == eDestination)
 			break;
-		(*itCur)->m_etat = true;
-		Arc * curArc = (*itCur)->m_listeDest;
+		(curSommet)->m_etat = true;
+		Arc * curArc = (curSommet)->m_listeDest;
 		while (curArc)
 		{
-			if (!(*itCur))
+			if (!(curSommet))
 			  std::cout << "itCur est null" << std::endl;
-			int curCout = (*itCur)->m_cout + curArc->m_cout;
+			int curCout = (curSommet)->m_cout + curArc->m_cout;
 
 			if (curArc->m_dest->m_etat == false && (curArc->m_dest->m_cout == -1 || curCout < curArc->m_dest->m_cout))
 			{
 				curArc->m_dest->m_cout = curCout;
-				curArc->m_dest->m_predecesseur = *itCur;
+				curArc->m_dest->m_predecesseur = curSommet;
 				queue.push_back(curArc->m_dest);
 			}
 			curArc = curArc->m_suivDest;
