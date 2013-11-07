@@ -44,6 +44,10 @@ std::ostream& operator <<(std::ostream& p_out, const Graphe<Objet>& p_graphe)
 	return p_out;
 }
 
+//! \brief Constructeur avec paramètres.
+//! \param[in] numero Le numero du sommet.
+//! \param[in] Etiquette L'etiquette du sommet.
+//! \post Le graphe est construit.
 template<typename Objet>
 Graphe<Objet>::Sommet::Sommet(int numero, const Objet& Etiquette)
 :m_numero(numero),m_etiquette(Etiquette), m_listeDest(0), m_etat(false), m_predecesseur(0),
@@ -52,6 +56,9 @@ Graphe<Objet>::Sommet::Sommet(int numero, const Objet& Etiquette)
 
 }
 
+//! \brief Constructeur par copie.
+//! \param[in] source Le graphe a copier.
+//! \post Un graphe semblable a celui passe en parametre est construit.
 template<typename Objet>
 Graphe<Objet>::Sommet::Sommet(Sommet * source)
 {
@@ -65,6 +72,10 @@ Graphe<Objet>::Sommet::Sommet(Sommet * source)
 	m_suivant = source->m_suivant;
 }
 
+//! \brief Constructeur avec paramètres.
+//! \param[in] dest Le sommet de destination.
+//! \param[in] cout Le poids de l'arc.
+//! \post Un arc est construit.
 template<typename Objet>
 Graphe<Objet>::Arc::Arc(Sommet * dest, int cout)
 :m_dest(dest),m_cout(cout),m_suivDest(0)
@@ -72,6 +83,8 @@ Graphe<Objet>::Arc::Arc(Sommet * dest, int cout)
 
 }
 
+//! \brief Constructeur par defaut.
+//! \post Un graphe vide est créé.
 template<typename Objet>
 Graphe<Objet>::Graphe()
 :nbSommets(0),listSommets(0)
@@ -79,12 +92,20 @@ Graphe<Objet>::Graphe()
 
  }
 
+//! \brief Constructeur de copie.
+//! \param[in] source La source du graphe à copier.
+//! \pre Il y a assez de mémoire pour copier le graphe.
+//! \exception bad_alloc Il n'y a pas assez de mémoire pour copier le graphe.
 template<typename Objet>
 Graphe<Objet>::Graphe(const Graphe &source)
 {
 	_copierGraphe(source);
 }
 
+
+//! \brief Copie d'un graphe
+//! \post Une copie profonde à partir du graphe source a été effectuée.
+//! \param[in] source Le graphe à copier.
 template<typename Objet>
 void Graphe<Objet>::_copierGraphe(const Graphe &source)
 {
@@ -109,12 +130,17 @@ void Graphe<Objet>::_copierGraphe(const Graphe &source)
 	}
 }
 
+//! \brief Destructeur
+//! \post Le graphe est détruit.
 template<typename Objet>
 Graphe<Objet>::~Graphe()
 {
 
 }
 
+//! \brief Trouve l'adresse d'un sommet à partir de son numéro.
+//! \post L'adresse du sommet recherché est retournée.
+//! \param[in] numero Le numéro du sommet.
 template<typename Objet>
 typename Graphe<Objet>::Sommet * Graphe<Objet>::_getSommet(int numero) const
 {
@@ -128,6 +154,11 @@ typename Graphe<Objet>::Sommet * Graphe<Objet>::_getSommet(int numero) const
 	return 0;
 }
 
+//! \brief Trouve l'adresse d'un arc entre deux sommets.
+//! \post L'adresse de l'arc recherché est retournée, 0 si aucun arc n'a été trouvé.
+//! \param[in] origine L'adresse du sommet d'origine.
+//! \param[in] destination L'adresse du sommet de destination.
+//! \return L'adresse de l'arc trouvé entre le sommet d'origine et le sommet de destination.
 template<typename Objet>
 typename Graphe<Objet>::Arc * Graphe<Objet>::_getArc(int numOrigine, int numDestination) const
 {
@@ -142,6 +173,14 @@ typename Graphe<Objet>::Arc * Graphe<Objet>::_getArc(int numOrigine, int numDest
 	return 0;
 }
 
+//! \brief Ajout d'un sommet au graphe. 
+//! \param[in] etiquette Les donnees du sommet à ajouter.
+//! \param[in] numero Le numero du sommet à ajouter.
+//! \pre Il y a assez de mémoire pour ajouter un sommet.
+//! \pre Il n'y a aucun sommet avec le même numéro dans le graphe.
+//! \post Un sommet contenant les informations passées en argument a été ajouté au Graphe.
+//! \exception bad_alloc Il n'y a pas assez de mémoire pour ajouter un sommet.
+//! \exception logic_error Il y a un sommet avec le même numéro dans le graphe.
 template<typename Objet>
 void Graphe<Objet>::ajouterSommet(int numero, const Objet& etiquette)
 {
@@ -162,6 +201,11 @@ void Graphe<Objet>::ajouterSommet(int numero, const Objet& etiquette)
 	++nbSommets;
 }
 
+//! \brief Enlève un sommet du graphe ainsi que tous les arcs qui vont et partent de ce sommet. 
+//! \param[in] numero Le numéro du sommet à enlever.
+//! \pre Il y a un sommet avec le numéro 'm_numero' dans le graphe.
+//! \post Le sommet identifié par 'm_numero' a été enlevé du graphe.
+//! \exception logic_error Il n'y a aucun sommet avec le numéro 'm_numero' dans le graphe.
 template<typename Objet>
 void Graphe<Objet>::enleverSommet(int numero)
 {
@@ -216,6 +260,15 @@ void Graphe<Objet>::enleverSommet(int numero)
 	--nbSommets;
 }
 
+//! \brief Ajout d'un arc au graphe.
+//! \param[in] numOrigine Le numéro du sommet d'origine.
+//! \param[in] numDestination Le numéro du sommet de destination.
+//! \param[in] cout Le cout de l'arc.
+//! \pre Les deux sommets doivent exister.
+//! \post Un arc a été ajouté entre le sommet 'numeroOrigine' et le sommet 'numeroDestination'.
+//! \exception bad_alloc Pas assez de mémoire pour alloué le nouvel arc.
+//! \exception logic_error Un des deux sommets n'existe pas.
+//! \exception logic_error Il y a déjà un arc orienté entre ces deux sommets.
 template<typename Objet>
 void Graphe<Objet>::ajouterArc(int numOrigine, int numDestination, int cout)
 {
@@ -230,6 +283,14 @@ void Graphe<Objet>::ajouterArc(int numOrigine, int numDestination, int cout)
 	orig->m_listeDest = newArc;
 }
 
+//! \brief Enlève un arc du graphe.
+//! \param[in] numOrigine Le numero du sommet d'origine.
+//! \param[in] numDestination 	Le numéro du sommet de destination.
+//! \pre Les deux sommets identifiés par leur numéro doivent appartenir au graphe.
+//! \pre Un arc reliant les deux sommets doit exister.
+//! \post Le graphe contient un arc en moins
+//! \exception std::logic_error Un des deux sommets, ou les deux, n'existent pas.
+//! \exception std::logic_error Il n'y a pas d'arc entre les 2 sommets.
 template<typename Objet>
 void Graphe<Objet>::enleverArc(int numOrigine, int numDestination)
 {
@@ -254,18 +315,27 @@ void Graphe<Objet>::enleverArc(int numOrigine, int numDestination)
 	}
 }
 
+//! \brief Retourne le nombre de sommets dans la liste des sommets. 
+//! \return Le nombre de sommets dans le graphe.
+//! \post Le graphe reste inchangé. 
 template<typename Objet>
 int Graphe<Objet>::nombreSommets() const
 {
 	return nbSommets;
 }
 
+//! \brief Indique si la liste des sommets est vide. 
+//! \return True si le graphe ne contient pas de sommets, false autrement.
+//! \post Le graphe reste inchangé.
 template<typename Objet>
 bool Graphe<Objet>::estVide() const
 {
 	return (nbSommets ? false : true);
 }
 
+//! \brief Retourne la liste des numéros des sommets dans un vecteur d'entiers.
+//! \return Un vector de type int qui contient une liste de tous les numéros des sommets.
+//! \post Le graphe reste inchangé.
 template<typename Objet>
 std::vector<int> Graphe<Objet>::listerSommets() const
 {
@@ -279,6 +349,9 @@ std::vector<int> Graphe<Objet>::listerSommets() const
 	return list;
 }
 
+//! \brief Retourne la liste des étiquettes des sommets dans un vecteur.
+//! \return Un vector de type Objet qui contient une liste de toutes les étiquettes des sommets.
+//! \post Le graphe reste inchangé. 
 template<typename Objet>
 std::vector<Objet> Graphe<Objet>::listerEtiquetteSommets() const
 {
@@ -292,6 +365,12 @@ std::vector<Objet> Graphe<Objet>::listerEtiquetteSommets() const
 	return list;
 }
 
+//! \brief Retourne le numéro d'un sommet selon son etiquette.
+//! \param[in] etiquette L'étiquette d'un sommet.
+//! \return Le numéro du sommet recherché 
+//! \pre Le sommet doit faire partie du graphe.
+//! \post Le graphe reste inchangé. 
+//! \exception logic_error Le sommet n'existe pas.
 template<typename Objet>
 int Graphe<Objet>::getNumeroSommet(const Objet& etiquette) const
 {
@@ -305,12 +384,22 @@ int Graphe<Objet>::getNumeroSommet(const Objet& etiquette) const
 	throw std::logic_error("Ce sommet n'existe pas !");
 }
 
+//! \brief Retourne l'existence d'un sommet. 
+//! \param[in] numero Le numéro du sommet.
+//! \return True si le sommet existe, false autrement.
+//! \post Le graphe reste inchangé.
 template<typename Objet>
 bool Graphe<Objet>::sommetExiste(int numero) const
 {
 	return _getSommet(numero) ? true : false;
 }
 
+//! \brief Retourne l'étiquette d'un sommet.
+//! \param[in] numero Le numéro du sommet.
+//! \return Le nom du sommet recherché.
+//! \pre Le sommet doit exister.
+//! \exception logic_error Il n'y a pas de sommets dans le graphe.
+//! \exception logic_error Le sommet n'existe pas.
 template<typename Objet>
 Objet Graphe<Objet>::getEtiquetteSommet(int numero) const
 {
@@ -319,18 +408,35 @@ Objet Graphe<Objet>::getEtiquetteSommet(int numero) const
 	return _getSommet(numero)->m_etiquette;
 }
 
+//! \brief Le sommet n'existe pas.
+//! \param[in] Le numéro du sommet.
+//! \return L'odre de sortie d'un sommet.
+//! \pre Le sommet doit exister.
+//! \exception logic_error Le sommet n'existe pas.
 template<typename Objet>
 int Graphe<Objet>::ordreSortieSommet(int numero) const
 {
 	return 0; // todo
 }
 
+//! \brief Retourne l'ordre d'entrée d'un sommet.
+//! \param[in] Le numéro du sommet.
+//! \return L'odre d'entrée d'un sommet.
+//! \pre Le sommet doit exister 
+//! \post Le graphe reste inchangé. 
+//! \exception logic_error Le sommet n'existe pas.
 template<typename Objet>
 int Graphe<Objet>::ordreEntreeSommet(int numero) const
 {
 	return 0; // todo
 }
 
+//! \brief Retourne la liste des numéros des sommets adjacents au sommet passé en argument dans un vecteur d'entiers.
+//! \param[in] numeroSommetsAdjacents Le numéro du sommet dont on cherche les sommets adjacents.
+//! \return Un vector de type int qui contient une liste de tous les numéros des sommets adjacents au sommet demandé.
+//! \pre Le sommet doit appartenir au graphe.
+//! \post Le graphe reste inchangé.
+//! \exception logic_error si le sommet n'existe pas.
 template<typename Objet>
 std::vector<int> Graphe<Objet>::listerSommetsAdjacents(int numeroSommetsAdjacents) const
 {
@@ -347,6 +453,13 @@ std::vector<int> Graphe<Objet>::listerSommetsAdjacents(int numeroSommetsAdjacent
 	return list;
 }
 
+//! \brief Retourne l'existence d'un arc.
+//! \param[in] numOrigine Le numéro du sommet d'origine.
+//! \param[in] numDestination Le numéro du sommet de destination.
+//! \return True si un arc existe entre les deux sommets, false autrement.
+//! \pre Les sommets doivent appartenir au graphe.
+//! \post Le graphe reste inchangé. 
+//! \exception logic_error L'un ou l'autre, ou les 2 sommets ne font pas partie du graphe.
 template<typename Objet>
 bool Graphe<Objet>::arcExiste(int numOrigine, int numDestination) const
 {
@@ -355,6 +468,14 @@ bool Graphe<Objet>::arcExiste(int numOrigine, int numDestination) const
 	return _getArc(numOrigine, numDestination) ? true : false;
 }
 
+//! \brief Retourne le coût d'un arc passé en argument.
+//! \param[in] numOrigine Le numéro du sommet d'origine.
+//! \param[in] numDestination Le numéro du sommet de destination.
+//! \return Le coût de l'arc entre deux sommets.
+//! \pre L'arc doit exister.
+//! \post Le graphe reste inchangé. 
+//! \exception logic_error Le sommet source et/ou destination n'existent pas.
+//! \exception logic_error L'arc n'existe pas.
 template<typename Objet>
 int Graphe<Objet>::getCoutArc(int numOrigine, int numDestination) const
 {
@@ -365,13 +486,23 @@ int Graphe<Objet>::getCoutArc(int numOrigine, int numDestination) const
 	return _getArc(numOrigine, numDestination)->m_cout;
 }
 
-template<typename Objet>
+//! \brief Surcharge de l'opérateur d'affectation.
+//! \param[in] source Le graphe à copier.
+//! \pre Il doit y avoir assez de mémoire.
+//! \post Le graphe a un contenu identique à 'source'. 
+//! \exception bad_alloc S'il n'y a pas assez de mémoire. 
+template<typename Objet> 
 const Graphe<Objet>& Graphe<Objet>::operator =(const Graphe& source)
 {
 	_copierGraphe(source);
 	return *this;
 }
 
+//! \brief Déterminer la fermeture transitive du graphe.
+//! \pre Le graphe est correctement initialisé.
+//! \post La fermeture transitive du graphe est retournée. 
+//! \post Le graphe original reste inchangé. 
+//! \exception bad_alloc si pas assez de mémoire application de l'algorithme de Floyd-Warshall 
 template<typename Objet>
 Graphe<Objet> Graphe<Objet>::fermetureGraphe() const
 {
@@ -415,6 +546,9 @@ Graphe<Objet> Graphe<Objet>::fermetureGraphe() const
 	return fermeture;
 }
 
+//! \brief Détermine si le graphe est fortement connexe ou non.
+//! \return true si le graphe est fortement connexe, false sinon 
+//! \post true est retourné si le graphe est fortement connexe, false est retourné sinon.
 template<typename Objet>
 bool Graphe<Objet>::estFortementConnexe() const
 {
@@ -427,6 +561,11 @@ bool Graphe<Objet>::estFortementConnexe() const
 	return true;
 }
 
+//! \brief Détermine les composantes fortement connexes et les mémorise dans un conteneur passé en paramètre.
+//! \param[in] composantes Les composantes du graphe.
+//! \pre Il y a assez de mémoire pour placer les composantes fortements connexes dans 'composantes'.
+//! \post Les composantes fortement connexes du graphe sont placées dans 'composantes'.
+//! \exception Il n'y a pas assez de mémoire pour placer les composantes fortements connexes dans 'composantes'.
 template<typename Objet>
 void Graphe<Objet>::getComposantesFortementConnexes(std::vector<std::vector<Objet> > & composantes) const
 {
@@ -451,6 +590,17 @@ void Graphe<Objet>::getComposantesFortementConnexes(std::vector<std::vector<Obje
 	}
 }
 
+//! \brief Trouve le plus court chemin entre deux points en utilisant l'algorithme de Bellman-Ford et le retourne.
+//! \param[in] eOrigine l'etiquette du sommet d'origine.
+//! \param[in] eDestination l'etiquette du sommet de destination.
+//! \param[out] chemin Un vector de type etiquette qui contient le chemin du parcours.
+//! \return Le coût du parcours trouvé.
+//! \pre Il y a assez de mémoire pour placer les composantes du chemin 'chemin'
+//! \post Le cout total est retourné, -1 s'il n'y a pas de chemin
+//! \post Le graphe original reste inchangé 
+//! \post La liste des étiquettes des sommets à parcourir est retournée dans le vector 'chemin'
+//! \exception bad_alloc Il n'y a pas assez de mémoire pour placer le chemin dans 'chemin'
+//! \exception logic_error Le sommet d'origine ou de destination n'existe pas 
 template<typename Objet>
 int Graphe<Objet>::bellmanFord(const Objet& eOrigine, const Objet& eDestination,std::vector<Objet> & chemin)
 {
@@ -495,6 +645,17 @@ int Graphe<Objet>::bellmanFord(const Objet& eOrigine, const Objet& eDestination,
 	return coutChemin;
 }
 
+//! \brief Trouve le plus court chemin entre deux points en utilisant l'algorithme de Dijkstra et le retourne.
+//! \param[in] eOrigine l'etiquette du sommet d'origine.
+//! \param[in] eDestination l'etiquette du sommet de destination.
+//! \param[out] chemin Un vector de type etiquette qui contient le chemin du parcours.
+//! \return Le coût du parcours trouvé.
+//! \pre Il y a assez de mémoire pour placer les composantes du chemin 'chemin'
+//! \post Le cout total est retourné, -1 s'il n'y a pas de chemin
+//! \post Le graphe original reste inchangé 
+//! \post La liste des étiquettes des sommets à parcourir est retournée dans le vector 'chemin'
+//! \exception bad_alloc Il n'y a pas assez de mémoire pour placer le chemin dans 'chemin'
+//! \exception logic_error Le sommet d'origine ou de destination n'existe pas 
 template<typename Objet>
 int Graphe<Objet>::dijkstra(const Objet& eOrigine, const Objet& eDestination, std::vector<Objet> & chemin)
 {
@@ -552,6 +713,11 @@ int Graphe<Objet>::dijkstra(const Objet& eOrigine, const Objet& eDestination, st
 	return coutChemin;
 }
 
+//! \brief Trouve les points d'articulation du graphe et les retourne.
+//! \param[out] sommets Un vector de type Objet qui contient tous les sommets d'articulation.
+//! \pre Il y a assez de mémoire pour placer les sommets dans 'sommets'
+//! \post La liste de tous les sommets d'articulation sont retournés dans le vector 'sommets' 
+//! \post Le graphe original reste inchangé
 template<typename Objet>
 void Graphe<Objet>::getPointsArticulation(std::vector<Objet> & sommets)
 {
