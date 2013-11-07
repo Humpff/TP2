@@ -43,6 +43,14 @@ TEST_F(CouvertureTest, villesCritiques)
   EXPECT_FALSE(couv.villesCritiques().empty());
 }
 
+TEST_F(CouvertureTest, determinerMinParcours)
+{
+  tp2::Ville depart("ville1", "a1");
+  tp2::Ville arrivee("ville4", "d4");
+  int duree;
+  couv.determinerMinParcours(depart, arrivee, duree);
+}
+
 int main(int ac, char* av[])
 {
   testing::InitGoogleTest(&ac, av);
